@@ -1,0 +1,55 @@
+//
+// Reset
+//
+
+*, ::before, ::after {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+//
+// Typography
+//
+
+html {
+  font-size: 21px;
+
+  @media print {
+    font-size: 12pt;
+  }
+}
+
+body {
+  font-family: system-ui;
+  hyphens: auto;
+  line-height: 1.4;
+}
+
+//
+// Layout
+//
+
+body {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  max-width: 29rem;
+  padding: 1rem;
+}
+
+body * + * {
+  margin-top: 1em;
+}
+
+//
+// Headings
+//
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  hyphens: none;
+}
