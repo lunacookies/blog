@@ -4,7 +4,11 @@
     {{ partial "head" . }}
   </head>
   <body>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    {{ partial "nav" . }}
+
+    <main>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </main>
   </body>
 </html>
