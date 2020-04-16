@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body>
+    <h1 class="greeting">{{ .Title }}</h1>
+
+    <section class="bio">
+      {{ .Content }}
+    </section>
+
+    {{ range .Pages }}
+      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ end }}
+  </body>
+</html>
