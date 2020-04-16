@@ -1,11 +1,16 @@
+@import "mixins";
+
 //
 // Reset
 //
 
 *, ::before, ::after {
+  color: inherit;
   font: inherit;
   margin: 0;
   padding: 0;
+  text-decoration: inherit;
+  background-repeat: no-repeat;
 }
 
 //
@@ -79,4 +84,15 @@ h1 {
 // Hyphenation looks weird for headings.
 h1, h2, h3, h4, h5, h6 {
   hyphens: none;
+}
+
+//
+// Links
+//
+
+// Use a background colour to create a custom underline.
+a {
+  @include background-color-positionable(currentColor);
+  background-size: 100% 1px;
+  background-position: 0 85%;
 }
