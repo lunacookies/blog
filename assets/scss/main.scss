@@ -20,8 +20,12 @@ html {
   }
 }
 
+$system-font-stack: system-ui;
+$serif-system-font-stack: "Iowan Old Style", Georgia, $system-font-stack;
+$serif-font-stack: bennet-text-one, $serif-system-font-stack;
+
 body {
-  font-family: system-ui;
+  font-family: $serif-font-stack;
   hyphens: auto;
   line-height: 1.4;
 }
