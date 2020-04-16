@@ -27,6 +27,20 @@ body {
 }
 
 //
+// Color
+//
+
+body {
+  background-color: rgb(245, 243, 240);
+  color: rgb(50, 50, 60);
+
+  @media (prefers-color-scheme: "dark") {
+    background-color: rgb(50, 50, 60);
+    color:rgb(201, 198, 193);
+  }
+}
+
+//
 // Layout
 //
 
