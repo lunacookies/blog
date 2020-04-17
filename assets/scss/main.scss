@@ -5,12 +5,13 @@
 //
 
 *, ::before, ::after {
+  background-repeat: no-repeat;
   color: inherit;
   font: inherit;
+  list-style-type: none;
   margin: 0;
   padding: 0;
   text-decoration: inherit;
-  background-repeat: no-repeat;
 }
 
 //
