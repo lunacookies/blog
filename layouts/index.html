@@ -3,15 +3,15 @@
   <head>
     {{ partial "head" . }}
   </head>
-  <body>
-    <h1 class="greeting">hi!</h1>
+  <body class="homepage">
+    <main>
+      <h1 class="greeting">hi!</h1>
 
-    <section class="bio">
-      {{ .Content }}
-    </section>
+      <section class="bio">
+        {{ .Content }}
+      </section>
+    </main>
 
-    {{ range .Pages }}
-      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-    {{ end }}
+    {{ partial "nav" . }}
   </body>
 </html>
