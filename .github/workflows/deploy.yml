@@ -22,7 +22,7 @@ jobs:
       with:
         cmd: install
 
-    - name: Build site with Hug
+    - name: Build site with Hugo
       run: hugo --minify
 
     - name: Deploy to GitHub Pages
