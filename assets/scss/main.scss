@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 //
 
 // Use a background colour to create a custom underline.
-a {
+main a {
   @include background-color-positionable(currentColor);
   background-size: 100% 1px;
   background-position: 0 85%;
