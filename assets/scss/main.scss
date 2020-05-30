@@ -78,7 +78,8 @@ main * + * {
 // Headings
 //
 
-h1 {
+// Page titles
+body > h1 {
   font-size: 2.5rem;
   font-family: $display-serif-font-stack;
   font-weight: 600;
@@ -90,6 +91,15 @@ h1 {
 // Hyphenation looks weird for headings.
 h1, h2, h3, h4, h5, h6 {
   hyphens: none;
+}
+
+// Section headers
+main h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 //
