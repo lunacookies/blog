@@ -6,8 +6,9 @@
   <body>
     {{ partial "nav" . }}
 
+    <h1>{{ .Title }}</h1>
+
     <main>
-      <h1>{{ .Title }}</h1>
       {{ .Content }}
     </main>
   </body>

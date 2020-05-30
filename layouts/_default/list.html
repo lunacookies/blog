@@ -6,9 +6,9 @@
   <body>
     {{ partial "nav" . }}
 
-    <main>
-      <h1>{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
 
+    <main>
       {{ .Content }}
 
       {{ range .Pages }}
