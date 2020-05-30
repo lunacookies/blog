@@ -40,6 +40,7 @@ body {
   font-family: $serif-font-stack;
   hyphens: auto;
   line-height: 1.6;
+  font-variant-numeric: proportional-nums oldstyle-nums;
 }
 
 //
@@ -130,7 +131,7 @@ main ol li {
 main ol li::before {
   content: counter(ol);
 
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: tabular-nums oldstyle-nums;
 
   position: absolute;
   width: $width;
