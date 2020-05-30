@@ -70,3 +70,17 @@
   italic,
   800,
 );
+
+//
+// Fira Mono
+//
+
+// Only regular
+@include font-face (
+  "fira-mono",
+  "https://use.typekit.net/af/79586e/00000000000000003b9b4001/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  "https://use.typekit.net/af/79586e/00000000000000003b9b4001/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  normal,
+  400,
+);
+
