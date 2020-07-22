@@ -71,8 +71,12 @@ body {
   padding: 1rem;
 }
 
-main * + * {
+main {
   margin-top: 1em;
+
+  * + * {
+    margin-top: 1em;
+  }
 }
 
 //
