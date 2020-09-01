@@ -3,5 +3,12 @@
     {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Title }}</a></li>
     {{ end }}
+
+    <li>
+      <a
+        href="{{ .URL }}"
+        type="application/rss+xml"
+        target="_blank">RSS Feed</a>
+    </li>
   </ul>
 </nav>
