@@ -4,12 +4,12 @@
       <li><a href="{{ .URL }}">{{ .Title }}</a></li>
     {{ end }}
 
-    {{ with .OutputFormats.Get "RSS" }}
+    {{ with .OutputFormats.Get "rss" }}
       <li>
         <a
+          rel="{{ .Rel }}"
+          type="{{ .MediaType.Type }}"
           href="{{ .Permalink }}"
-          rel="alternate"
-          type="application/rss+xml"
           title="{{ $.Site.Title }}">RSS Feed</a>
       </li>
     {{ end }}
