@@ -6,7 +6,10 @@
   <body>
     {{ partial "nav" . }}
 
+    <header>
     <h1>{{ .Title }}</h1>
+    </header>
+
     <p>{{ .Date.Format "January 2, 2006" }}</p>
 
     <main>

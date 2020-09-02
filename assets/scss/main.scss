@@ -84,18 +84,23 @@ main {
 }
 
 //
-// Headings
+// Page title
 //
 
-// Page titles
-body > h1 {
-  font-size: 2.5rem;
-  font-family: $display-serif-font-stack;
-  font-weight: 600;
-
+header {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: $display-serif-font-stack;
+  font-weight: 600;
+}
+
+//
+// Headings
+//
 
 // Hyphenation looks weird for headings.
 h1, h2, h3, h4, h5, h6 {
