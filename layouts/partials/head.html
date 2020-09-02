@@ -3,16 +3,18 @@
 
 {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 
-<link
-  href="{{ .RSSLink }}"
-  rel="alternate"
-  type="application/rss+xml"
-  title="{{ .Site.Title }}">
-<link
-  href="{{ .RSSLink }}"
-  rel="feed"
-  type="application/rss+xml"
-  title="{{ .Site.Title }}">
+{{ with .OutputFormats.Get "RSS" }}
+  <link
+    href="{{ .Permalink }}"
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ $.Site.Title }}">
+  <link
+    href="{{ .Permalink }}"
+    rel="feed"
+    type="application/rss+xml"
+    title="{{ $.Site.Title }}">
+{{ end }}
 
 <link rel="stylesheet"
       href="{{ $styles.Permalink }}"
