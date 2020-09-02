@@ -249,20 +249,20 @@ sup {
 }
 
 //
-// Nagivation
+// Page Nagivation
 //
 
 // Put items in the navigation next to each other, with one em of space between
 // each other.
-nav ul {
+.page-nav ul {
   display: flex;
 }
-nav ul li + li {
+.page-nav ul li + li {
   margin-left: 1em;
 }
 
 // Make the navigation section less prominent
-nav {
+.page-nav {
   opacity: 0.3;
   transition: opacity 250ms ease-out;
 
@@ -273,6 +273,6 @@ nav {
 
 // As on the homepage the navigation is below the content, rather than above it,
 // we add a little space above the navigation to separate it from the content.
-.homepage nav {
+.homepage .page-nav {
   padding-top: 3rem;
 }
