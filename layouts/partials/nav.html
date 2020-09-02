@@ -4,11 +4,14 @@
       <li><a href="{{ .URL }}">{{ .Title }}</a></li>
     {{ end }}
 
-    <li>
-      <a
-        href="{{ .Site.BaseURL }}"
-        type="application/rss+xml"
-        target="_blank">RSS Feed</a>
-    </li>
+    {{ with .OutputFormats.Get "RSS" }}
+      <li>
+        <a
+          href="{{ .Permalink }}"
+          rel="alternate"
+          type="application/rss+xml"
+          title="{{ $.Site.Title }}">RSS Feed</a>
+      </li>
+    {{ end }}
   </ul>
 </nav>
