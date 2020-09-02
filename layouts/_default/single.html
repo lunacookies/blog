@@ -3,11 +3,13 @@
   <head>
     {{ partial "head" . }}
   </head>
+
   <body>
     {{ partial "nav" . }}
 
     <header>
-    <h1>{{ .Title }}</h1>
+      <subtitle>{{ .CurrentSection.Title }}</subtitle>
+      <h1>{{ .Title }}</h1>
     </header>
 
     <p>{{ .Date.Format "January 2, 2006" }}</p>
