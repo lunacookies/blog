@@ -5,7 +5,9 @@
 // Reset
 //
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   background-repeat: no-repeat;
   box-sizing: border-box;
   color: inherit;
@@ -57,7 +59,7 @@ body {
 
   @media (prefers-color-scheme: "dark") {
     background-color: rgb(50, 50, 60);
-    color:rgb(201, 198, 193);
+    color: rgb(201, 198, 193);
   }
 }
 
@@ -109,7 +111,12 @@ header subtitle {
 //
 
 // Hyphenation looks weird for headings.
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   hyphens: none;
 }
 
@@ -189,7 +196,8 @@ code {
 }
 
 // Inline code and outer element of block code
-*:not(pre) > code, pre {
+*:not(pre) > code,
+pre {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }

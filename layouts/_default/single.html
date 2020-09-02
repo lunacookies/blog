@@ -1,21 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {{ partial "head" . }}
-  </head>
 
-  <body>
-    {{ partial "nav" . }}
+<head>
+  {{ partial "head" . }}
+</head>
 
-    <header>
-      <subtitle>{{ .CurrentSection.Title }}</subtitle>
-      <h1>{{ .Title }}</h1>
-    </header>
+<body>
+  {{ partial "nav" . }}
 
-    <p>{{ .Date.Format "January 2, 2006" }}</p>
+  <header>
+    <subtitle>{{ .CurrentSection.Title }}</subtitle>
+    <h1>{{ .Title }}</h1>
+  </header>
 
-    <main>
-      {{ .Content }}
-    </main>
-  </body>
+  <p>{{ .Date.Format "January 2, 2006" }}</p>
+
+  <main>
+    {{ .Content }}
+  </main>
+</body>
+
 </html>
