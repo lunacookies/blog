@@ -1,0 +1,17 @@
+body {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  max-width: 32rem;
+  padding: 1rem;
+}
+
+main {
+  margin-top: 1em;
+
+  * + * {
+    margin-top: 1em;
+  }
+}

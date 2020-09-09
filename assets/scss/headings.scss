@@ -1,0 +1,18 @@
+// Hyphenation looks weird for headings.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  hyphens: none;
+}
+
+// Section headers
+main h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,25 @@
+$light-hue: 25;
+$light-saturation: 20%;
+$light-lightness: 95%;
+
+$dark-hue: 230;
+$dark-saturation: 15%;
+$dark-lightness: 20%;
+
+body {
+  background-color: hsl($light-hue, $light-saturation, $light-lightness);
+  color: hsl($light-hue, $light-saturation, $light-lightness - 90%);
+
+  @media (prefers-color-scheme: "dark") {
+    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness);
+    color: hsl($dark-hue, $dark-saturation, $dark-lightness + 75%);
+  }
+}
+
+::selection {
+  background-color: hsl($light-hue, $light-saturation - 10%, $light-lightness - 10%);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
+  }
+}

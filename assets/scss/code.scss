@@ -1,0 +1,37 @@
+// Inline and inner element of block code
+code {
+  font-family: $mono-font-stack;
+  font-size: 0.75em;
+  hyphens: none;
+}
+
+// Inline code and outer element of block code
+*:not(pre) > code,
+pre {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background-color: hsl($light-hue, $light-saturation, $light-lightness - 4%);
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness - 2%);
+  }
+}
+
+// Block code
+pre {
+  line-height: 1.3;
+  padding: 0.5rem;
+
+  // Without this code that doesn’t fit horizontally overflows
+  overflow-x: scroll;
+}
+
+// Inline code
+*:not(pre) > code {
+  padding: {
+    left: 0.2rem;
+    right: 0.2rem;
+  }
+
+  // Prevent wrapping as it is often awkward for code.
+  white-space: nowrap;
+}

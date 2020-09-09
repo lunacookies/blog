@@ -1,0 +1,18 @@
+.prev-and-next {
+  margin-top: 3rem;
+
+  .hint {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .prev {
+    text-align: left;
+    float: left;
+  }
+
+  .next {
+    text-align: right;
+    float: right;
+  }
+}

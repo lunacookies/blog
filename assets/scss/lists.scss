@@ -1,0 +1,21 @@
+$width: 0.5em;
+$gap: 1em;
+$total-width: $width + $gap;
+
+main ol {
+  margin-left: $total-width;
+}
+
+main ol li {
+  counter-increment: ol;
+}
+
+main ol li::before {
+  content: counter(ol);
+
+  font-variant-numeric: tabular-nums oldstyle-nums;
+
+  position: absolute;
+  width: $width;
+  margin-left: -$total-width;
+}
