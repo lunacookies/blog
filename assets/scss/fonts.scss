@@ -1,7 +1,7 @@
-@mixin font-face($font-family, $woff2-url, $woff-url, $style, $weight) {
+@mixin font-face($font-family, $url, $style, $weight) {
   @font-face {
     font-family: $font-family;
-    src: url($woff2-url) format("woff2"), url($woff-url) format("woff");
+    src: url($url) format("woff2");
 
     font-style: $style;
     font-weight: $weight;
@@ -17,7 +17,6 @@
 @include font-face(
   "meno-display",
   "https://use.typekit.net/af/f3e509/00000000000000003b9af05a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3",
-  "https://use.typekit.net/af/f3e509/00000000000000003b9af05a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3",
   normal,
   300
 );
@@ -26,7 +25,6 @@
 @include font-face(
   "meno-display",
   "https://use.typekit.net/af/c39a4b/00000000000000003b9af05e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3",
-  "https://use.typekit.net/af/c39a4b/00000000000000003b9af05e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3",
   normal,
   600
 );
@@ -39,7 +37,6 @@
 @include font-face(
   "bennet-text-one",
   "https://use.typekit.net/af/15ae15/00000000000000003b9b0177/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
-  "https://use.typekit.net/af/15ae15/00000000000000003b9b0177/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
   normal,
   400
 );
@@ -48,7 +45,6 @@
 @include font-face(
   "bennet-text-one",
   "https://use.typekit.net/af/a3821f/00000000000000003b9b0176/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
-  "https://use.typekit.net/af/a3821f/00000000000000003b9b0176/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
   italic,
   400
 );
@@ -57,7 +53,6 @@
 @include font-face(
   "bennet-text-one",
   "https://use.typekit.net/af/9a8935/00000000000000003b9b0178/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3",
-  "https://use.typekit.net/af/9a8935/00000000000000003b9b0178/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3",
   normal,
   800
 );
@@ -66,7 +61,6 @@
 @include font-face(
   "bennet-text-one",
   "https://use.typekit.net/af/9aa5d3/00000000000000003b9b0179/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3",
-  "https://use.typekit.net/af/9aa5d3/00000000000000003b9b0179/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3",
   italic,
   800
 );
@@ -78,7 +72,6 @@
 @include font-face(
   "jetbrains-mono",
   "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff2/JetBrainsMono-Regular.woff2",
-  "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/web/woff/JetBrainsMono-Regular.woff",
   normal,
   400
 );
