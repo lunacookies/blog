@@ -53,13 +53,29 @@ em {
 // Color
 //
 
+$light-hue: 25;
+$light-saturation: 20%;
+$light-lightness: 95%;
+
+$dark-hue: 230;
+$dark-saturation: 15%;
+$dark-lightness: 20%;
+
 body {
-  background-color: rgb(245, 243, 240);
-  color: rgb(50, 50, 60);
+  background-color: hsl($light-hue, $light-saturation, $light-lightness);
+  color: hsl($light-hue, $light-saturation, $light-lightness - 90%);
 
   @media (prefers-color-scheme: "dark") {
-    background-color: rgb(50, 50, 60);
-    color: rgb(201, 198, 193);
+    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness);
+    color: hsl($dark-hue, $dark-saturation, $dark-lightness + 75%);
+  }
+}
+
+::selection {
+  background-color: hsl($light-hue, $light-saturation - 10%, $light-lightness - 10%);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
   }
 }
 
@@ -198,8 +214,12 @@ code {
 // Inline code and outer element of block code
 *:not(pre) > code,
 pre {
-  background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background-color: hsl($light-hue, $light-saturation, $light-lightness - 4%);
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness - 2%);
+  }
 }
 
 // Block code
