@@ -11,3 +11,9 @@
   text-decoration: inherit;
   vertical-align: baseline;
 }
+
+// Without this some mobile browsers (e.g. iOS Safari) will automatically scale
+// font size, disrespecting our own behaviour.
+body {
+  text-size-adjust: 100%;
+}
