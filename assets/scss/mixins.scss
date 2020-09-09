@@ -1,6 +1,0 @@
-// We create a linear gradient with the start and end colours the same to
-// simulate the ability to use background-size and background-position with
-// background-color.
-@mixin background-color-positionable($color) {
-  background-image: linear-gradient($color, $color);
-}
