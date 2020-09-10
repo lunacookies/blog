@@ -10,7 +10,7 @@ $system-font-stack: system-ui;
 $serif-system-font-stack: "Iowan Old Style", Georgia, $system-font-stack;
 $serif-font-stack: bennet-text-one, $serif-system-font-stack;
 $display-serif-font-stack: meno-display, $serif-font-stack;
-$system-mono-font-stack: SFMono-Regular, Consolas, Menlo, Monaco, monospace;
+$system-mono-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 $mono-font-stack: jetbrains-mono, $system-mono-font-stack;
 
 body {
