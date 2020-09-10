@@ -23,6 +23,11 @@ pre {
 
   // Without this code that doesn’t fit horizontally overflows
   overflow-x: scroll;
+
+  * + &,
+  & + * {
+    margin-top: 2rem;
+  }
 }
 
 // Inline code
