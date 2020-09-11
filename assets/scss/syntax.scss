@@ -1,0 +1,85 @@
+.chroma {
+  // Errors
+  .err {
+    color: #e21514;
+    text-decoration: underline;
+  }
+
+  // Keywords
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kr,
+  .kt,
+  .nb,
+  .bp,
+  .nt,
+  .ow {
+    color: #e12da0;
+  }
+
+  // Names
+  .n,
+  .na,
+  .no,
+  .nd,
+  .ni,
+  .ne,
+  .nf,
+  .fm,
+  .nl,
+  .nn,
+  .nx,
+  .py,
+  .nv,
+  .vc,
+  .vg,
+  .vi,
+  .vm {
+    color: #29a09f;
+  }
+
+  // Types
+  .nc {
+    color: #18b5b1;
+  }
+
+  // Literals
+  .l,
+  .m,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo {
+    color: #8783be;
+  }
+
+  // Strings
+  .s,
+  .sa,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    color: #de3a3c;
+  }
+
+  // Comments
+  .c,
+  .ch,
+  .cm,
+  .c1,
+  .cs {
+    color: #51c34f;
+  }
+}
