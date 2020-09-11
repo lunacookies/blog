@@ -100,7 +100,7 @@ A couple months ago I read the paper [*Program Design in the UNIX Environment*][
 
 Imagine a spectrum, on which the left side is the simplest shell imaginable:
 
-```
+```python3
 import subprocess
 
 while True:
@@ -138,7 +138,7 @@ It seems that this approach other shells have taken -- starting from the bare mi
 
 ‘What about the performance of `sor`?’, you might ask. Well, I came to the realisation that `sor` seems awfully similar to the `filter` function present in many programming languages. Here’s an implementation in pseudocode, in case you’re unfamiliar:
 
-```
+```rust
 fn filter<T>(input: List<T>, predicate: T -> bool) -> List<T> {
     var output = List.new()
 
