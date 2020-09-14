@@ -23,7 +23,10 @@ pre {
 
   // Without this code that doesn’t fit horizontally overflows
   overflow-x: scroll;
+}
 
+.highlight,
+pre:not(.chroma) {
   * + &,
   & + * {
     margin-top: 2rem;
