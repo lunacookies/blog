@@ -10,9 +10,9 @@ code {
 pre {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
-  background-color: hsl($light-hue, $light-saturation, $light-lightness - 4%);
+  background-color: hsl($light-hue, $light-saturation, $light-lightness + 2%);
   @media (prefers-color-scheme: dark) {
-    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness - 2%);
+    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness - 3%);
   }
 }
 
