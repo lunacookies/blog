@@ -1,48 +1,26 @@
 .chroma {
-  // Errors
-  .err {
-    color: #e21514;
-    text-decoration: underline;
-  }
-
   // Keywords
   .k,
   .kc,
   .kd,
   .kn,
   .kr,
-  .kt,
-  .nb,
   .bp,
-  .nt,
   .ow {
-    color: #e12da0;
-  }
-
-  // Names
-  .n,
-  .na,
-  .no,
-  .nd,
-  .ni,
-  .ne,
-  .nf,
-  .fm,
-  .nl,
-  .nn,
-  .nx,
-  .py,
-  .nv,
-  .vc,
-  .vg,
-  .vi,
-  .vm {
-    color: #29a09f;
+    color: #cd3469;
+    @media (prefers-color-scheme: dark) {
+      color: #5b92da;
+    }
   }
 
   // Types
-  .nc {
-    color: #18b5b1;
+  .nb,
+  .nt,
+  .kt {
+    color: #1570da;
+    @media (prefers-color-scheme: dark) {
+      color: #38a27a;
+    }
   }
 
   // Literals
@@ -54,7 +32,10 @@
   .mi,
   .il,
   .mo {
-    color: #8783be;
+    color: #6a64d0;
+    @media (prefers-color-scheme: dark) {
+      color: #a283ca;
+    }
   }
 
   // Strings
@@ -71,7 +52,10 @@
   .sr,
   .s1,
   .ss {
-    color: #de3a3c;
+    color: #3d8111;
+    @media (prefers-color-scheme: dark) {
+      color: #d67475;
+    }
   }
 
   // Comments
@@ -80,6 +64,9 @@
   .cm,
   .c1,
   .cs {
-    color: #51c34f;
+    color: #00000044;
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff55;
+    }
   }
 }
