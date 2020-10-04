@@ -2,20 +2,31 @@ $width: 0.5em;
 $gap: 1em;
 $total-width: $width + $gap;
 
-main ol {
+main ol,
+main ul {
   margin-left: $total-width;
+}
+
+main ol li::before,
+main ul li::before {
+  position: absolute;
+  width: $width;
+  margin-left: -$total-width;
 }
 
 main ol li {
   counter-increment: ol;
+
+  &::before {
+    content: counter(ol);
+    font-variant-numeric: tabular-nums oldstyle-nums;
+  }
 }
 
-main ol li::before {
-  content: counter(ol);
+main ul li {
+  margin-top: 0;
 
-  font-variant-numeric: tabular-nums oldstyle-nums;
-
-  position: absolute;
-  width: $width;
-  margin-left: -$total-width;
+  &::before {
+    content: "•";
+  }
 }
