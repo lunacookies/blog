@@ -4,7 +4,7 @@
   "private": true,
   "description": "arzg’s blog",
   "scripts": {
-    "start": "hugo server --minify"
+    "start": "hugo server --minify --buildFuture"
   },
   "browserslist": [
     "> 1% in AU"
