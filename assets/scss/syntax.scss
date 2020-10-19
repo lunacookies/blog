@@ -11,6 +11,8 @@
     @media (prefers-color-scheme: dark) {
       color: #5b92da;
     }
+
+    font-weight: bold;
   }
 
   // Types
@@ -56,6 +58,8 @@
     @media (prefers-color-scheme: dark) {
       color: #d67475;
     }
+
+    font-family: $serif-code-font-stack;
   }
 
   // Comments
@@ -68,5 +72,8 @@
     @media (prefers-color-scheme: dark) {
       color: #ffffff55;
     }
+
+    font-family: $serif-code-font-stack;
+    font-style: italic;
   }
 }
