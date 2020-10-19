@@ -6,20 +6,29 @@ $dark-hue: 225;
 $dark-saturation: 12%;
 $dark-lightness: 15%;
 
+$light-background: hsl($light-hue, $light-saturation, $light-lightness);
+$light-foreground: hsl($light-hue, $light-saturation, $light-lightness - 90%);
+
+$dark-background: hsl($dark-hue, $dark-saturation, $dark-lightness);
+$dark-foreground: hsl($dark-hue, $dark-saturation, $dark-lightness + 75%);
+
 body {
-  background-color: hsl($light-hue, $light-saturation, $light-lightness);
-  color: hsl($light-hue, $light-saturation, $light-lightness - 90%);
+  background-color: $light-background;
+  color: $light-foreground;
 
   @media (prefers-color-scheme: "dark") {
-    background-color: hsl($dark-hue, $dark-saturation, $dark-lightness);
-    color: hsl($dark-hue, $dark-saturation, $dark-lightness + 75%);
+    background-color: $dark-background;
+    color: $dark-foreground;
   }
 }
 
+$light-selection: hsl($light-hue, $light-saturation - 10%, $light-lightness - 10%);
+$dark-selection: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
+
 ::selection {
-  background-color: hsl($light-hue, $light-saturation - 10%, $light-lightness - 10%);
+  background-color: $light-selection;
 
   @media (prefers-color-scheme: dark) {
-    background-color: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
+    background-color: $dark-selection;
   }
 }
