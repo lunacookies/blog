@@ -32,7 +32,11 @@ main a {
 // Match colour of links’ text shadow when selected to the selection colour.
 ::selection {
   @include text-shadow($light-selection);
+
+  // Selection backgrounds in dark mode have a reduced opacity, so the colour we
+  // pick won’t match the actual background colour of the selection. The best
+  // option here is to just disable the text shadow.
   @media (prefers-color-scheme: dark) {
-    @include text-shadow($dark-selection);
+    text-shadow: none;
   }
 }
