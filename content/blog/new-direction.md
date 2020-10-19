@@ -26,7 +26,7 @@ Similar enough. Now, what if you wanted to find all the files and directories co
 
 This is where the differences begin to arise. Whereas `find` integrates searching capabilities, `walk` relies on the user’s use of external programs to do the searching.
 
-If you wanted to do a case-insensitive search, `find` offers the `-iname` option, while `walk` can take advantage of `grep`’s `-I` flag:
+If you wanted to do a case-insensitive search, `find` offers the `-iname` option, while `walk` can take advantage of `grep`’s `-i` flag:
 
     $ find dir -iname '*foo*'
     $ walk dir | grep -i foo
