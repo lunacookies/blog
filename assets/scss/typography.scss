@@ -8,9 +8,11 @@ html {
 
 $system-font-stack: system-ui;
 
+$sans-font-stack: freight-sans, $system-font-stack;
+
 $serif-system-font-stack: "Iowan Old Style", Georgia, $system-font-stack;
-$serif-font-stack: bennet-text-one, $serif-system-font-stack;
-$display-serif-font-stack: meno-display, $serif-font-stack;
+$serif-font-stack: freight-text, $serif-system-font-stack;
+$slab-font-stack: freight-macro, $serif-font-stack;
 
 $system-code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 $code-font-stack: input-sans-narrow, $system-code-font-stack;

@@ -1,6 +1,8 @@
 .greeting {
-  font-weight: 300;
   font-size: 5rem;
+  font-family: $slab-font-stack;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .bio {

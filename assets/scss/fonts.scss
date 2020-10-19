@@ -10,59 +10,113 @@
 }
 
 //
-// Display
+// Freight Macro
 //
 
-// Light
 @include font-face(
-  "meno-display",
-  "https://use.typekit.net/af/f3e509/00000000000000003b9af05a/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n3&v=3",
+  "freight-macro",
+  "https://use.typekit.net/af/89984a/000000000000000000017779/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3",
+  italic,
+  300
+);
+
+@include font-face(
+  "freight-macro",
+  "https://use.typekit.net/af/e67d8d/000000000000000000017776/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  normal,
+  400
+);
+
+@include font-face(
+  "freight-macro",
+  "https://use.typekit.net/af/32d1b5/000000000000000000017777/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
+  italic,
+  400
+);
+
+@include font-face(
+  "freight-macro",
+  "https://use.typekit.net/af/c1b4f7/000000000000000000017774/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+  normal,
+  700
+);
+
+@include font-face(
+  "freight-macro",
+  "https://use.typekit.net/af/f96583/000000000000000000017775/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
+  italic,
+  700
+);
+
+//
+// Freight Text
+//
+
+@include font-face(
+  "freight-text",
+  "https://use.typekit.net/af/1aea0d/000000000000000000012106/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3",
   normal,
   300
 );
 
-// Semibold
 @include font-face(
-  "meno-display",
-  "https://use.typekit.net/af/c39a4b/00000000000000003b9af05e/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n6&v=3",
-  normal,
-  600
-);
-
-//
-// Text
-//
-
-// Regular
-@include font-face(
-  "bennet-text-one",
-  "https://use.typekit.net/af/15ae15/00000000000000003b9b0177/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n4&v=3",
+  "freight-text",
+  "https://use.typekit.net/af/ac6334/000000000000000000012059/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
   normal,
   400
 );
 
-// Italic
 @include font-face(
-  "bennet-text-one",
-  "https://use.typekit.net/af/a3821f/00000000000000003b9b0176/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=i4&v=3",
+  "freight-text",
+  "https://use.typekit.net/af/5464d5/00000000000000000001205a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
   italic,
   400
 );
 
-// Bold
 @include font-face(
-  "bennet-text-one",
-  "https://use.typekit.net/af/9a8935/00000000000000003b9b0178/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=n6&v=3",
+  "freight-text",
+  "https://use.typekit.net/af/04ec74/00000000000000000001205b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
   normal,
-  800
+  700
 );
 
-// Bold italic
 @include font-face(
-  "bennet-text-one",
-  "https://use.typekit.net/af/9aa5d3/00000000000000003b9b0179/27/l?primer=388f68b35a7cbf1ee3543172445c23e26935269fadd3b392a13ac7b2903677eb&fvd=i6&v=3",
+  "freight-text",
+  "https://use.typekit.net/af/8cf83d/00000000000000000001205c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
   italic,
-  800
+  700
+);
+
+//
+// Freight Sans
+//
+
+@include font-face(
+  "freight-sans",
+  "https://use.typekit.net/af/442215/000000000000000000010b5a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  normal,
+  400
+);
+
+@include font-face(
+  "freight-sans",
+  "https://use.typekit.net/af/3df5fe/000000000000000000010b5b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
+  italic,
+  400
+);
+
+@include font-face(
+  "freight-sans",
+  "https://use.typekit.net/af/1709eb/000000000000000000010b60/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+  normal,
+  700
+);
+
+@include font-face(
+  "freight-sans",
+  "https://use.typekit.net/af/65fc7d/000000000000000000010b61/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
+  italic,
+  700
 );
 
 //

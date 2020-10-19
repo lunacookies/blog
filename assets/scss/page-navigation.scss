@@ -1,6 +1,8 @@
 // Put items in the navigation next to each other, with one em of space between
 // each other.
 .page-nav ul {
+  font-family: $sans-font-stack;
+
   display: inline-flex;
   flex-wrap: wrap;
 
