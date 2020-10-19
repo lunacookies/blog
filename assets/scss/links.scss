@@ -3,6 +3,14 @@ a:active {
   opacity: 0.5;
 }
 
+@mixin text-shadow($background) {
+  text-shadow: 0px -1px $background, 0px 1px $background, -1px 0px $background, 1px 0px $background,
+    -1px -1px $background, 1px -1px $background, -1px 1px $background, 1px 1px $background, 0px -2px $background,
+    0px 2px $background, -2px 0px $background, 2px 0px $background, -2px -2px $background, 2px -2px $background,
+    -2px 2px $background, 2px 2px $background, 0px -3px $background, 0px 3px $background, -3px 0px $background,
+    3px 0px $background, -3px -3px $background, 3px -3px $background, -3px 3px $background, 3px 3px $background;
+}
+
 // Use a background colour to create a custom underline.
 main a {
   // We create a linear gradient with the start and end colours the same to
@@ -12,4 +20,19 @@ main a {
 
   background-size: 100% 1px;
   background-position: 0 95%;
+
+  // We add a shadow to links of the page background colour to make the
+  // underline avoid descenders.
+  @include text-shadow(hsl($light-hue, $light-saturation, $light-lightness));
+  @media (prefers-color-scheme: dark) {
+    @include text-shadow(hsl($dark-hue, $dark-saturation, $dark-lightness));
+  }
+}
+
+// Match colour of links’ text shadow when selected to the selection colour.
+::selection {
+  @include text-shadow($light-selection);
+  @media (prefers-color-scheme: dark) {
+    @include text-shadow($dark-selection);
+  }
 }
