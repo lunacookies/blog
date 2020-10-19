@@ -1,3 +1,8 @@
+// Dim links while clicked to add some feedback.
+a:active {
+  opacity: 0.5;
+}
+
 // Use a background colour to create a custom underline.
 main a {
   // We create a linear gradient with the start and end colours the same to
