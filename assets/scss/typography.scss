@@ -1,5 +1,5 @@
 html {
-  font-size: 21px;
+  font-size: 23px;
 
   @media print {
     font-size: 12pt;
@@ -21,8 +21,9 @@ $serif-code-font-stack: input-serif-narrow, $code-font-stack;
 body {
   font-family: $serif-font-stack;
   hyphens: auto;
-  line-height: 1.6;
+  line-height: 1.5;
   font-variant-numeric: proportional-nums oldstyle-nums;
+  letter-spacing: 0.01em;
 }
 
 em {
