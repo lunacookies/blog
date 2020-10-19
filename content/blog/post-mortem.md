@@ -15,7 +15,7 @@ At one point the default Xcode colour scheme caught my eye, with its pretty neon
 
 ![Xcode 11’s default dark colour scheme.](xcode11.png)
 
-I managed to [recreate the colour scheme in Vim][xcodedark], but something was wrong -- Xcode highlighted the code differently. I won’t bore you with the details, but the gist of it is that I managed to create [a crude approximation of Xcode’s fancy semantic highlighting][vim-rust-syntax-ext] for Rust, using only the regex system Vim uses for its highlighting. This eventually lead me to another obsession: syntax highlighting.
+I managed to [recreate the colour scheme in Vim][xcodedark], but something was wrong -- Xcode highlighted the code differently. I won’t bore you with the details, but the gist of it is that I managed to create [a crude approximation of Xcode’s fancy semantic highlighting][vim-rust-syntax-ext] for Rust, using only the regex system Vim uses for its highlighting. This eventually led me to another obsession: syntax highlighting.
 
 # The first attempt
 
