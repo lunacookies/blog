@@ -2,9 +2,9 @@ $light-hue: 25;
 $light-saturation: 20%;
 $light-lightness: 95%;
 
-$dark-hue: 230;
-$dark-saturation: 15%;
-$dark-lightness: 20%;
+$dark-hue: 225;
+$dark-saturation: 12%;
+$dark-lightness: 15%;
 
 body {
   background-color: hsl($light-hue, $light-saturation, $light-lightness);
