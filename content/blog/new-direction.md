@@ -13,33 +13,33 @@ I’ve always been interested in Plan 9 and its philosophy -- Unix turned up to 
 
 Say you want to recursively list all the files in a given directory. With the classic `find` you would do that like so:
 
-    find dir
+    $ find dir
 
 With the Plan 9 utilities:
 
-    walk dir
+    $ walk dir
 
 Similar enough. Now, what if you wanted to find all the files and directories containing the word ‘foo’?
 
-    find dir -name '*foo*'
-    walk dir | grep foo
+    $ find dir -name '*foo*'
+    $ walk dir | grep foo
 
 This is where the differences begin to arise. Whereas `find` integrates searching capabilities, `walk` relies on the user’s use of external programs to do the searching.
 
 If you wanted to do a case-insensitive search, `find` offers the `-iname` option, while `walk` can take advantage of `grep`’s `-I` flag:
 
-    find dir -iname '*foo*'
-    walk dir | grep -i foo
+    $ find dir -iname '*foo*'
+    $ walk dir | grep -i foo
 
 What if you wanted to find all the files and directories *not* containing ‘foo’?
 
-    find dir -not -iname '*foo*'
-    walk dir | grep -iv foo
+    $ find dir -not -iname '*foo*'
+    $ walk dir | grep -iv foo
 
 What if you wanted to find all the files (but not directories) that don’t contain ‘foo’?
 
-    find dir -type f -not -iname '*foo*'
-    walk dir | grep -iv foo | sor 'test -f'
+    $ find dir -type f -not -iname '*foo*'
+    $ walk dir | grep -iv foo | sor 'test -f'
 
 Here, a new utility has been introduced: `sor`. `sor` passes each line of the input into the given predicate; if the predicate exits with a `0` (meaning success), then the line is passed on. However, if the predicate exits with a non-`0` exit code (meaning failure), then the line is omitted from the output. As you have probably guessed, `test -f` succeeds if the path listed on `STDIN` is a file; otherwise, it fails.
 
