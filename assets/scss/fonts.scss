@@ -66,12 +66,65 @@
 );
 
 //
-// JetBrains Mono
+// Input Sans
 //
 
 @include font-face(
-  "jetbrains-mono",
-  "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2",
+  "input-sans-narrow",
+  "https://use.typekit.net/af/f32dee/00000000000000003b9ae5c9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
+  italic,
+  400
+);
+
+@include font-face(
+  "input-sans-narrow",
+  "https://use.typekit.net/af/283f45/00000000000000003b9ae5ca/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
   normal,
   400
+);
+
+@include font-face(
+  "input-sans-narrow",
+  "https://use.typekit.net/af/d91c02/00000000000000003b9ae5cd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
+  italic,
+  700
+);
+
+@include font-face(
+  "input-sans-narrow",
+  "https://use.typekit.net/af/ed36f4/00000000000000003b9ae5ce/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+  normal,
+  700
+);
+
+//
+// Input Serif
+//
+
+@include font-face(
+  "input-serif-narrow",
+  "https://use.typekit.net/af/3fef6b/00000000000000003b9ae601/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+  normal,
+  400
+);
+
+@include font-face(
+  "input-serif-narrow",
+  "https://use.typekit.net/af/6be419/00000000000000003b9ae602/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3",
+  italic,
+  400
+);
+
+@include font-face(
+  "input-serif-narrow",
+  "https://use.typekit.net/af/2266cc/00000000000000003b9ae605/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
+  italic,
+  700
+);
+
+@include font-face(
+  "input-serif-narrow",
+  "https://use.typekit.net/af/26f198/00000000000000003b9ae606/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+  normal,
+  700
 );

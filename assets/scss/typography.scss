@@ -7,11 +7,14 @@ html {
 }
 
 $system-font-stack: system-ui;
+
 $serif-system-font-stack: "Iowan Old Style", Georgia, $system-font-stack;
 $serif-font-stack: bennet-text-one, $serif-system-font-stack;
 $display-serif-font-stack: meno-display, $serif-font-stack;
+
 $system-code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-$code-font-stack: jetbrains-mono, $system-code-font-stack;
+$code-font-stack: input-sans-narrow, $system-code-font-stack;
+$serif-code-font-stack: input-serif-narrow, $code-font-stack;
 
 body {
   font-family: $serif-font-stack;
