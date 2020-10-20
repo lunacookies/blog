@@ -42,6 +42,7 @@ pre:not(.chroma) {
     right: 0.2rem;
   }
 
-  // Prevent wrapping as it is often awkward for code.
-  white-space: nowrap;
+  // Prevent wrapping (since it’s often awkward for code to be wrapped across
+  // lines), apart from when the piece of code is too long to fit on one line.
+  word-break: break-word;
 }
