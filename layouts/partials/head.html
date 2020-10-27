@@ -10,3 +10,11 @@
 {{ end }}
 
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+<!-- Prefetch links currently on screen. -->
+<script src="https://unpkg.com/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+<script>
+  window.onload = () => {
+    quicklink.listen();
+  };
+</script>
