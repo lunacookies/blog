@@ -1,17 +1,43 @@
 header {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-}
+  margin-top: 10rem;
+  margin-bottom: 4rem;
 
-header h1 {
-  font-size: 2.5rem;
-  font-family: $serif-font-stack;
-  font-weight: 300;
-  line-height: 1.2;
-}
+  @media (max-height: 30rem) {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
 
-header subtitle {
-  font-family: $sans-font-stack;
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.08em;
+  h1 {
+    font-size: 2.5rem;
+    font-family: $serif-font-stack;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  subtitle {
+    display: block;
+
+    font-style: italic;
+    margin-top: 1rem;
+
+    ul {
+      li {
+        display: inline;
+      }
+
+      .current-section {
+        font-variant-caps: all-small-caps;
+        letter-spacing: 0.05em;
+      }
+
+      li + li::before {
+        content: "·";
+
+        margin: {
+          left: 0.5em;
+          right: 0.5em;
+        }
+      }
+    }
+  }
 }

@@ -9,11 +9,21 @@
   {{ partial "nav" . }}
 
   <header>
-    <subtitle>{{ .CurrentSection.Title }}</subtitle>
     <h1>{{ .Title }}</h1>
+
+    <subtitle>
+      <ul>
+        <li>
+          Posted in
+          <a class="current-section" href="{{ .CurrentSection.Permalink }}">
+            {{ .CurrentSection.Title }}
+          </a>
+        </li>
+        <li>{{ .Date.Format "2 January 2006" }}</li>
+      </ul>
+    </subtitle>
   </header>
 
-  <p>{{ .Date.Format "2 January 2006" }}</p>
 
   <main>
     {{ .Content }}
