@@ -25,6 +25,16 @@
     }
   }
 
+  // Function definitions
+  .nf {
+    color: #cc8722;
+    @media (prefers-color-scheme: dark) {
+      color: #57b9e4;
+    }
+
+    font-weight: bold;
+  }
+
   // Literals
   .il,
   .l,
