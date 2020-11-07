@@ -1,11 +1,11 @@
 .chroma {
   // Keywords
+  .bp,
   .k,
   .kc,
   .kd,
   .kn,
   .kr,
-  .bp,
   .ow {
     color: #cd3469;
     @media (prefers-color-scheme: dark) {
@@ -16,9 +16,9 @@
   }
 
   // Types
+  .kt,
   .nb,
-  .nt,
-  .kt {
+  .nt {
     color: #1570da;
     @media (prefers-color-scheme: dark) {
       color: #38a27a;
@@ -26,13 +26,13 @@
   }
 
   // Literals
+  .il,
   .l,
   .m,
   .mb,
   .mf,
   .mh,
   .mi,
-  .il,
   .mo {
     color: #6a64d0;
     @media (prefers-color-scheme: dark) {
@@ -42,18 +42,18 @@
 
   // Strings
   .s,
+  .s1,
+  .s2,
   .sa,
   .sb,
   .sc,
   .sd,
-  .s2,
   .se,
   .sh,
   .si,
-  .sx,
   .sr,
-  .s1,
-  .ss {
+  .ss,
+  .sx {
     color: #3d8111;
     @media (prefers-color-scheme: dark) {
       color: #d67475;
@@ -64,9 +64,9 @@
 
   // Comments
   .c,
+  .c1,
   .ch,
   .cm,
-  .c1,
   .cs {
     color: #00000044;
     @media (prefers-color-scheme: dark) {
