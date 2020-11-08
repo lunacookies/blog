@@ -19,8 +19,6 @@ jobs:
 
     - name: Install Yarn dependencies
       uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install
 
     - name: Build site with Hugo
       run: hugo --minify --buildFuture
