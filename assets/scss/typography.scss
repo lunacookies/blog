@@ -16,6 +16,7 @@ $slab-font-stack: freight-macro, $serif-font-stack;
 
 $system-code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 $code-font-stack: input-sans-narrow, $system-code-font-stack;
+$mono-font-stack: input-mono-narrow, $code-font-stack;
 $serif-code-font-stack: input-serif-narrow, $code-font-stack;
 
 body {

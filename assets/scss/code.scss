@@ -4,6 +4,11 @@ code {
   hyphens: none;
 }
 
+// Code with the language ‘-’ is shell output, which needs to be monospaced.
+.language-- {
+  font-family: $mono-font-stack;
+}
+
 // Inline code and outer element of block code
 *:not(pre) > code,
 pre {

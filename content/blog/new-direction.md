@@ -48,7 +48,7 @@ As you can see, `find` has to keep adding complex functionality to keep up with 
 However, in the aforementioned repository where `walk` and its companion `sor` are stored, my eye was caught by a benchmark. Running `find` or `walk` in the simplest case possible (without any kind of filtering at all) shows `walk` to be significantly faster:
 
 > By avoiding syscalls, walk achieves substantially better performance than find. A microbenchmark --
-> ```
+> ```-
 > $ time find /usr >/dev/null
 >
 > real    0m3.542s
@@ -64,7 +64,7 @@ However, in the aforementioned repository where `walk` and its companion `sor` a
 
 However, the moment that `sor` is used to only show files the Plan 9 duo’s performance plummets to be be roughly 135 *times* slower than `find`:
 
-> ```
+> ```-
 > $ time find /usr -type f >/dev/null
 >
 > real    0m3.464s
