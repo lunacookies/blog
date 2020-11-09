@@ -1,0 +1,12 @@
+hr {
+  text-align: center;
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  &::before {
+    content: "···";
+    letter-spacing: 1em;
+  }
+}
