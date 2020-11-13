@@ -72,6 +72,17 @@
     font-family: $serif-code-font-stack;
   }
 
+  // Lifetimes
+  .na {
+    color: #32939a;
+    @media (prefers-color-scheme: dark) {
+      color: #edbc64;
+    }
+
+    font-style: italic;
+    font-feature-settings: "ss01", "ss02";
+  }
+
   // Comments
   .c,
   .c1,
