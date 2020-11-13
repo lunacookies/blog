@@ -26,15 +26,15 @@ pre {
 
   padding: 0.5rem;
 
-  // Without this code that doesn’t fit horizontally overflows
+  // Without this code that doesn’t fit horizontally overflows.
   overflow-x: scroll;
 }
 
 .highlight,
 pre:not(.chroma) {
-  * + &,
-  & + * {
-    margin-top: 2rem;
+  margin: {
+    top: 2rem;
+    bottom: 2rem;
   }
 }
 
