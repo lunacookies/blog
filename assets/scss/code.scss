@@ -13,6 +13,7 @@ code {
 *:not(pre) > code,
 pre {
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 
   background-color: hsl($light-hue, $light-saturation, $light-lightness + 2%);
   @media (prefers-color-scheme: dark) {
