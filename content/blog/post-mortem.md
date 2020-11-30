@@ -31,11 +31,11 @@ Having realised that around two thirds of the code I had written was unnecessary
 
 Once again, I used nom, but this time I omitted ASTs, outputting from each sub-parser a list of `HighlightedSpan`s directly. In the mean time, I wrangled with [the subject of error recovery][nom-error-recovery] (so the whole file wouldn’t turn red if you made a single mistake) in nom, which lead to a number of pretty nasty, hard-to-track-down bugs.[^1] Although I initially managed to solve these, eventually the project became swamped with little niggling problems that I didn’t know how to solve.[^2] And worst of all: the project had no tests.[^3]
 
-It was during this time that I was learning TDD, so I decided that the only way forward was to write tests, or rewrite. Not having the motivation to slog through *every single sub-parser* I had written and painstakingly add tests for *every single case,* I chose the second. The wiser thing to do would have been to add the tests, but oh well.
+It was during this time that I was learning TDD, so I decided that the only way forward was to write tests, or rewrite. Not having the motivation to slog through _every single sub-parser_ I had written and painstakingly add tests for _every single case,_ I chose the second. The wiser thing to do would have been to add the tests, but oh well.
 
 # The third attempt
 
-This time around I wrote tests for everything, just like a good test-driven developer does. I also used nom, again. I have nothing against nom or its developers, and I’m sure that error recovery is a breeze for people that know how to use nom well, just that *I’m not one of those people.* I don’t think there is much to say here, apart from that it didn’t take long before I started to get tired of nom and decided to rewrite. Fortunately, I didn’t get far into this third attempt, so little time and energy was lost.
+This time around I wrote tests for everything, just like a good test-driven developer does. I also used nom, again. I have nothing against nom or its developers, and I’m sure that error recovery is a breeze for people that know how to use nom well, just that _I’m not one of those people._ I don’t think there is much to say here, apart from that it didn’t take long before I started to get tired of nom and decided to rewrite. Fortunately, I didn’t get far into this third attempt, so little time and energy was lost.
 
 # The fourth attempt
 
@@ -53,12 +53,9 @@ While I’ve been doing all this syntax highlighting work, I have also rewritten
 
 During my focus on the editor and syntax highlighting, the project that used to be at the centre -- Fjord -- has been neglected. I have learnt a lot about parsing and the creation of programming languages throughout this process, so that when I now look back upon Fjord, I feel that it could be improved in many ways. Before I turn back to Fjord with my newfound knowledge, I need to do a little more work to determine if the changes I want to make to Fjord are possible.[^4]
 
-[^1]: The worst reared its head when presented with (and there are likely other inputs that could trigger it) a struct definition followed by a function definition: a mistake in the struct definition seemed to recover fine, as the function definition was all highlighted correctly, *right up to* the second comma in the function definition’s list of parameters -- *what?!*
-
-[^2]: A memorable one was a bug with error recovery in block expressions -- when a parsing error occurred in a function body (in Rust function bodies are identical to block expressions), the highlighter was able to skip the invalid text until it found something it could work with. However, if an error occurred in a block expression anywhere else, the *entire block* was marked as an error. Weird, right?
-
-[^3]:  Well, it *did* have one or two that I had introduced to debug one specific problem, but that was it.
-
+[^1]: The worst reared its head when presented with (and there are likely other inputs that could trigger it) a struct definition followed by a function definition: a mistake in the struct definition seemed to recover fine, as the function definition was all highlighted correctly, _right up to_ the second comma in the function definition’s list of parameters -- _what?!_
+[^2]: A memorable one was a bug with error recovery in block expressions -- when a parsing error occurred in a function body (in Rust function bodies are identical to block expressions), the highlighter was able to skip the invalid text until it found something it could work with. However, if an error occurred in a block expression anywhere else, the _entire block_ was marked as an error. Weird, right?
+[^3]: Well, it _did_ have one or two that I had introduced to debug one specific problem, but that was it.
 [^4]: Specifically, the change I intend to make to Fjord is to rewrite its parser with the same approach I used for syntax-rust attempt four, and use the [rowan][rowan] library to represent the parse results. In terms of experiments I need to conduct before I start working on the transition: I’ve already experimented with [Pratt parsing in rowan][expr-parser], but I still need to work out how to get line and column locations within rowan (for error messages). My final goal for all of these changes is to create an interpreter for Fjord that can also function as a language server implementation.
 
 [fjord]: https://github.com/arzg/fjord

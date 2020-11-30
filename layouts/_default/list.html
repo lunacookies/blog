@@ -1,24 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
 
-<head>
-  {{ partial "head" . }}
-</head>
+  <body>
+    {{ partial "nav" . }}
 
-<body>
-  {{ partial "nav" . }}
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
 
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-
-  <main>
-    {{ .Content }}
-
-    {{ range .Pages }}
-    <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-    {{ end }}
-  </main>
-</body>
-
+    <main>
+      {{ .Content }} {{ range .Pages }}
+      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+      {{ end }}
+    </main>
+  </body>
 </html>

@@ -2,11 +2,15 @@
   <ul>
     {{ range .Site.Menus.main }}
     <li><a href="{{ .URL }}">{{ .Title }}</a></li>
-    {{ end }}
-
-    {{ with .OutputFormats.Get "rss" }}
+    {{ end }} {{ with .OutputFormats.Get "rss" }}
     <li>
-      <a rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">RSS Feed</a>
+      <a
+        rel="{{ .Rel }}"
+        type="{{ .MediaType.Type }}"
+        href="{{ .Permalink }}"
+        title="{{ $.Site.Title }}"
+        >RSS Feed</a
+      >
     </li>
     {{ end }}
   </ul>

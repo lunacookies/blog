@@ -1,22 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
 
-<head>
-  {{ partial "head" . }}
-</head>
+  <body class="homepage">
+    <header>
+      <h1 class="greeting">hi!</h1>
+    </header>
 
-<body class="homepage">
-  <header>
-    <h1 class="greeting">hi!</h1>
-  </header>
+    <main>
+      <section class="bio">{{ .Content }}</section>
+    </main>
 
-  <main>
-    <section class="bio">
-      {{ .Content }}
-    </section>
-  </main>
-
-  {{ partial "nav" . }}
-</body>
-
+    {{ partial "nav" . }}
+  </body>
 </html>

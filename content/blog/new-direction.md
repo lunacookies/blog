@@ -5,7 +5,7 @@ date: "2020-05-30"
 
 # Some context
 
-*Fjord* is a project I’m working on. It started off as a ‘shell’ that has all the applications you want to run from it baked into the shell itself; essentially, a scripting language with the ability to call Rust functions. The plan was for Fjord to be used primarily as a shell -- that is, a shell that cannot run programs, only call functions. Stupid, I know.
+_Fjord_ is a project I’m working on. It started off as a ‘shell’ that has all the applications you want to run from it baked into the shell itself; essentially, a scripting language with the ability to call Rust functions. The plan was for Fjord to be used primarily as a shell -- that is, a shell that cannot run programs, only call functions. Stupid, I know.
 
 # Why Fjord is the way it is
 
@@ -31,7 +31,7 @@ If you wanted to do a case-insensitive search, `find` offers the `-iname` option
     $ find dir -iname '*foo*'
     $ walk dir | grep -i foo
 
-What if you wanted to find all the files and directories *not* containing ‘foo’?
+What if you wanted to find all the files and directories _not_ containing ‘foo’?
 
     $ find dir -not -iname '*foo*'
     $ walk dir | grep -iv foo
@@ -48,6 +48,7 @@ As you can see, `find` has to keep adding complex functionality to keep up with 
 However, in the aforementioned repository where `walk` and its companion `sor` are stored, my eye was caught by a benchmark. Running `find` or `walk` in the simplest case possible (without any kind of filtering at all) shows `walk` to be significantly faster:
 
 > By avoiding syscalls, walk achieves substantially better performance than find. A microbenchmark --
+>
 > ```-
 > $ time find /usr >/dev/null
 >
@@ -60,9 +61,10 @@ However, in the aforementioned repository where `walk` and its companion `sor` a
 > user    0m0.370s
 > sys     0m1.926s
 > ```
+>
 > -- shows walk executing nearly 40% faster on a local file system with a hot cache. Performance on network file systems should be even better.
 
-However, the moment that `sor` is used to only show files the Plan 9 duo’s performance plummets to be be roughly 135 *times* slower than `find`:
+However, the moment that `sor` is used to only show files the Plan 9 duo’s performance plummets to be be roughly 135 _times_ slower than `find`:
 
 > ```-
 > $ time find /usr -type f >/dev/null
@@ -94,7 +96,7 @@ I explained my idea on r/ProgrammingLanguages, and people were not impressed. In
 
 When I read this now I think I should have been wise enough to understand my mistake after reading this. Unfortunately, I did not.
 
-A couple months ago I read the paper [*Program Design in the UNIX Environment*][unix], by Rob Pike. This helped me realise that performance in a command-line context isn’t extremely important -- the terminal is almost always the bottleneck. Rob Pike’s paper, in combination with [this old video I stumbled upon][video], reminded me about how powerful the basic idea of a shell and plain text being passed between programs is.
+A couple months ago I read the paper [_Program Design in the UNIX Environment_][unix], by Rob Pike. This helped me realise that performance in a command-line context isn’t extremely important -- the terminal is almost always the bottleneck. Rob Pike’s paper, in combination with [this old video I stumbled upon][video], reminded me about how powerful the basic idea of a shell and plain text being passed between programs is.
 
 # A conceptual framework for comparing shells scripting languages
 
@@ -167,7 +169,6 @@ So, we need some way for `sor` to be able to take in an anonymous function witho
 The moment I noticed the likeness between `sor` and `filter` I started to consider including `filter`’s friends, `map` and `reduce`/`fold` in Fjord. This is definitely an area that I’d like to research further.
 
 [^1]: Note that I’m comparing `find` and `walk` based on the assumption that passing `find` through other command-line programs is verboten, mainly because it seems that `walk` was designed with filtering in mind, while `find` seems to have been designed based on the assumption it’ll be used by itself (given how many features it has).
-
 [^2]: In my experience, the only commands that take anonymous functions are those that are quite simple and can justifiably be made a builtin (such as `sor`), and those whose functionality that makes use of anonymous functions should arguably be made a separate command (such as `find`’s `-exec` functionality being separated into a `map` command that could then be made a builtin).
 
 [googlewalk]: https://github.com/google/walk

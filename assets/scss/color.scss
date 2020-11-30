@@ -22,7 +22,11 @@ body {
   }
 }
 
-$light-selection: hsl($light-hue, $light-saturation - 10%, $light-lightness - 10%);
+$light-selection: hsl(
+  $light-hue,
+  $light-saturation - 10%,
+  $light-lightness - 10%
+);
 $dark-selection: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
 
 ::selection {
