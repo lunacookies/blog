@@ -13,6 +13,8 @@ jobs:
 
     - name: Format using Prettier
       uses: creyD/prettier_action@v3.1
+      with:
+        prettier_options: --write **/*.{html,js,md,scss}
 
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2.4.13
