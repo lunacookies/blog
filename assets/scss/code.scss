@@ -27,8 +27,8 @@ pre {
 
   padding: 0.5rem;
 
-  // Without this code that doesn’t fit horizontally overflows.
-  overflow-x: scroll;
+  // Add scrollbars if necessary.
+  overflow-x: auto;
 }
 
 .highlight,
