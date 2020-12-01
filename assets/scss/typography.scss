@@ -6,11 +6,9 @@ html {
   }
 }
 
-$system-font-stack: system-ui;
+$sans-font-stack: freight-sans, system-ui;
 
-$sans-font-stack: freight-sans, $system-font-stack;
-
-$serif-system-font-stack: "Iowan Old Style", Georgia, $system-font-stack;
+$serif-system-font-stack: "Iowan Old Style", Georgia, serif;
 $serif-font-stack: freight-text, $serif-system-font-stack;
 $slab-font-stack: freight-macro, $serif-font-stack;
 
