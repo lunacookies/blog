@@ -1,45 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{ partial "head" . }}
-  </head>
+{{ define "body" }}
+  {{ partial "nav" . }}
 
-  <body>
-    {{ partial "nav" . }}
+  <header>
+    <h1>{{ .Title }}</h1>
 
-    <header>
-      <h1>{{ .Title }}</h1>
+    <subtitle>
+      <ul>
+        <li>
+          Posted in
+          <a class="current-section" href="{{ .CurrentSection.Permalink }}">
+            {{ .CurrentSection.Title }}
+          </a>
+        </li>
+        <li>{{ .Date.Format "2 January 2006" }}</li>
+      </ul>
+    </subtitle>
+  </header>
 
-      <subtitle>
-        <ul>
-          <li>
-            Posted in
-            <a class="current-section" href="{{ .CurrentSection.Permalink }}">
-              {{ .CurrentSection.Title }}
-            </a>
-          </li>
-          <li>{{ .Date.Format "2 January 2006" }}</li>
-        </ul>
-      </subtitle>
-    </header>
+  <main>{{ .Content }}</main>
 
-    <main>{{ .Content }}</main>
+  <nav class="prev-and-next">
+    {{ with .PrevInSection }}
+      <div class="prev">
+        <p class="hint">Previously</p>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+    {{ end }}
+    {{ with .NextInSection }}
+      <div class="next">
+        <p class="hint">Next up</p>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </div>
+    {{ end }}
 
-    <nav class="prev-and-next">
-      {{ with .PrevInSection }}
-        <div class="prev">
-          <p class="hint">Previously</p>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </div>
-      {{ end }}
-      {{ with .NextInSection }}
-        <div class="next">
-          <p class="hint">Next up</p>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </div>
-      {{ end }}
-
-      <div style="clear: both"></div>
-    </nav>
-  </body>
-</html>
+    <div style="clear: both"></div>
+  </nav>
+{{ end }}

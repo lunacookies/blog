@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {{ partial "head" . }}
-  </head>
+{{ define "body" }}
+  <main>
+    <header>
+      <section class="bio">{{ .Content }}</section>
+    </header>
+  </main>
 
-  <body class="homepage">
-    <main>
-      <header>
-        <section class="bio">{{ .Content }}</section>
-      </header>
-    </main>
-
-    {{ partial "nav" . }}
-  </body>
-</html>
+  {{ partial "nav" . }}
+{{ end }}
