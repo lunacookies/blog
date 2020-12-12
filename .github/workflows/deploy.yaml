@@ -20,6 +20,7 @@ jobs:
           -o -name '*.js' \
           -o -name '*.md' \
           -o -name '*.scss' \
+          -o -name '*.json' \
         ); do
           $(yarn global bin)/prettier --write $file
         done
