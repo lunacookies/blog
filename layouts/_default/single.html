@@ -27,15 +27,16 @@
 
     <nav class="prev-and-next">
       {{ with .PrevInSection }}
-      <div class="prev">
-        <p class="hint">Previously</p>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
-      {{ end }} {{ with .NextInSection }}
-      <div class="next">
-        <p class="hint">Next up</p>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </div>
+        <div class="prev">
+          <p class="hint">Previously</p>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </div>
+      {{ end }}
+      {{ with .NextInSection }}
+        <div class="next">
+          <p class="hint">Next up</p>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </div>
       {{ end }}
 
       <div style="clear: both"></div>

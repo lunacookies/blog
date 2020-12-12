@@ -12,8 +12,9 @@
     </header>
 
     <main>
-      {{ .Content }} {{ range .Pages }}
-      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+      {{ .Content }}
+      {{ range .Pages }}
+        <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
       {{ end }}
     </main>
   </body>

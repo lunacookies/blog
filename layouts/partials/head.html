@@ -5,12 +5,12 @@
 
 {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 {{ with .OutputFormats.Get "rss" }}
-<link
-  rel="{{ .Rel }}"
-  type="{{ .MediaType.Type }}"
-  href="{{ .Permalink }}"
-  title="{{ $.Site.Title }}"
-/>
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .Permalink }}"
+    title="{{ $.Site.Title }}"
+  />
 {{ end }}
 
 <link
