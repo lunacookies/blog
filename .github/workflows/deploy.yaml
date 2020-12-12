@@ -22,8 +22,10 @@ jobs:
             -or -name '*.scss' \
             -or -name '*.json' \
           ); do
-            $(yarn global bin)/prettier --write $file
+            $(yarn global bin)/prettier --write $file &
           done
+
+          wait
 
           if [[ -n "$(git status -s)" ]]; then
             git config --global user.email 'actions@github.com'
