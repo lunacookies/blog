@@ -2,6 +2,9 @@
 code {
   font-family: $code-font-stack;
   hyphens: none;
+
+  // Reset extra letter spacing from body since Input already has enough.
+  letter-spacing: 0;
 }
 
 // Code with the language ‘-’ is shell output, which needs to be monospaced.
