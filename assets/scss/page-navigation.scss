@@ -6,6 +6,10 @@
   display: inline-flex;
   flex-wrap: wrap;
 
+  .current {
+    font-weight: 700;
+  }
+
   // We remove space on the last item instead of using li + li because, if we
   // use that wrapped items are indented due to the use of margin-left.
   li {

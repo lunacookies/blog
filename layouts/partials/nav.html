@@ -1,8 +1,13 @@
 <nav class="page-nav">
   <ul>
     {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+      {{ $class := cond (eq .Page.Section $.Section) "current" "" }}
+
+      <li class="{{ $class }}">
+        <a href="{{ .URL }}">{{ .Title }}</a>
+      </li>
     {{ end }}
+
     {{ with .OutputFormats.Get "rss" }}
       <li>
         <a
