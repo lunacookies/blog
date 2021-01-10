@@ -8,6 +8,9 @@
       <ul>
         <li>{{ .Date.Format "2 January 2006" }}</li>
         <li>{{ .WordCount }} words</li>
+
+        {{ $readingTime := math.Round (div .WordCount 200.0) }}
+        <li>{{ partial "humanNumber" (dict "n" $readingTime) }} minute read</li>
       </ul>
     </subtitle>
   </header>
