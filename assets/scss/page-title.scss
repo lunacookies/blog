@@ -9,9 +9,10 @@ header {
 
   h1 {
     font-size: 2.5rem;
-    font-family: $serif-font-stack;
-    font-weight: 300;
+    font-family: $display-font-stack;
+    font-weight: 700;
     line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
   subtitle {
