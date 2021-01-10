@@ -25,11 +25,6 @@ header {
         display: inline;
       }
 
-      .current-section {
-        font-variant-caps: all-small-caps;
-        letter-spacing: 0.05em;
-      }
-
       li + li::before {
         content: "·";
 
