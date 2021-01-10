@@ -1,10 +1,12 @@
+$textblock-width: 29rem;
+
 body {
   margin: {
     left: auto;
     right: auto;
   }
 
-  max-width: 29rem;
+  max-width: $textblock-width;
   padding: 1rem;
 }
 

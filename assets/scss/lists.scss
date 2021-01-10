@@ -1,10 +1,12 @@
-$width: 0.5em;
-$gap: 0.5em;
+$width: 0.5rem;
+$gap: 0.5rem;
 $total-width: $width + $gap;
 
-main ol,
-main ul {
-  margin-left: $total-width;
+@media (max-width: $total-width + $textblock-width) {
+  main ol,
+  main ul {
+    margin-left: $total-width;
+  }
 }
 
 main ol li::before,
