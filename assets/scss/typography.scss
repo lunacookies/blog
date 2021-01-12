@@ -8,12 +8,11 @@ html {
 
 $sans-font-stack: freight-sans, system-ui;
 
-$serif-system-font-stack: "Iowan Old Style", Georgia, serif;
-$serif-font-stack: freight-text, $serif-system-font-stack;
+$serif-font-stack: freight-text, Iowan Old Style, Georgia, serif;
 $display-font-stack: freight-display, $serif-font-stack;
 
-$system-code-font-stack: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-$code-font-stack: input-sans-narrow, $system-code-font-stack;
+$code-font-stack: input-sans-narrow, SFMono-Regular, Menlo, Monaco, Consolas,
+  monospace;
 $mono-font-stack: input-mono-narrow, $code-font-stack;
 $serif-code-font-stack: input-serif-narrow, $code-font-stack;
 
