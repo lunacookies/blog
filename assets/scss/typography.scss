@@ -6,13 +6,13 @@ html {
   }
 }
 
-$sans-font-stack: freight-sans, Seravek, system-ui;
+$sans-font-stack: freight-sans, Seravek, ui-sans-serif, system-ui;
 
-$serif-font-stack: freight-text, Iowan Old Style, Georgia, serif;
+$serif-font-stack: freight-text, ui-serif, Iowan Old Style, Georgia, serif;
 $display-font-stack: freight-display, $serif-font-stack;
 
-$code-font-stack: input-sans-narrow, SFMono-Regular, Menlo, Monaco, Consolas,
-  monospace;
+$code-font-stack: input-sans-narrow, ui-monospace, SFMono-Regular, Menlo, Monaco,
+  Consolas, monospace;
 $mono-font-stack: input-mono-narrow, $code-font-stack;
 $serif-code-font-stack: input-serif-narrow, $code-font-stack;
 
