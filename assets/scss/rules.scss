@@ -6,9 +6,10 @@ hr {
   }
 
   &::before {
-    // We use three em spaces between each interpunct for spacing instead of
-    // the letter-spacing property because letter-spacing adds extra space on
-    // the right, making the rule off-centre.
-    content: "·    ·    ·";
+    // We use an em space between each interpunct for spacing
+    // instead of the letter-spacing property
+    // because letter-spacing adds extra space
+    // on the right, making the rule off-centre.
+    content: "· · ·";
   }
 }
