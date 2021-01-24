@@ -1,0 +1,29 @@
+digraph g {
+    graph [
+        rankdir = LR
+    ];
+    node [
+    	shape = record
+    ];
+
+    root [
+        label = "hir::Expr::Binary | op: BinaryOp::Mul | <lhs> lhs: Box | <rhs> rhs: Box"
+    ];
+    lhs1 [
+        label = "<top> hir::Expr::Binary | op: BinaryOp::Add | <lhs> lhs: Box | <rhs> rhs: Box"
+    ];
+    lhs2 [
+        label = "<top> hir::Expr::Literal | n: 5"
+    ];
+    rhs2 [
+        label = "<top> hir::Expr::Literal | n: 10"
+    ];
+    rhs1 [
+        label = "<top> hir::Expr::VariableRef | var: \"foo\""
+    ];
+
+    root:lhs -> lhs1:top;
+    root:rhs -> rhs1:top;
+    lhs1:lhs -> lhs2:top;
+    lhs1:rhs -> rhs2:top;
+}
