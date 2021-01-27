@@ -7,8 +7,14 @@
 
   <main>
     {{ .Content }}
-    {{ range .Pages }}
-      <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-    {{ end }}
   </main>
+
+  <section class="pages">
+    {{ range .Pages }}
+      <section class="page">
+        <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+        {{ partial "pageInfo" . }}
+      </section>
+    {{ end }}
+  </section>
 {{ end }}
