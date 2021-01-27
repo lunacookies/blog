@@ -13,27 +13,7 @@ header {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.02em;
-  }
 
-  subtitle {
-    display: block;
-
-    font-style: italic;
-    margin-top: 1rem;
-
-    ul {
-      li {
-        display: inline;
-      }
-
-      li + li::before {
-        content: "·";
-
-        margin: {
-          left: 0.5em;
-          right: 0.5em;
-        }
-      }
-    }
+    margin-bottom: 1rem;
   }
 }

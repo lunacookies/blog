@@ -1,0 +1,18 @@
+.page-info {
+  font-style: italic;
+
+  ul {
+    li {
+      display: inline;
+    }
+
+    li + li::before {
+      content: "·";
+
+      margin: {
+        left: 0.5em;
+        right: 0.5em;
+      }
+    }
+  }
+}
