@@ -57,7 +57,6 @@
   .sa,
   .sb,
   .sc,
-  .sd,
   .se,
   .sh,
   .si,
@@ -88,7 +87,8 @@
   .c1,
   .ch,
   .cm,
-  .cs {
+  .cs,
+  .sd {
     color: #00000044;
     @media (prefers-color-scheme: dark) {
       color: #ffffff55;
