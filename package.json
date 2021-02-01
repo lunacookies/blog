@@ -7,7 +7,7 @@
     "start": "hugo server --minify --buildFuture"
   },
   "browserslist": [
-    "> 1% in AU"
+    "> 1%"
   ],
   "devDependencies": {
     "cssnano": "4",
