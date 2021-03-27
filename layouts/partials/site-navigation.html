@@ -1,4 +1,4 @@
-<nav class="page-nav">
+<nav class="site-navigation">
   <ul>
     {{ range .Site.Menus.main }}
       {{ $class := cond (eq .Page.Section $.Section) "current" "" }}

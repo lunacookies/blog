@@ -1,0 +1,25 @@
+// Put items in the navigation next to each other, with one em of space between
+// each other.
+.site-navigation ul {
+  font-family: $sans-font-stack;
+
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  .current {
+    font-weight: 700;
+  }
+
+  // We remove space on the last item instead of using li + li because, if we
+  // use that wrapped items are indented due to the use of margin-left.
+  li {
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Make the navigation section less prominent
+  opacity: 0.5;
+}
