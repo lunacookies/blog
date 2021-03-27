@@ -6,18 +6,18 @@ html {
   }
 }
 
-$sans-font-stack: freight-sans, Seravek, ui-sans-serif, system-ui;
+$sans-fonts: freight-sans, Seravek, ui-sans-serif, system-ui;
 
-$serif-font-stack: freight-text, ui-serif, Iowan Old Style, Georgia, serif;
-$display-font-stack: freight-display, $serif-font-stack;
+$serif-fonts: freight-text, ui-serif, Iowan Old Style, Georgia, serif;
+$display-fonts: freight-display, $serif-fonts;
 
-$code-font-stack: input-sans-narrow, ui-monospace, SFMono-Regular, Menlo, Monaco,
+$code-fonts: input-sans-narrow, ui-monospace, SFMono-Regular, Menlo, Monaco,
   Consolas, monospace;
-$mono-font-stack: input-mono-narrow, $code-font-stack;
-$serif-code-font-stack: input-serif-narrow, $code-font-stack;
+$mono-fonts: input-mono-narrow, $code-fonts;
+$serif-code-fonts: input-serif-narrow, $code-fonts;
 
 body {
-  font-family: $serif-font-stack;
+  font-family: $serif-fonts;
   line-height: 1.5;
   font-variant-numeric: proportional-nums oldstyle-nums;
   letter-spacing: 0.01em;

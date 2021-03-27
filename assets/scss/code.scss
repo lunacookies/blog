@@ -1,6 +1,6 @@
 // Inline and inner element of block code
 code {
-  font-family: $code-font-stack;
+  font-family: $code-fonts;
   hyphens: none;
 
   // Reset extra letter spacing from body since Input already has enough.
@@ -9,7 +9,7 @@ code {
 
 // Code with the language ‘-’ is shell output, which needs to be monospaced.
 .language-- {
-  font-family: $mono-font-stack;
+  font-family: $mono-fonts;
 }
 
 // Inline code and outer element of block code
