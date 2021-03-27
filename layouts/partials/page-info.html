@@ -4,6 +4,6 @@
     <li>{{ .WordCount }} words</li>
 
     {{ $readingTime := math.Round (div .WordCount 200.0) }}
-    <li>{{ partial "humanNumber" (dict "n" $readingTime) }} minute read</li>
+    <li>{{ partial "human-number" (dict "n" $readingTime) }} minute read</li>
   </ul>
 </section>

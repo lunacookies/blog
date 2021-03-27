@@ -13,7 +13,7 @@
     {{ range .Pages }}
       <section class="page">
         <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-        {{ partial "pageInfo" . }}
+        {{ partial "page-info" . }}
       </section>
     {{ end }}
   </section>
