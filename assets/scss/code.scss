@@ -1,7 +1,6 @@
 // Inline and inner element of block code
 code {
   font-family: $code-fonts;
-  hyphens: none;
 
   // Reset extra letter spacing from body since Input already has enough.
   letter-spacing: 0;
