@@ -4,14 +4,14 @@
 <title>{{ .Title }} · {{ .Site.Title }}</title>
 
 {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
-{{ with .OutputFormats.Get "rss" }}
+{{ with .OutputFormats.Get "rss" }}>
   <link
     rel="{{ .Rel }}"
     type="{{ .MediaType.Type }}"
     href="{{ .Permalink }}"
     title="{{ $.Site.Title }}"
   />
-{{ end }}
+{{ end }}>
 
 <link
   rel="stylesheet"
@@ -19,7 +19,7 @@
   integrity="{{ $styles.Data.Integrity }}"
 />
 
-<!-- Prefetch links currently on screen. -->
+<!-- Prefetch links currently on screen. --
 <script src="https://unpkg.com/quicklink@2.0.0/dist/quicklink.umd.js"></script>
 <script>
   window.onload = () => {

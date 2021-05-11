@@ -1,20 +1,20 @@
 {{ define "body" }}
   {{ partial "site-navigation" . }}
 
-  <header class="header-area">
-    <h1 class="title">{{ .Title }}</h1>
-  </header>
+  <header class="header-area"
+    <h1 class="title"{{ .Title }}</h1
+  </header
 
-  <main>
+  <main
     {{ .Content }}
-  </main>
+  </main
 
-  <section class="pages">
+  <section class="pages"
     {{ range .Pages }}
-      <section class="page">
-        <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+      <section class="page"
+        <p class="title"<a href="{{ .Permalink }}"{{ .Title }}</a</p
         {{ partial "page-info" . }}
-      </section>
+      </section
     {{ end }}
-  </section>
+  </section
 {{ end }}
