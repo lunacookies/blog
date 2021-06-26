@@ -22,9 +22,14 @@
 
 <!-- Prefetch links currently on screen. -->
 <script src="https://unpkg.com/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+
+<!-- Add anchor links -->
+<script src="https://unpkg.com/anchor-js@4.3.1/anchor.min.js"></script>
+
 <script>
   window.onload = () => {
     quicklink.listen();
+    anchors.add("main h1");
   };
 </script>
 
