@@ -1,6 +1,7 @@
 {{ define "body" }}
   {{ partial "site-navigation" . }}
 
+
   <header class="header-area">
     <h1 class="title">{{ .Title }}</h1>
     {{ partial "page-info" . }}
@@ -14,14 +15,18 @@
         <p class="hint">Previously</p>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
+
     {{ end }}
     {{ with .NextInSection }}
       <div class="next">
         <p class="hint">Next up</p>
         <a href="{{ .Permalink }}">{{ .Title }}</a>
       </div>
+
     {{ end }}
+
 
     <div style="clear: both"></div>
   </nav>
+
 {{ end }}
