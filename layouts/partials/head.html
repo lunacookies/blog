@@ -29,8 +29,11 @@
 <script>
   window.onload = () => {
     quicklink.listen();
-    anchors.add("main h1");
   };
+
+  document.addEventListener("DOMContentLoaded", function (event) {
+    anchors.add("main h1");
+  });
 </script>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
