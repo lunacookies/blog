@@ -15,7 +15,8 @@ a:active {
 }
 
 // Use a background colour to create a custom underline.
-main a {
+main a,
+.info a {
   // We create a linear gradient with the start and end colours the same to
   // simulate the ability to use background-size and background-position with
   // background-color.

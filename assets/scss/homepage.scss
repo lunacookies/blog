@@ -1,3 +1,20 @@
 .bio {
   font-size: 1.5rem;
 }
+
+.info {
+  display: flex;
+
+  li + li::before {
+    margin: {
+      left: 0.5em;
+      right: 0.5em;
+    }
+    content: "·";
+  }
+
+  font-size: 1rem;
+  font-family: $sans-fonts;
+  opacity: 0.5;
+  margin-top: 0;
+}
