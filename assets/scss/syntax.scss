@@ -1,3 +1,7 @@
+@mixin serif-font-features {
+  font-feature-settings: "ss11", "ss12";
+}
+
 .chroma {
   // Keywords
   .bp,
@@ -69,6 +73,7 @@
     }
 
     font-family: $serif-code-fonts;
+    @include serif-font-features();
   }
 
   // Lifetimes
@@ -79,7 +84,7 @@
     }
 
     font-style: italic;
-    font-feature-settings: "ss01", "ss02";
+    font-feature-settings: "ss01", "ss02", "ss11", "ss12";
   }
 
   // Comments
@@ -96,5 +101,6 @@
 
     font-family: $serif-code-fonts;
     font-style: italic;
+    @include serif-font-features();
   }
 }

@@ -1,6 +1,7 @@
 // Inline and inner element of block code
 code {
   font-family: $code-fonts;
+  font-feature-settings: "ss02", "ss11", "ss12";
 
   // Reset extra letter spacing from body since Input already has enough.
   letter-spacing: 0;
