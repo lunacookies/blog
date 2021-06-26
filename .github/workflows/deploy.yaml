@@ -13,7 +13,7 @@ jobs:
 
       - name: Format using Prettier
         run: |
-          yarn global add prettier@2.2.1 prettier-plugin-go-template
+          yarn global add prettier@2.3.2 prettier-plugin-go-template@0.0.11
 
           for file in $(find . \
             -name '*.html' \
