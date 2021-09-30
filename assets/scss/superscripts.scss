@@ -1,7 +1,7 @@
 sup {
   font-variant-position: super;
 
-  // Adjust link underline position.
+  // Links in superscripts need their underlines to be higher up.
   a {
     background-position-y: 70% !important;
   }

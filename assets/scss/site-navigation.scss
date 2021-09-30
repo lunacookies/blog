@@ -1,5 +1,3 @@
-// Put items in the navigation next to each other, with one em of space between
-// each other.
 .site-navigation ul {
   display: inline-flex;
   flex-wrap: wrap;
@@ -25,6 +23,5 @@
     }
   }
 
-  // Make the navigation section less prominent
   @include faded-color;
 }

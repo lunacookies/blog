@@ -28,10 +28,7 @@ main ol li {
 main ul li {
   margin-top: 0;
 
-  // Just • is too thick, and · is too thin, so we use a bold · as a nice middle
-  // ground.
   &::before {
-    content: "·";
-    font-weight: 700;
+    content: "•";
   }
 }
