@@ -86,10 +86,7 @@
   .cm,
   .cs,
   .sd {
-    color: hsl($hue, $light-saturation, $light-lightness - 25%);
-    @media (prefers-color-scheme: dark) {
-      color: hsl($hue, $dark-saturation, $dark-lightness + 40%);
-    }
+    @include faded-color;
 
     --casual: 1;
     --slant: -10;

@@ -26,5 +26,5 @@
   }
 
   // Make the navigation section less prominent
-  opacity: 0.5;
+  @include faded-color;
 }
