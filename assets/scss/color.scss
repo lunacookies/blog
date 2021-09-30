@@ -1,16 +1,16 @@
-$light-hue: 25;
+$hue: 240;
+
 $light-saturation: 20%;
 $light-lightness: 95%;
 
-$dark-hue: 227;
-$dark-saturation: 8%;
-$dark-lightness: 12%;
+$dark-saturation: 15%;
+$dark-lightness: 18%;
 
-$light-background: hsl($light-hue, $light-saturation, $light-lightness);
-$light-foreground: hsl($light-hue, $light-saturation, $light-lightness - 90%);
+$light-background: hsl($hue, $light-saturation * 2, $light-lightness);
+$light-foreground: hsl($hue, $light-saturation, $light-lightness - 80%);
 
-$dark-background: hsl($dark-hue, $dark-saturation, $dark-lightness);
-$dark-foreground: hsl($dark-hue, $dark-saturation, $dark-lightness + 75%);
+$dark-background: hsl($hue, $dark-saturation, $dark-lightness);
+$dark-foreground: hsl($hue, $dark-saturation, $dark-lightness + 75%);
 
 body {
   background-color: $light-background;
@@ -22,12 +22,8 @@ body {
   }
 }
 
-$light-selection: hsl(
-  $light-hue,
-  $light-saturation - 10%,
-  $light-lightness - 10%
-);
-$dark-selection: hsl($dark-hue, $dark-saturation - 10%, $dark-lightness + 50%);
+$light-selection: hsl($hue, $light-saturation + 20%, $light-lightness - 5%);
+$dark-selection: hsl($hue, $dark-saturation, $dark-lightness + 50%);
 
 ::selection {
   background-color: $light-selection;

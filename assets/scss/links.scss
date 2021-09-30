@@ -27,10 +27,10 @@ main a:not(.anchorjs-link),
   // We create a linear gradient with the start and end colours the same to
   // simulate the ability to use background-size and background-position with
   // background-color.
-  $underline-color: hsl($light-hue, $light-saturation, $light-lightness - 35%);
+  $underline-color: hsl($hue, $light-saturation, $light-lightness - 35%);
   background-image: linear-gradient($underline-color, $underline-color);
   @media (prefers-color-scheme: dark) {
-    $underline-color: hsl($dark-hue, $dark-saturation, $dark-lightness + 40%);
+    $underline-color: hsl($hue, $dark-saturation, $dark-lightness + 40%);
     background-image: linear-gradient($underline-color, $underline-color);
   }
 
@@ -39,9 +39,9 @@ main a:not(.anchorjs-link),
 
   // We add a shadow to links of the page background colour to make the
   // underline avoid descenders.
-  @include text-shadow(hsl($light-hue, $light-saturation, $light-lightness));
+  @include text-shadow(hsl($hue, $light-saturation, $light-lightness));
   @media (prefers-color-scheme: dark) {
-    @include text-shadow(hsl($dark-hue, $dark-saturation, $dark-lightness));
+    @include text-shadow(hsl($hue, $dark-saturation, $dark-lightness));
   }
 }
 

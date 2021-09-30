@@ -7,9 +7,9 @@
   .kn,
   .kr,
   .ow {
-    color: #cd3469;
+    color: #7242ca;
     @media (prefers-color-scheme: dark) {
-      color: #5b92da;
+      color: #b191eb;
     }
 
     --casual: 1;
@@ -21,17 +21,17 @@
   .kt,
   .nb,
   .nt {
-    color: #1570da;
+    color: #3bac81;
     @media (prefers-color-scheme: dark) {
-      color: #38a27a;
+      color: #8dcfb6;
     }
   }
 
   // Function definitions
   .nf {
-    color: #cc8722;
+    color: #9875da;
     @media (prefers-color-scheme: dark) {
-      color: #57b9e4;
+      color: #c9b6ec;
     }
   }
 
@@ -44,9 +44,9 @@
   .mh,
   .mi,
   .mo {
-    color: #6a64d0;
+    color: #a78732;
     @media (prefers-color-scheme: dark) {
-      color: #a283ca;
+      color: #dbc894;
     }
   }
 
@@ -63,17 +63,17 @@
   .sr,
   .ss,
   .sx {
-    color: #3d8111;
+    color: #b43c74;
     @media (prefers-color-scheme: dark) {
-      color: #d67475;
+      color: #d674a2;
     }
   }
 
   // Lifetimes
   .na {
-    color: #32939a;
+    color: #6576db;
     @media (prefers-color-scheme: dark) {
-      color: #edbc64;
+      color: #7e87d6;
     }
 
     --cursive: 1;
@@ -86,9 +86,9 @@
   .cm,
   .cs,
   .sd {
-    color: #00000044;
+    color: hsl($hue, $light-saturation, $light-lightness - 25%);
     @media (prefers-color-scheme: dark) {
-      color: #ffffff55;
+      color: hsl($hue, $dark-saturation, $dark-lightness + 40%);
     }
 
     --casual: 1;
