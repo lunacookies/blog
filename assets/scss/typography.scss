@@ -1,5 +1,14 @@
 html {
   font-size: 20px;
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    font-size: 17px;
+  }
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
 
   font-weight: 400;
   @media (prefers-color-scheme: dark) {
