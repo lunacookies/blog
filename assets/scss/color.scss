@@ -16,7 +16,7 @@ body {
   background-color: $light-background;
   color: $light-foreground;
 
-  @media (prefers-color-scheme: "dark") {
+  @media (prefers-color-scheme: dark) {
     background-color: $dark-background;
     color: $dark-foreground;
   }
