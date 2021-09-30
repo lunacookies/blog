@@ -1,3 +1,42 @@
+@media (max-width: $textblock-width) {
+  .homepage {
+    margin-top: 0;
+  }
+}
+
+.avatar {
+  max-width: 11rem;
+  padding-left: 1rem;
+
+  > img {
+    border-radius: 50%;
+
+    box-shadow: 0 7px 20px
+      hsl($hue, $light-saturation + 10%, $light-lightness - 30%);
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 7px 20px
+        hsl($hue, $dark-saturation + 10%, $dark-lightness - 10%);
+    }
+
+    border: 0.5px solid $light-foreground;
+    @media (prefers-color-scheme: dark) {
+      border: 0.5px solid $dark-foreground;
+    }
+  }
+
+  @media (max-width: $textblock-width) {
+    max-width: 9rem;
+    margin-left: auto;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: $textblock-width) {
+    float: right;
+    margin-top: 5rem;
+  }
+}
+
+.name,
 .bio {
   font-size: 1.5rem;
 }

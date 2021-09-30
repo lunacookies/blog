@@ -1,20 +1,19 @@
 {{ define "body" }}
-  <header class="header-area">
-    <section class="bio">
-      <strong class="name">Aramis Razzaghipour</strong>
+  <header class="header-area homepage">
+    <div class="avatar"><img src="/img/avatar.jpeg" /></div>
 
-      <ul class="info">
-        <li>she/her</li>
-        <li>@arzg <a href="https://github.com/arzg">on GitHub</a></li>
-      </ul>
+    <strong class="name">Aramis Razzaghipour</strong>
 
-      <main>
-        I’m a student living in Sydney, Australia. I&nbsplike programming in
-        <a href="https://rust-lang.org">Rust</a> and typography.
-      </main>
-    </section>
+    <ul class="info">
+      <li>she/her</li>
+      <li>@arzg <a href="https://github.com/arzg">on GitHub</a></li>
+    </ul>
+
+    <main class="bio">
+      I’m a student living in Sydney, Australia. I&nbsplike programming in
+      <a href="https://rust-lang.org">Rust</a> and typography.
+    </main>
   </header>
 
   {{ partial "site-navigation" . }}
-
 {{ end }}
