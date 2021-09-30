@@ -2,6 +2,11 @@
   font-size: 1.5rem;
 }
 
+.name,
+.info {
+  --casual: 1;
+}
+
 .info {
   display: flex;
 
@@ -14,7 +19,6 @@
   }
 
   font-size: 1rem;
-  font-family: $sans-fonts;
   opacity: 0.5;
   margin-top: 0;
 }

@@ -1,30 +1,63 @@
 html {
-  font-size: 23px;
+  font-size: 20px;
+
+  font-weight: 400;
+  @media (prefers-color-scheme: dark) {
+    font-weight: 350;
+  }
 
   @media print {
     font-size: 12pt;
   }
 }
 
-$sans-fonts: freight-sans, Seravek, ui-sans-serif, system-ui;
+html {
+  --proportional-nums: 1;
+  --monocular-a: 0;
+  --monocular-g: 0;
+  --sans-f: 0;
+  --sans-i: 0;
+  --sans-l: 0;
+  --sans-r: 0;
+  --simplified-italics: 0;
+  --sans-caps: 0;
+  --simplified-nums: 0;
+  --dotted-zero: 0;
+  --sans-1: 0;
+  --simplified-at: 0;
 
-$serif-fonts: freight-text, ui-serif, Iowan Old Style, Georgia, serif;
-$display-fonts: freight-display, $serif-fonts;
+  --monospace: 0;
+  --casual: 0.2;
+  --slant: 0;
+  --cursive: 0;
+}
 
-$code-fonts: input-sans-narrow, ui-monospace, SFMono-Regular, Menlo, Monaco,
-  Consolas, monospace;
-$mono-fonts: input-mono-narrow, $code-fonts;
-$serif-code-fonts: input-serif-narrow, $code-fonts;
+*,
+::before,
+::after {
+  font-feature-settings: "pnum" var(--proportional-nums),
+    "ss01" var(--monocular-a), "ss02" var(--monocular-g), "ss03" var(--sans-f),
+    "ss04" var(--sans-i), "ss05" var(--sans-l), "ss06" var(--sans-r),
+    "ss07" var(--simplified-italics), "ss08" var(--sans-caps),
+    "ss09" var(--simplified-nums), "ss10" var(--dotted-zero),
+    "ss11" var(--sans-1), "ss12" var(--simplified-at);
+
+  font-variation-settings: "MONO" var(--monospace), "CASL" var(--casual),
+    "slnt" var(--slant), "CRSV" var(--cursive);
+}
+
+$sans-fonts: "Recursive", ui-sans-serif, system-ui;
+$code-fonts: "Recursive", ui-monospace, "SF Mono", "SFMono-Regular", "Menlo",
+  "Consolas", "DejaVu Sans Mono", monospace;
 
 body {
-  font-family: $serif-fonts;
-  line-height: 1.5;
-  font-variant-numeric: proportional-nums oldstyle-nums;
-  letter-spacing: 0.01em;
+  font-family: $sans-fonts;
+  line-height: 1.7;
 }
 
 em {
-  font-style: italic;
+  --slant: -15;
+  --cursive: 1;
 }
 
 strong {

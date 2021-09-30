@@ -1,15 +1,28 @@
 // Inline and inner element of block code
 code {
   font-family: $code-fonts;
-  font-feature-settings: "ss02", "ss11", "ss12";
 
-  // Reset extra letter spacing from body since Input already has enough.
-  letter-spacing: 0;
+  --monospace: 0.6;
+  --casual: 0.5;
+
+  --proportional-nums: 0;
+  --sans-f: 1;
+  --sans-i: 1;
+  --sans-l: 1;
+  --sans-caps: 1;
+  --sans-1: 1;
+  --dotted-zero: 1;
+  --simplified-at: 1;
 }
 
 // Code with the language ‘-’ is shell output, which needs to be monospaced.
 .language-- {
-  font-family: $mono-fonts;
+  --monospace: 1;
+  --sans-f: 0;
+  --sans-i: 0;
+  --sans-l: 0;
+  --sans-r: 0;
+  --sans-1: 0;
 }
 
 // Inline code and outer element of block code
@@ -28,7 +41,8 @@ pre {
 
 // Block code
 pre {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
 
   padding: 0.5rem;
 
@@ -46,8 +60,6 @@ pre:not(.chroma) {
 
 // Inline code
 *:not(pre) > code {
-  font-size: 0.75em;
-
   padding: {
     left: 0.2rem;
     right: 0.2rem;

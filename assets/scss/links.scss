@@ -4,26 +4,38 @@ a:active {
 }
 
 @mixin text-shadow($background) {
-  text-shadow: 0px -1px $background, 0px 1px $background, -1px 0px $background,
-    1px 0px $background, -1px -1px $background, 1px -1px $background,
-    -1px 1px $background, 1px 1px $background, 0px -2px $background,
-    0px 2px $background, -2px 0px $background, 2px 0px $background,
-    -2px -2px $background, 2px -2px $background, -2px 2px $background,
-    2px 2px $background, 0px -3px $background, 0px 3px $background,
-    -3px 0px $background, 3px 0px $background, -3px -3px $background,
-    3px -3px $background, -3px 3px $background, 3px 3px $background;
+  $shadows: ();
+
+  @for $x from -3 through 3 {
+    @for $y from -2 through 2 {
+      // A shadow at 0px, 0px has no effect, so we omit it.
+      @if not($x==0 and $y==0) {
+        $shadows: append(
+          $shadows,
+          unquote("#{$x}px #{$y}px #{$background}"),
+          $separator: comma
+        );
+      }
+    }
+  }
+
+  text-shadow: $shadows;
 }
 
-// Use a background colour to create a custom underline.
 main a:not(.anchorjs-link),
 .info a {
   // We create a linear gradient with the start and end colours the same to
   // simulate the ability to use background-size and background-position with
   // background-color.
-  background-image: linear-gradient(currentColor, currentColor);
+  $underline-color: hsl($light-hue, $light-saturation, $light-lightness - 35%);
+  background-image: linear-gradient($underline-color, $underline-color);
+  @media (prefers-color-scheme: dark) {
+    $underline-color: hsl($dark-hue, $dark-saturation, $dark-lightness + 40%);
+    background-image: linear-gradient($underline-color, $underline-color);
+  }
 
   background-size: 100% 1px;
-  background-position: 0 95%;
+  background-position: 0 100%;
 
   // We add a shadow to links of the page background colour to make the
   // underline avoid descenders.

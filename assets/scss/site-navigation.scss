@@ -1,13 +1,18 @@
 // Put items in the navigation next to each other, with one em of space between
 // each other.
 .site-navigation ul {
-  font-family: $sans-fonts;
-
   display: inline-flex;
   flex-wrap: wrap;
 
-  .current {
+  li * {
+    transition: font-variation-settings 150ms ease-out,
+      font-weight 150ms ease-out;
+  }
+
+  :not(&:hover) > .current,
+  li:hover {
     font-weight: 700;
+    --casual: 0.5;
   }
 
   // We remove space on the last item instead of using li + li because, if we

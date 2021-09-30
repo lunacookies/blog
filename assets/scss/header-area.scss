@@ -9,10 +9,10 @@
 
   .title {
     font-size: 2.5rem;
-    font-family: $display-fonts;
-    font-weight: 700;
+    font-weight: 300;
+    --casual: 0.5;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.05em;
 
     margin-bottom: 1rem;
   }

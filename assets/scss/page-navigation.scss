@@ -1,10 +1,10 @@
 .page-navigation {
-  font-family: $sans-fonts;
   margin-top: 3rem;
 
   .hint {
     font-size: 0.8rem;
-    font-style: italic;
+    --slant: -15;
+    --cursive: 1;
   }
 
   .prev {
