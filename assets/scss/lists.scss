@@ -21,7 +21,7 @@ main ol li {
 
   &::before {
     content: counter(ol);
-    font-variant-numeric: tabular-nums oldstyle-nums;
+    --proportional-nums: 0;
   }
 }
 
