@@ -1,95 +1,80 @@
-.chroma {
-  // Keywords
-  .bp,
-  .k,
-  .kc,
-  .kd,
-  .kn,
-  .kr,
-  .ow {
-    color: #7242ca;
-    @media (prefers-color-scheme: dark) {
-      color: #b191eb;
-    }
-
-    --casual: 1;
-    --slant: -7;
-    --cursive: 1;
+.token.keyword,
+.token.table.class-name {
+  color: #7242ca;
+  @media (prefers-color-scheme: dark) {
+    color: #b191eb;
   }
 
-  // Types
-  .kt,
-  .nb,
-  .nt {
-    color: #3bac81;
-    @media (prefers-color-scheme: dark) {
-      color: #8dcfb6;
-    }
+  --casual: 1;
+  --slant: -7;
+  --cursive: 1;
+}
+
+.token.class-name {
+  color: #3bac81;
+  @media (prefers-color-scheme: dark) {
+    color: #8dcfb6;
+  }
+}
+
+.token.function,
+.token.builtin,
+.token.macro,
+.token.key {
+  color: #9875da;
+  @media (prefers-color-scheme: dark) {
+    color: #c9b6ec;
+  }
+}
+
+.token.number,
+.token.constant,
+.token.boolean {
+  color: #a78732;
+  @media (prefers-color-scheme: dark) {
+    color: #dbc894;
+  }
+}
+
+.token.string {
+  color: #b43c74;
+  @media (prefers-color-scheme: dark) {
+    color: #d674a2;
+  }
+}
+
+.token.namespace {
+  color: #4d4c91;
+  @media (prefers-color-scheme: dark) {
+    color: #a1a0f3;
+  }
+}
+
+// Ruby’s :symbols and Rust’s 'lifetimes both get .token.symbol
+.token.symbol {
+  color: #6576db;
+  @media (prefers-color-scheme: dark) {
+    color: #7e87d6;
   }
 
-  // Function definitions
-  .nf {
-    color: #9875da;
-    @media (prefers-color-scheme: dark) {
-      color: #c9b6ec;
-    }
-  }
+  --cursive: 1;
+}
 
-  // Literals
-  .il,
-  .l,
-  .m,
-  .mb,
-  .mf,
-  .mh,
-  .mi,
-  .mo {
-    color: #a78732;
-    @media (prefers-color-scheme: dark) {
-      color: #dbc894;
-    }
-  }
+.token.attribute {
+  @include faded-color;
+}
 
-  // Strings
-  .s,
-  .s1,
-  .s2,
-  .sa,
-  .sb,
-  .sc,
-  .se,
-  .sh,
-  .si,
-  .sr,
-  .ss,
-  .sx {
-    color: #b43c74;
-    @media (prefers-color-scheme: dark) {
-      color: #d674a2;
-    }
-  }
+.token.comment {
+  @include faded-color;
 
-  // Lifetimes
-  .na {
-    color: #6576db;
-    @media (prefers-color-scheme: dark) {
-      color: #7e87d6;
-    }
+  --casual: 1;
+  --slant: -10;
+  --cursive: 1;
+}
 
-    --cursive: 1;
-  }
-
-  // Comments
-  .c,
-  .c1,
-  .ch,
-  .cm,
-  .cs,
-  .sd {
-    @include faded-color;
-
-    --casual: 1;
-    --slant: -10;
-    --cursive: 1;
+.token.punctuation {
+  color: $light-foreground;
+  @media (prefers-color-scheme: dark) {
+    color: $dark-foreground;
   }
 }

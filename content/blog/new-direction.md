@@ -102,7 +102,7 @@ A couple months ago I read the paper [_Program Design in the UNIX Environment_][
 
 Imagine a spectrum, on which the left side is the simplest shell imaginable:
 
-```python3
+```py
 import subprocess
 
 while True:
