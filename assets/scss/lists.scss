@@ -20,7 +20,7 @@ main ol li {
   counter-increment: ol;
 
   &::before {
-    content: counter(ol);
+    content: counter(ol) ".";
     --proportional-nums: 0;
   }
 }
