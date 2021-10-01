@@ -13,6 +13,16 @@ code {
   --sans-1: 1;
   --dotted-zero: 1;
   --simplified-at: 1;
+
+  border-radius: 5px;
+  $border-color: black;
+
+  border: 1px solid rgba($border-color, 0.1);
+  background-color: hsl($hue, $light-saturation * 4, $light-lightness + 2%);
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid rgba($border-color, 0.2);
+    background-color: hsl($hue, $dark-saturation, $dark-lightness - 3%);
+  }
 }
 
 // Code with the language ‘-’ is shell output, which needs to be monospaced.
@@ -25,29 +35,38 @@ code {
   --sans-1: 0;
 }
 
-// Inline code and outer element of block code
-*:not(pre) > code,
-pre {
-  border-radius: 5px;
-  $border-color: black;
-
-  border: 1px solid rgba($border-color, 0.1);
-  background-color: hsl($hue, $light-saturation * 4, $light-lightness + 2%);
-  @media (prefers-color-scheme: dark) {
-    border: 1px solid rgba($border-color, 0.2);
-    background-color: hsl($hue, $dark-saturation, $dark-lightness - 3%);
-  }
-}
-
 // Block code
-pre {
+pre > code {
+  display: block;
   font-size: 0.8rem;
   line-height: 1.5;
 
-  padding: 0.5rem;
+  padding: $padding;
 
   // Add scrollbars if necessary.
   overflow-x: auto;
+}
+
+main > pre,
+main > .highlight > pre {
+  @include full-width;
+
+  > code {
+    $width: 45rem;
+    max-width: $width;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    @media (max-width: $width) {
+      border-radius: 0;
+      border: {
+        left: none;
+        right: none;
+      }
+    }
+  }
 }
 
 .highlight,
