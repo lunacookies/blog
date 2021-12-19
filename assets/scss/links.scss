@@ -2,25 +2,6 @@ a:active {
   opacity: 0.5;
 }
 
-@mixin text-shadow($background) {
-  $shadows: ();
-
-  @for $x from -3 through 3 {
-    @for $y from -2 through 2 {
-      // A shadow at 0px, 0px has no effect, so we omit it.
-      @if not($x==0 and $y==0) {
-        $shadows: append(
-          $shadows,
-          unquote("#{$x}px #{$y}px #{$background}"),
-          $separator: comma
-        );
-      }
-    }
-  }
-
-  text-shadow: $shadows;
-}
-
 main a:not(.anchorjs-link),
 .info a {
   // We create a linear gradient with the start and end colours the same to
@@ -35,23 +16,4 @@ main a:not(.anchorjs-link),
 
   background-size: 100% 1px;
   background-position: 0 100%;
-
-  // We add a shadow to links of the page background colour to make the
-  // underline avoid descenders.
-  @include text-shadow(hsl($hue, $light-saturation, $light-lightness));
-  @media (prefers-color-scheme: dark) {
-    @include text-shadow(hsl($hue, $dark-saturation, $dark-lightness));
-  }
-}
-
-// Match colour of links’ text shadow when selected to the selection colour.
-::selection {
-  @include text-shadow($light-selection);
-
-  // Selection backgrounds in dark mode have a reduced opacity, so the colour we
-  // pick won’t match the actual background colour of the selection. The best
-  // option here is to just disable the text shadow.
-  @media (prefers-color-scheme: dark) {
-    text-shadow: none;
-  }
 }

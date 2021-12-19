@@ -28,14 +28,3 @@ body {
     color: hsl($hue, $dark-saturation, $dark-lightness + 40%);
   }
 }
-
-$light-selection: hsl($hue, $light-saturation + 20%, $light-lightness - 5%);
-$dark-selection: hsl($hue, $dark-saturation, $dark-lightness + 50%);
-
-::selection {
-  background-color: $light-selection;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-selection;
-  }
-}
