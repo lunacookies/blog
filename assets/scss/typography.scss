@@ -14,10 +14,6 @@ html {
   @media (prefers-color-scheme: dark) {
     font-weight: 350;
   }
-
-  @media print {
-    font-size: 12pt;
-  }
 }
 
 html {
@@ -55,20 +51,7 @@ html {
     "slnt" var(--slant), "CRSV" var(--cursive);
 }
 
-$sans-fonts: "Recursive", ui-sans-serif, system-ui;
-$code-fonts: "Recursive", ui-monospace, "SF Mono", "SFMono-Regular", "Menlo",
-  "Consolas", "DejaVu Sans Mono", monospace;
-
 body {
-  font-family: $sans-fonts;
+  font-family: "Recursive", ui-sans-serif, system-ui;
   line-height: 1.7;
-}
-
-em {
-  --slant: -15;
-  --cursive: 1;
-}
-
-strong {
-  font-weight: 700;
 }

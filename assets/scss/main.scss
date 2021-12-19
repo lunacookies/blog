@@ -1,20 +1,69 @@
-@import "utils";
 @import "fonts";
 @import "reset";
 @import "typography";
 @import "color";
 @import "layout";
-@import "header-area";
-@import "headings";
-@import "images";
-@import "blockquotes";
-@import "lists";
 @import "links";
-@import "code";
-@import "rules";
-@import "superscripts";
-@import "homepage";
-@import "page-navigation";
-@import "page-info";
-@import "pages";
-@import "syntax";
+
+.avatar {
+  max-width: 11rem;
+  @media (max-width: $textblock-width) {
+    max-width: 7rem;
+  }
+
+  float: right;
+  padding-left: 1rem;
+
+  > img {
+    width: 100%;
+    display: block; // remove small space below
+
+    border-radius: 50%;
+
+    box-shadow: 0 7px 20px
+      hsl($hue, $light-saturation + 10%, $light-lightness - 30%);
+    @media (prefers-color-scheme: dark) {
+      box-shadow: 0 7px 20px
+        hsl($hue, $dark-saturation + 10%, $dark-lightness - 10%);
+    }
+
+    border: 0.5px solid $light-foreground;
+    @media (prefers-color-scheme: dark) {
+      border: 0.5px solid $dark-foreground;
+    }
+  }
+}
+
+.name {
+  font-weight: 700;
+}
+
+.name,
+.bio {
+  font-size: 1.5rem;
+}
+
+.name,
+.info {
+  --casual: 1;
+}
+
+.info {
+  display: flex;
+
+  li + li::before {
+    margin: {
+      left: 0.5em;
+      right: 0.5em;
+    }
+    content: "·";
+  }
+
+  font-size: 1rem;
+  @include faded-color;
+}
+
+.info,
+.bio {
+  margin-bottom: 1rem;
+}
