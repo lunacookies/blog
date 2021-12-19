@@ -1,9 +1,4 @@
-a:active {
-  opacity: 0.5;
-}
-
-main a:not(.anchorjs-link),
-.info a {
+a {
   // We create a linear gradient with the start and end colours the same to
   // simulate the ability to use background-size and background-position with
   // background-color.
@@ -16,4 +11,8 @@ main a:not(.anchorjs-link),
 
   background-size: 100% 1px;
   background-position: 0 100%;
+
+  &:active {
+    opacity: 0.5;
+  }
 }
