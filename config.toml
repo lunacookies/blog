@@ -2,11 +2,6 @@ baseURL = "https://arzg.github.io/"
 languageCode = "en-uk"
 title = "arzg’s website"
 
-# disable Hugo’s automatic syntax highlighting of code blocks
-# since we use PrismJS instead
-[markup.highlight]
-codeFences = false
-
 [markup.goldmark.renderer]
 unsafe = true
 
