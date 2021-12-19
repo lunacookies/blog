@@ -1,6 +1,6 @@
 baseURL = "https://arzg.github.io/"
 languageCode = "en-uk"
-title = "arzg’s website"
+title = "Luna’s Website"
 
 [markup.goldmark.renderer]
 unsafe = true
