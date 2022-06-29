@@ -4,7 +4,13 @@
 
   {{ .Page.Content }}
 
-  {{ range .Pages }}
-    <p>{{ .Title }}</p>
-  {{ end }}
+
+  <ul>
+    {{ range .Pages }}
+      <li>
+        {{ .Date.Format "2 Jan 2006" }} –
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}
