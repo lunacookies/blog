@@ -1,69 +1,97 @@
-@import "fonts";
-@import "reset";
-@import "typography";
-@import "color";
-@import "layout";
-@import "links";
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+}
 
-.avatar {
-  max-width: 11rem;
-  @media (max-width: $textblock-width) {
-    max-width: 7rem;
+html {
+  font-size: 19px;
+}
+
+body {
+  font-family: Georgia, serif;
+  line-height: 1.5;
+  max-width: 42rem;
+  padding: 2rem;
+  margin: {
+    left: auto;
+    right: auto;
   }
 
-  float: right;
-  padding-left: 1rem;
+  background-color: hsl(30, 20%, 95%);
+  color: hsl(270, 50%, 15%);
 
-  > img {
-    width: 100%;
-    display: block; // remove small space below
-
-    border-radius: 50%;
-
-    box-shadow: 0 7px 20px
-      hsl($hue, $light-saturation + 10%, $light-lightness - 30%);
-    @media (prefers-color-scheme: dark) {
-      box-shadow: 0 7px 20px
-        hsl($hue, $dark-saturation + 10%, $dark-lightness - 10%);
-    }
-
-    border: 0.5px solid $light-foreground;
-    @media (prefers-color-scheme: dark) {
-      border: 0.5px solid $dark-foreground;
-    }
+  @media (prefers-color-scheme: dark) {
+    background-color: hsl(220, 10%, 15%);
+    color: hsl(50, 15%, 90%);
   }
 }
 
-.name {
-  font-weight: 700;
+body * + * {
+  margin-top: 1rem;
 }
 
-.name,
-.bio {
+h1 {
   font-size: 1.5rem;
 }
-
-.name,
-.info {
-  --casual: 1;
-}
-
-.info {
-  display: flex;
-
-  li + li::before {
-    margin: {
-      left: 0.5em;
-      right: 0.5em;
-    }
-    content: "·";
+h2 {
+  font-weight: 700;
+  margin: {
+    top: 4rem;
+    bottom: 2rem;
   }
-
-  font-size: 1rem;
-  @include faded-color;
+}
+.subtitle {
+  margin: {
+    top: 0;
+    bottom: 4rem;
+  }
+  opacity: 0.7;
+  font-style: italic;
 }
 
-.info,
-.bio {
-  margin-bottom: 1rem;
+a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 97%;
+  background-size: 100% 1px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin-left: 1.5em;
+}
+
+ul > li::before {
+  content: "•";
+  position: absolute;
+  width: 1em;
+  margin-left: -1.5em;
+}
+
+ol > li {
+  counter-increment: ol;
+}
+
+ol > li::before {
+  content: counter(ol) ".";
+  position: absolute;
+  width: 1em;
+  margin-left: -1.5em;
+}
+
+ul *,
+ol * {
+  margin-top: 0;
+}
+
+code {
+  font-family: Monaco;
+  font-size: 0.85em;
 }

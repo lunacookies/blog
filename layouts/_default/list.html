@@ -1,0 +1,10 @@
+{{ define "body" }}
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">{{ .Description }}</p>
+
+  {{ .Page.Content }}
+
+  {{ range .Pages }}
+    <p>{{ .Title }}</p>
+  {{ end }}
+{{ end }}
