@@ -116,6 +116,12 @@ code {
   font-family: Fira Mono, monospace;
   font-size: 0.87em;
 }
+pre {
+  font-size: 0.82rem;
+  line-height: 1.1;
+  border-left: 1px solid #777;
+  padding-left: 1rem;
+}
 
 .home {
   // remove link underline from home button
