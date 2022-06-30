@@ -2,7 +2,9 @@ baseURL = "https://arzg.github.io/"
 languageCode = "en-uk"
 title = "Luna’s Website"
 
-pygmentsUseClasses = true
+# disable Hugo’s syntax highlighting since we use PrismJS instead
+[markup.highlight]
+codeFences = false
 
 [markup.goldmark.renderer]
 unsafe = true

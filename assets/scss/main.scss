@@ -143,90 +143,80 @@ pre {
 }
 
 // keywords
-.chroma .k,
-.chroma .o {
+pre .keyword,
+pre .operator {
   color: hsb(210, 100, 80);
 }
 
 // types
-.chroma .kt {
+pre .class-name {
   color: hsb(230, 45, 65);
 }
 
 // numbers
-.chroma .mi {
+pre .number {
   color: hsb(40, 100, 80);
 }
 
 // constants
-.chroma .nb {
+pre .constant {
   color: hsb(35, 100, 80);
 }
 
 // preprocessor directives
-.chroma .cp,
-.chroma .cpf {
+pre .directive,
+pre .directive-hash {
   color: hsb(180, 40, 50);
 }
 
 // strings
-.chroma .s {
+pre .string {
   color: hsb(110, 45, 50);
 }
 
-// string escapes
-.chroma .se {
-  color: hsb(75, 100, 60);
-}
-
 @media (prefers-color-scheme: dark) {
-  .chroma {
+  pre {
     color: hsb($dark-fg-hue, 10, 80);
   }
 
   // keywords
-  .chroma .k,
-  .chroma .o {
+  pre .keyword,
+  pre .operator {
     color: hsb(210, 30, 80);
   }
 
   // types
-  .chroma .kt {
+  pre .class-name {
     color: hsb(220, 25, 65);
   }
 
   // numbers
-  .chroma .mi {
+  pre .number {
     color: hsb(40, 100, 80);
   }
 
   // constants
-  .chroma .nb {
+  pre .constant {
     color: hsb(35, 100, 100);
   }
 
   // functions
-  .chroma .nf {
+  pre .function {
     color: hsb($dark-fg-hue, 20, 100);
   }
 
   // preprocessor directives
-  .chroma .cp,
-  .chroma .cpf {
+  pre .directive,
+  pre .directive-hash {
     color: hsb(180, 40, 65);
   }
 
   // strings
-  .chroma .s {
+  pre .string {
     color: hsb(110, 30, 65);
-  }
-
-  // string escapes
-  .chroma .se {
-    color: hsb(75, 95, 65);
   }
 }
 
-.chroma .c1 {
+pre .comment {
   font-weight: bold;
 }
