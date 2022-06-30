@@ -1,3 +1,13 @@
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+  @if $b-hsb == 0 {
+    @return hsla(0, 0, 0, $a);
+  } @else {
+    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -24,6 +34,8 @@ html {
   }
 }
 
+$dark-fg-hue: 55;
+
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
@@ -34,12 +46,12 @@ body {
     right: auto;
   }
 
-  background-color: hsl(30, 20%, 95%);
-  color: hsl(270, 50%, 15%);
+  background-color: hsb(30, 2, 95);
+  color: hsb(270, 65, 25);
 
   @media (prefers-color-scheme: dark) {
-    background-color: hsl(220, 4%, 13%);
-    color: hsl(55, 20%, 86%);
+    background-color: hsb(220, 5, 15);
+    color: hsb($dark-fg-hue, 5, 90);
   }
 }
 
@@ -63,16 +75,16 @@ h2 {
     bottom: 4rem;
   }
 
-  color: hsl(30, 5%, 50%);
+  color: hsb(30, 10, 55);
   @media (prefers-color-scheme: dark) {
-    color: hsl(55, 3%, 55%);
+    color: hsb($dark-fg-hue, 5, 55);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   h1,
   h2 {
-    color: hsl(55, 30%, 90%);
+    color: hsb($dark-fg-hue, 5, 95);
   }
 }
 
@@ -133,85 +145,85 @@ pre {
 // keywords
 .chroma .k,
 .chroma .o {
-  color: hsl(210, 100%, 40%);
+  color: hsb(210, 100, 80);
 }
 
 // types
 .chroma .kt {
-  color: hsl(230, 30%, 50%);
+  color: hsb(230, 45, 65);
 }
 
 // numbers
 .chroma .mi {
-  color: hsl(40, 100%, 40%);
+  color: hsb(40, 100, 80);
 }
 
 // constants
 .chroma .nb {
-  color: hsl(35, 100%, 40%);
+  color: hsb(35, 100, 80);
 }
 
 // preprocessor directives
 .chroma .cp,
 .chroma .cpf {
-  color: hsl(180, 25%, 40%);
+  color: hsb(180, 40, 50);
 }
 
 // strings
 .chroma .s {
-  color: hsl(110, 30%, 40%);
+  color: hsb(110, 45, 50);
 }
 
 // string escapes
 .chroma .se {
-  color: hsl(75, 100%, 30%);
+  color: hsb(75, 100, 60);
 }
 
 @media (prefers-color-scheme: dark) {
   .chroma {
-    color: hsl(55, 17%, 78%);
+    color: hsb($dark-fg-hue, 10, 80);
   }
 
   // keywords
   .chroma .k,
   .chroma .o {
-    color: hsl(210, 40%, 70%);
+    color: hsb(210, 30, 80);
   }
 
   // types
   .chroma .kt {
-    color: hsl(220, 15%, 55%);
+    color: hsb(220, 25, 65);
   }
 
   // numbers
   .chroma .mi {
-    color: hsl(40, 100%, 40%);
+    color: hsb(40, 100, 80);
   }
 
   // constants
   .chroma .nb {
-    color: hsl(35, 100%, 50%);
+    color: hsb(35, 100, 100);
   }
 
   // functions
   .chroma .nf {
-    color: hsl(55, 85%, 88%);
+    color: hsb($dark-fg-hue, 20, 100);
   }
 
   // preprocessor directives
   .chroma .cp,
   .chroma .cpf {
-    color: hsl(180, 25%, 50%);
+    color: hsb(180, 40, 65);
   }
 
   // strings
   .chroma .s {
-    color: hsl(110, 20%, 55%);
+    color: hsb(110, 30, 65);
   }
 
   // string escapes
   .chroma .se {
-    color: hsl(75, 90%, 35%);
+    color: hsb(75, 95, 65);
   }
 }
 
