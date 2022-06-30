@@ -3,6 +3,11 @@
 
 <title>{{ .Title }} · {{ .Site.Title }}</title>
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+  rel="stylesheet"
+/>
+
 {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
   rel="stylesheet"
