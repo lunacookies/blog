@@ -116,3 +116,92 @@ code {
   font-family: Fira Mono, monospace;
   font-size: 0.87em;
 }
+
+// keywords
+.chroma .k,
+.chroma .o {
+  color: hsl(210, 100%, 40%);
+}
+
+// types
+.chroma .kt {
+  color: hsl(230, 30%, 50%);
+}
+
+// numbers
+.chroma .mi {
+  color: hsl(40, 100%, 40%);
+}
+
+// constants
+.chroma .nb {
+  color: hsl(35, 100%, 40%);
+}
+
+// preprocessor directives
+.chroma .cp,
+.chroma .cpf {
+  color: hsl(180, 25%, 40%);
+}
+
+// strings
+.chroma .s {
+  color: hsl(110, 30%, 40%);
+}
+
+// string escapes
+.chroma .se {
+  color: hsl(75, 100%, 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .chroma {
+    color: hsl(55, 17%, 78%);
+  }
+
+  // keywords
+  .chroma .k,
+  .chroma .o {
+    color: hsl(210, 40%, 70%);
+  }
+
+  // types
+  .chroma .kt {
+    color: hsl(220, 15%, 55%);
+  }
+
+  // numbers
+  .chroma .mi {
+    color: hsl(40, 100%, 40%);
+  }
+
+  // constants
+  .chroma .nb {
+    color: hsl(35, 100%, 50%);
+  }
+
+  // functions
+  .chroma .nf {
+    color: hsl(55, 85%, 88%);
+  }
+
+  // preprocessor directives
+  .chroma .cp,
+  .chroma .cpf {
+    color: hsl(180, 25%, 50%);
+  }
+
+  // strings
+  .chroma .s {
+    color: hsl(110, 20%, 55%);
+  }
+
+  // string escapes
+  .chroma .se {
+    color: hsl(75, 90%, 35%);
+  }
+}
+
+.chroma .c1 {
+  font-weight: bold;
+}

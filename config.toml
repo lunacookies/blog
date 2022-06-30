@@ -2,6 +2,8 @@ baseURL = "https://arzg.github.io/"
 languageCode = "en-uk"
 title = "Luna’s Website"
 
+pygmentsUseClasses = true
+
 [markup.goldmark.renderer]
 unsafe = true
 
