@@ -1,0 +1,12 @@
+{{ define "body" }}
+  <header class="home">
+    <a href="{{ .Site.BaseURL }}">🏠</a>
+  </header>
+
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">
+    {{ .Description }}&emsp;•&emsp;{{ .Date.Format "2 Jan 2006" }}
+  </p>
+
+  {{ .Page.Content }}
+{{ end }}
