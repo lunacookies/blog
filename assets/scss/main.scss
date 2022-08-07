@@ -140,11 +140,9 @@ pre {
   overflow-x: auto;
 }
 
-.home {
-  // remove link underline from home button
-  > a {
-    background-image: none;
-  }
+// remove link underlines
+nav a {
+  background-image: none;
 }
 
 // keywords
