@@ -64,6 +64,7 @@ body * + * {
 h1 {
   font-size: 1.5rem;
 }
+
 h2 {
   font-weight: 700;
   margin: {
@@ -71,22 +72,23 @@ h2 {
     bottom: 2rem;
   }
 }
-.subtitle {
-  margin: {
-    top: 0;
-    bottom: 4rem;
-  }
-
-  color: hsb(0, 0, 55);
-  @media (prefers-color-scheme: dark) {
-    color: hsb($dark-fg-hue, 5, 55);
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   h1,
   h2 {
     color: hsb($dark-fg-hue, 5, 100);
+  }
+}
+
+header {
+  margin-bottom: 4rem;
+
+  > .subtitle {
+    margin-top: 0;
+    color: hsb(0, 0, 55);
+    @media (prefers-color-scheme: dark) {
+      color: hsb($dark-fg-hue, 5, 55);
+    }
   }
 }
 
