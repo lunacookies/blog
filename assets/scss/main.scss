@@ -177,6 +177,11 @@ pre .string {
   color: hsb(110, 45, 50);
 }
 
+// lifetimes
+pre .lifetime-annotation {
+  color: hsb(75, 100, 60);
+}
+
 @media (prefers-color-scheme: dark) {
   pre {
     color: hsb($dark-fg-hue, 10, 80);
@@ -217,6 +222,11 @@ pre .string {
   // strings
   pre .string {
     color: hsb(110, 30, 65);
+  }
+
+  // lifetimes
+  pre .lifetime-annotation {
+    color: hsb(75, 95, 65);
   }
 }
 
