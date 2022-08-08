@@ -136,9 +136,23 @@ code {
 pre {
   font-size: 0.82rem;
   line-height: 1.1;
-  border-left: 1px solid #777;
-  padding-left: 1rem;
+  padding: 1rem;
   overflow-x: auto;
+}
+
+:not(pre) > code {
+  padding: 0.1rem 0.25rem;
+}
+
+:not(pre) > code,
+pre {
+  border-radius: 0.25rem;
+  border: 1px solid hsb(0, 0, 90);
+  background-color: hsb(0, 0, 98);
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid hsb($dark-bg-hue, 20, 25);
+    background-color: hsb($dark-bg-hue, 2, 13);
+  }
 }
 
 * + pre,
