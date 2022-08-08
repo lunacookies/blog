@@ -33,6 +33,10 @@ html {
     font-size: 17px;
   }
 
+  @media (min-width: 1000px) {
+    font-size: 21px;
+  }
+
   text-size-adjust: 100%;
 }
 
