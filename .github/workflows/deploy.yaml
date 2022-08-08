@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   deploy:
@@ -27,6 +27,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           publish_dir: ./public
-          publish_branch: master
+          publish_branch: main
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: arzg/arzg.github.io
