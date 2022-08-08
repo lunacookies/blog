@@ -26,12 +26,14 @@ struct Expr {
 
 We can compare this representation to a traditional memory model:
 
-- the arena is our address space
-- `usize` is our pointer
-- `Vec::push` is our `malloc()`
-- `Vec::clear` is our `free()` (kinda)
-- indexing is our dereference
-- an out-of-bounds panic is our segfault
+|        memory | meta-memory         |
+| ------------: | :------------------ |
+| address space | arena               |
+|       pointer | `usize`             |
+|    `malloc()` | `Vec::push`         |
+|      `free()` | `Vec::clear`        |
+|   dereference | indexing            |
+|      segfault | out-of-bounds panic |
 
 This simple abstraction over memory has
 some desirable performance and safety characteristics
