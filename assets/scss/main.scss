@@ -36,6 +36,7 @@ html {
   text-size-adjust: 100%;
 }
 
+$dark-bg-hue: 220;
 $dark-fg-hue: 55;
 
 body {
@@ -52,7 +53,7 @@ body {
   color: black;
 
   @media (prefers-color-scheme: dark) {
-    background-color: hsb(220, 5, 15);
+    background-color: hsb($dark-bg-hue, 5, 15);
     color: hsb($dark-fg-hue, 5, 90);
   }
 }
@@ -87,7 +88,7 @@ header {
     margin-top: 0;
     color: hsb(0, 0, 55);
     @media (prefers-color-scheme: dark) {
-      color: hsb($dark-fg-hue, 5, 55);
+      color: hsb($dark-bg-hue, 8, 55);
     }
   }
 }
