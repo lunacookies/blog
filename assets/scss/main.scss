@@ -140,6 +140,11 @@ pre {
   overflow-x: auto;
 }
 
+* + pre,
+pre + * {
+  margin-top: 1.5rem;
+}
+
 // remove link underlines
 nav a {
   background-image: none;
