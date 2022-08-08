@@ -91,7 +91,7 @@ impl<T> Arena<T> {
 	}
 
 	fn get(&self, idx: Idx) -> &T {
-		assert_eq(idx.generation, self.generation);
+		assert_eq!(idx.generation, self.generation);
 		self.data[idx.idx]
 	}
 }
