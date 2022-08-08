@@ -188,7 +188,8 @@ pre .constant {
 
 // preprocessor directives
 pre .directive,
-pre .directive-hash {
+pre .directive-hash,
+pre .macro {
   color: hsb(180, 40, 50);
 }
 
@@ -235,7 +236,8 @@ pre .lifetime-annotation {
 
   // preprocessor directives
   pre .directive,
-  pre .directive-hash {
+  pre .directive-hash,
+  pre .macro {
     color: hsb(180, 40, 65);
   }
 
