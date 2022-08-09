@@ -168,7 +168,12 @@ code {
 pre {
   font-size: 0.84rem;
   line-height: 1.2;
+
   padding: 1rem;
+  @media (max-width: 500px) {
+    padding: 0.5rem;
+  }
+
   overflow-x: auto;
 }
 
