@@ -192,9 +192,21 @@ pre + * {
   margin-top: 1.5rem;
 }
 
-// remove link underlines
-nav a {
-  background-image: none;
+nav {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  // remove link underlines
+  a {
+    background-image: none;
+  }
+
+  // avoid element following navigation
+  // having phantom spacing
+  & + * {
+    margin-top: 0;
+  }
 }
 
 // keywords
