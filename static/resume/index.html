@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>
+      <span class="name">Luna Razzaghipour</span>
+      <span class="pronouns">she / her</span>
+    </h1>
+    <ul class="deets">
+      <li>Sydney, Australia</li>
+      <li><a href="mailto:lunarazzaghipour@gmail.com">lunarazzaghipour@gmail.com</a></li>
+      <li><a href="https://github.com/arzg">@arzg</a> on GitHub</li>
+    </ul>
+
+    <section class="category">
+      <h2>Education</h2>
+      <div class="content">
+        <section class="place">
+          <h3>Australian National University</h3>
+          <p class="role">Bachelor of Advanced Computing</p>
+          <time>commencing 2023</time>
+        </section>
+        <section class="place">
+          <h3>NBSC Manly Selective Campus</h3>
+          <time>2017 to 2022</time>
+          <p class="description">
+            I achieved 90% in Software Design & Development
+            (HSC&nbsp;result&nbsp;pending).
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Projects</h2>
+      <div class="content">
+        <section class="place">
+          <h3>
+            <a href="https://github.com/gingerbread-lang/gingerbread"
+              >Gingerbread</a
+            >
+          </h3>
+          <p class="role">programming language in Rust</p>
+          <time>Aug 2021 to May 2022</time>
+          <div class="description">
+            <p>
+              I made a statically-typed compiler and VS Code plugin using Rust
+              for a programming language of my own design. I optimised the
+              compiler heavily for performance, reaching over 1 million
+              LOC/second on a&nbsp;single&nbsp;core.
+            </p>
+            <details>
+              <summary>more…</summary>
+              <p>
+                I wrote the compiler in a modular fashion to allow reusing its
+                infrastructure to create editor plugins. Out of this came an
+                LSP-based VS Code plugin which provided semantic highlighting,
+                Go to Definition, Expand/Shrink Selection, Workspace Symbols as
+                well as live as-you-type diagnostics.
+              </p>
+              <p>
+                To improve performance I structured the entire compiler to
+                operate on each source file independently during every phase,
+                thereby making it trivial to add multithreading. I profiled the
+                compiler on large test inputs to find areas in need of
+                optimisation. This resulted in my implementation of a custom
+                syntax tree data structure. Additionally, for several
+                particularly hot functions, I read their disassemblies and
+                tweaked the relevant source code to eliminate bounds checks.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="place">
+          <h3>Timetable Bot</h3>
+          <p class="role">timetable notification system in Rust</p>
+          <time>Jul 2021 to Nov 2021</time>
+          <div class="description">
+            <p>
+              A friend and I successfully created a Discord bot, written in
+              Rust, to provide lesson time notifications. It was very satisfying
+              when over 250 students at our school used it!
+            </p>
+            <details>
+              <summary>more…</summary>
+              <p>
+                We scraped the timetable of every student from the school’s
+                website. This let us automatically send each student a
+                notification through Discord when a class of theirs was about
+                to start. These messages included a link to the roll call
+                website of the relevant class.
+              </p>
+              <p>
+                We set up a Discord server for the entire school and managed to
+                get over 250 members! Through the Discord bot, we created an
+                automated authentication system to only provide server access to
+                students verified through the school’s timetable website.
+              </p>
+              <p>
+                Once school went back to in-person learning, we added a
+                timetable export feature to the bot that could emit timetables
+                in the format expected by the popular
+                <a href="https://classtimetable.app">Class Timetable</a> app.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="place">
+          <h3><a href="https://arzg.github.io/lang">Make A Language</a></h3>
+          <p class="role">blog post series in Hugo & Rust</p>
+          <time>Sep 2020 to Jan 2021</time>
+          <p class="description">
+            I wrote a tutorial which leads the reader along the process of
+            making an interpreted programming language using Rust. The series
+            has twenty parts. I built the website from scratch using Hugo (Go
+            templating HTML + SCSS + Markdown). It was
+            <a href="https://news.ycombinator.com/item?id=25026419"
+              >posted on Hacker News</a
+            >
+            and
+            <a href="https://twitter.com/algo_luca/status/1333141350255095811"
+              >retweeted by the Rust Twitter account</a
+            >.
+          </p>
+        </section>
+
+        <section class="place">
+          <h3><a href="https://github.com/arzg/fjord">Fjord</a></h3>
+          <p class="role">shell in Rust</p>
+          <time>Jan 2020 to Sep 2020</time>
+          <div class="description">
+            <p>
+              I made an interpreted programming language in Rust to be used as a
+              shell. Its standout feature was the integration of applications
+              into the shell to provide a consistent command-line interface.
+            </p>
+            <details>
+              <summary>more…</summary>
+              <p>
+                The most sizeable of these applications was a terminal-based
+                <a href="https://github.com/arzg/se">text editor</a>. To add
+                syntax highlighting I developed my own error-resilient
+                <a href="https://github.com/arzg/syntax-rust">Rust parser</a>.
+                To let others develop Fjord apps I created a
+                <a href="https://github.com/arzg/fjord/blob/1cdf792f63e32bfebcb6471978c10285d6f52f33/foreignfjordfunc-derive/src/lib.rs">proc macro</a>
+                to automate code generation.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="place">
+          <h3>Assorted color schemes</h3>
+          <time>Oct 2018 to present</time>
+          <div class="description">
+            <p>
+              I’m interested in color theory and color science, as well as the
+              application of mathematical rigor to color schemes, especially
+              syntax highlighting. Along the way I’ve implemented libraries in
+              Rust for generating colors using perceptually uniform color spaces
+              and for creating VS Code themes. I’ve also made a number of
+              popular color schemes for Vim (<a
+                href="https://github.com/arzg/vim-colors-xcode/"
+                >vim-colors-xcode</a
+              >
+              and
+              <a href="https://github.com/arzg/vim-substrata">vim-substrata</a
+              >).
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Experience</h2>
+      <div class="content">
+        <section class="place">
+          <h3>Kasa Investment Partners</h3>
+          <p class="role">work experience</p>
+          <time>Oct 2020 to Nov 2020</time>
+          <p class="description">
+            I created a tool to scrape listings from Airbnb, Booking.com and
+            Google&nbsp;Travel. I used async Rust with a multithreaded runtime
+            to maximise performance. To prevent rate-limiting I used the
+            user-agent of a major web browser and limited the rate at which
+            requests could be made.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Awards & scholarships</h2>
+      <div class="content">
+        <section class="place">
+          <h3>CECS Female Excellence Scholarship</h3>
+          <time>2023</time>
+          <p class="description">
+	    This scholarship is offered by the ANU College of Engineering and
+            Computer Science.
+          </p>
+        </section>
+        <section class="place">
+          <h3>Dedication to Studies in Software Design and Development</h3>
+          <time>2021</time>
+          <p class="description">
+            This was awarded by NBSC Manly Selective Campus.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Technologies</h2>
+      <div class="content">
+        <section class="place spaced">
+          <h3>Proficient</h3>
+          <ul>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>HTML</li>
+            <li>Python</li>
+            <li>Rust</li>
+            <li>Shell scripting</li>
+            <li>XML</li>
+          </ul>
+          <h3>Basic</h3>
+          <ul>
+            <li>AArch64 assembly</li>
+            <li>C#</li>
+            <li>C</li>
+            <li>Go templating</li>
+            <li>Go</li>
+            <li>Hugo</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SCSS</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="category">
+      <h2>Interests</h2>
+      <div class="content">
+        <section class="place">
+          <ul>
+            <li>programming languages</li>
+            <li>compilers</li>
+            <li>typography</li>
+            <li>graphic design</li>
+            <li>music production</li>
+            <li>color science</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
