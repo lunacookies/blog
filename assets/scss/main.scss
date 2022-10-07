@@ -216,12 +216,15 @@ nav {
 
 // keywords
 pre .keyword,
-pre .operator {
+pre .operator,
+pre .rule {
   color: hsb(210, 100, 80);
 }
 
 // types
-pre .class-name {
+pre .class-name,
+pre.language-css .property,
+pre.language-scss .property {
   color: hsb(230, 45, 65);
 }
 
@@ -231,14 +234,16 @@ pre .number {
 }
 
 // constants
-pre .constant {
+pre .constant,
+pre.language-scss .variable {
   color: hsb(35, 100, 80);
 }
 
 // preprocessor directives
 pre .directive,
 pre .directive-hash,
-pre .macro {
+pre .macro,
+pre.language-scss .keyword {
   color: hsb(180, 40, 50);
 }
 
@@ -259,12 +264,15 @@ pre .lifetime-annotation {
 
   // keywords
   pre .keyword,
-  pre .operator {
+  pre .operator,
+  pre .rule {
     color: hsb(210, 30, 80);
   }
 
   // types
-  pre .class-name {
+  pre .class-name,
+  pre.language-css .property,
+  pre.language-scss .property {
     color: hsb(220, 25, 65);
   }
 
@@ -274,7 +282,8 @@ pre .lifetime-annotation {
   }
 
   // constants
-  pre .constant {
+  pre .constant,
+  pre.language-scss .variable {
     color: hsb(35, 100, 100);
   }
 
@@ -286,7 +295,8 @@ pre .lifetime-annotation {
   // preprocessor directives
   pre .directive,
   pre .directive-hash,
-  pre .macro {
+  pre .macro,
+  pre.language-scss .keyword {
     color: hsb(180, 40, 65);
   }
 
