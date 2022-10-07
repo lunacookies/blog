@@ -133,6 +133,12 @@ ol * {
   margin-top: 0;
 }
 
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
 table {
   margin: {
     left: auto;
