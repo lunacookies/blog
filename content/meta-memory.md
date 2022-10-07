@@ -1,5 +1,5 @@
 ---
-title: Meta-memory
+title: Meta Memory
 description: An abstraction of memory on top of memory
 date: 2022-08-08
 ---
