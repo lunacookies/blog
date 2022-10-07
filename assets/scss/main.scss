@@ -8,6 +8,14 @@
   }
 }
 
+@mixin element-border {
+  border-radius: 0.25rem;
+  border: 1px solid hsb(0, 0, 90);
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid hsb($dark-bg-hue, 20, 25);
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -137,6 +145,7 @@ img,
 video {
   display: block;
   max-width: 100%;
+  @include element-border();
 }
 
 table {
@@ -189,11 +198,9 @@ pre {
 
 :not(pre) > code,
 pre {
-  border-radius: 0.25rem;
-  border: 1px solid hsb(0, 0, 90);
+  @include element-border();
   background-color: hsb(0, 0, 98);
   @media (prefers-color-scheme: dark) {
-    border: 1px solid hsb($dark-bg-hue, 20, 25);
     background-color: hsb($dark-bg-hue, 2, 13);
   }
 }
