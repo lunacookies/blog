@@ -137,5 +137,5 @@ Even with all this effort,
 the text shadows still don’t render _quite right_
 when you select a portion of some underlined text:
 
-<video autoplay muted loop src="/text-shadows.mp4">
+<video autoplay muted loop playsinline src="/text-shadows.mp4">
 </video>
