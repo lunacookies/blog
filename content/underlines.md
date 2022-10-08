@@ -139,3 +139,6 @@ when you select a portion of some underlined text:
 
 <video autoplay muted loop playsinline src="/text-shadows.mp4">
 </video>
+
+> Edit: I couldn’t resist adding the text shadows to this website
+> after all :)
