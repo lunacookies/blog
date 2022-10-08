@@ -57,6 +57,9 @@ $dark-bg: hsb($dark-bg-hue, 5, 15);
 $light-fg: black;
 $dark-fg: hsb($dark-fg-hue, 5, 90);
 
+$light-faded: hsb(0, 0, 55);
+$dark-faded: hsb($dark-bg-hue, 8, 55);
+
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
@@ -103,18 +106,54 @@ header {
 
   > .subtitle {
     margin-top: 0;
-    color: hsb(0, 0, 55);
+    color: $light-faded;
     @media (prefers-color-scheme: dark) {
-      color: hsb($dark-bg-hue, 8, 55);
+      color: $dark-faded;
     }
   }
 }
 
+@mixin text-shadow($background) {
+  $shadows: ();
+
+  @for $x from -2 through 2 {
+    @for $y from -2 through 2 {
+      // A shadow at 0px, 0px has no effect, so we omit it.
+      @if not($x==0 and $y==0) {
+        $shadows: append(
+          $shadows,
+          unquote("#{$x}px #{$y}px #{$background}"),
+          $separator: comma
+        );
+      }
+    }
+  }
+
+  text-shadow: $shadows;
+}
+
 a {
-  background-image: linear-gradient(currentColor, currentColor);
+  $light-underline: rgba($light-fg, 0.5);
+  $dark-underline: rgba($dark-fg, 0.7);
+
+  background-image: linear-gradient($light-underline, $light-underline);
+  @include text-shadow($light-bg);
+  @media (prefers-color-scheme: dark) {
+    background-image: linear-gradient($dark-underline, $dark-underline);
+    @include text-shadow($dark-bg);
+  }
+
   background-repeat: no-repeat;
-  background-position: 0 97%;
+  background-position: 0 100%;
   background-size: 100% 1px;
+}
+
+blockquote {
+  border-left: 1px solid $light-faded;
+  @media (prefers-color-scheme: dark) {
+    border-left: 1px solid $dark-faded;
+  }
+  padding-left: 1rem;
 }
 
 ul,
