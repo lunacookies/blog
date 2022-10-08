@@ -259,11 +259,6 @@ nav {
   top: 1rem;
   left: 1rem;
 
-  // remove link underlines
-  a {
-    background-image: none;
-  }
-
   // avoid element following navigation
   // having phantom spacing
   & + * {
