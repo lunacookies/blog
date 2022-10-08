@@ -51,6 +51,12 @@ html {
 $dark-bg-hue: 220;
 $dark-fg-hue: 55;
 
+$light-bg: hsb(0, 0, 97);
+$dark-bg: hsb($dark-bg-hue, 5, 15);
+
+$light-fg: black;
+$dark-fg: hsb($dark-fg-hue, 5, 90);
+
 body {
   font-family: Georgia, serif;
   line-height: 1.5;
@@ -61,12 +67,11 @@ body {
     right: auto;
   }
 
-  background-color: hsb(0, 0, 97);
-  color: black;
-
+  background-color: $light-bg;
+  color: $light-fg;
   @media (prefers-color-scheme: dark) {
-    background-color: hsb($dark-bg-hue, 5, 15);
-    color: hsb($dark-fg-hue, 5, 90);
+    background-color: $dark-bg;
+    color: $dark-fg;
   }
 }
 
