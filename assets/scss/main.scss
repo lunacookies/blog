@@ -146,6 +146,10 @@ a {
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 1px;
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 blockquote {
