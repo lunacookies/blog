@@ -31,14 +31,14 @@ em {
   font-style: italic;
 }
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 html {
-  font-size: 19px;
+  font-size: 17px;
 
   @media (max-width: 500px) {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   @media (min-width: 1000px) {
@@ -61,9 +61,10 @@ $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb($dark-bg-hue, 8, 55);
 
 body {
-  font-family: Georgia, serif;
+  font-family: portada-text, Georgia, serif;
+  font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.6;
-  max-width: 33rem;
+  max-width: 36rem;
   padding: 4rem 1rem;
   margin: {
     left: auto;
@@ -84,10 +85,11 @@ body * + * {
 
 h1 {
   font-size: 1.5rem;
+  font-family: portada;
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 600;
   margin: {
     top: 4rem;
     bottom: 2rem;
@@ -144,7 +146,7 @@ a {
   }
 
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  background-position: 0 87%;
   background-size: 100% 1px;
 
   &:active {
@@ -211,7 +213,7 @@ table {
   }
 
   thead > tr > th {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   // border with space above and below
@@ -225,12 +227,25 @@ table {
 }
 
 code {
-  font-family: Consolas, Menlo, DejaVu Sans Mono, monospace;
+  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+  font-feature-settings:
+    // monocular g
+    "ss02",
+    // centred asterisk
+    "ss11",
+    // “boring” curly braces
+    "ss12";
   font-size: 0.86em;
 }
 pre {
-  font-size: 0.82rem;
-  line-height: 1.2;
+  > code {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    @media (max-width: 600px) {
+      font-family: input-mono-narrow;
+    }
+  }
 
   padding: 1rem;
   @media (max-width: 500px) {

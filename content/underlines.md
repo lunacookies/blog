@@ -24,7 +24,7 @@ then resize and position it so it:
   background-color: currentColor;
   background-repeat: no-repeat;
   background-size: 100% 1px;
-  background-position: 0 97%;
+  background-position: 0 87%;
 }
 ```
 
@@ -39,7 +39,7 @@ to circumvent this limitation:
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-size: 100% 1px;
-  background-position: 0 97%;
+  background-position: 0 87%;
 }
 ```
 
@@ -48,13 +48,13 @@ at the text’s current color;
 this functions identically to the `background-color` property,
 except that it lets us resize and reposition the background.
 
-<span style="background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 97%">Much better.</span>
+<span style="background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 87%">Much better.</span>
 
 And here, enlarged for your viewing pleasure:
 
 <span style="font-size: 2rem; line-height: 1; text-decoration: underline">lorem ipsum</span>
 
-<span style="font-size: 2rem; line-height: 1; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 2px; background-repeat: no-repeat; background-position: 0 97%">lorem ipsum</span>
+<span style="font-size: 2rem; line-height: 1; background-image: linear-gradient(currentColor, currentColor); background-size: 100% 2px; background-repeat: no-repeat; background-position: 0 87%">lorem ipsum</span>
 
 (Note that I manually increased the underline thickness
 to compensate for the larger font size.)
