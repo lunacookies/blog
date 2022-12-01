@@ -118,7 +118,7 @@ header {
 @mixin text-shadow($background) {
   $shadows: ();
 
-  @for $x from -2 through 2 {
+  @for $x from -4 through 4 {
     @for $y from -2 through 2 {
       // A shadow at 0px, 0px has no effect, so we omit it.
       @if not($x==0 and $y==0) {
