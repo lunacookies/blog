@@ -135,8 +135,8 @@ header {
 }
 
 a {
-  $light-underline: rgba($light-fg, 0.5);
-  $dark-underline: rgba($dark-fg, 0.7);
+  $light-underline: $light-fg;
+  $dark-underline: rgba($dark-fg, 0.8);
 
   background-image: linear-gradient($light-underline, $light-underline);
   @include text-shadow($light-bg);
