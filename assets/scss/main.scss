@@ -46,6 +46,9 @@ html {
   }
 
   text-size-adjust: 100%;
+
+  // dark scroll bars in OS dark mode
+  color-scheme: light dark;
 }
 
 $dark-bg-hue: 220;
