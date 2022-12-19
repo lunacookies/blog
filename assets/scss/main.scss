@@ -16,6 +16,19 @@
   }
 }
 
+@mixin color-faded {
+  color: $light-faded;
+  @media (prefers-color-scheme: dark) {
+    color: $dark-faded;
+  }
+}
+
+@mixin color-bright {
+  @media (prefers-color-scheme: dark) {
+    color: $dark-bright;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -59,6 +72,8 @@ $dark-fg: hsb($dark-fg-hue, 5, 90);
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb($dark-bg-hue, 8, 55);
 
+$dark-bright: hsb($dark-fg-hue, 5, 100);
+
 body {
   font-family: portada-text, Georgia, serif;
   font-variant-numeric: proportional-nums oldstyle-nums;
@@ -95,11 +110,9 @@ h2 {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  h1,
-  h2 {
-    color: hsb($dark-fg-hue, 5, 100);
-  }
+h1,
+h2 {
+  @include color-bright();
 }
 
 header {
@@ -107,10 +120,7 @@ header {
 
   > .subtitle {
     margin-top: 0;
-    color: $light-faded;
-    @media (prefers-color-scheme: dark) {
-      color: $dark-faded;
-    }
+    @include color-faded();
   }
 }
 
