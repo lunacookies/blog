@@ -169,11 +169,10 @@ a {
 }
 
 blockquote {
-  border-left: 1px solid $light-faded;
-  @media (prefers-color-scheme: dark) {
-    border-left: 1px solid $dark-faded;
-  }
-  padding-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  padding-left: 4rem;
 }
 
 ul,
