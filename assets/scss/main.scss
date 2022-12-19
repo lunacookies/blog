@@ -29,6 +29,17 @@
   }
 }
 
+@mixin small {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+@mixin small-caps {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.05em;
+}
+
 *,
 ::before,
 ::after {
@@ -130,6 +141,28 @@ header {
   }
 }
 
+footer {
+  @include small();
+  margin-top: 4rem;
+
+  border-top: 4px solid hsb(0, 0, 80);
+  @media (prefers-color-scheme: dark) {
+    border-top: 4px solid hsb($dark-bg-hue, 15, 50);
+  }
+
+  > * + * {
+    margin-top: 0;
+  }
+
+  > h3 {
+    @include small-caps();
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+    @include color-bright();
+  }
+}
+
 @mixin text-shadow($background) {
   $shadows: ();
 
@@ -174,6 +207,10 @@ blockquote {
   line-height: 1.4;
   letter-spacing: 0.02em;
   padding-left: 4rem;
+}
+
+abbr {
+  @include small-caps();
 }
 
 ul,
