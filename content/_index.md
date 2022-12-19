@@ -8,7 +8,7 @@ description: "she / her"
 - student who loves programming
 - [@arzg](https://github.com/arzg) on GitHub
 - I like making compilers with a focus on IDE tooling
-- obsessed with typography and colour schemes
+- obsessed with typography and color schemes
 
 ## Projects
 
