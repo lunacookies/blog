@@ -77,11 +77,16 @@ body {
   font-family: portada-text, Georgia, serif;
   font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.5;
+
   max-width: 32rem;
-  padding: 4rem 1rem;
   margin: {
     left: auto;
     right: auto;
+  }
+
+  padding: 8rem 1rem;
+  @media (max-width: 500px) {
+    padding: 4rem 1rem;
   }
 
   background-color: $light-bg;
