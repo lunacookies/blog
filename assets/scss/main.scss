@@ -128,8 +128,8 @@ header {
 @mixin text-shadow($background) {
   $shadows: ();
 
-  @for $x from -4 through 4 {
-    @for $y from -2 through 2 {
+  @for $x from -3 through 3 {
+    @for $y from -1 through 1 {
       // A shadow at 0px, 0px has no effect, so we omit it.
       @if not($x==0 and $y==0) {
         $shadows: append(
@@ -156,7 +156,7 @@ a {
   }
 
   background-repeat: no-repeat;
-  background-position: 0 87%;
+  background-position: 0 83%;
   background-size: 100% 1px;
 
   &:active {
