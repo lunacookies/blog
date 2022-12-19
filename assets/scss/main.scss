@@ -124,7 +124,7 @@ header {
   margin-bottom: 4rem;
 
   > .subtitle {
-    margin-top: 0;
+    margin-top: 0.5rem;
     @include color-faded();
   }
 }
