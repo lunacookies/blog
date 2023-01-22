@@ -80,9 +80,8 @@ $light-fg: black;
 $dark-fg: hsb($dark-fg-hue, 5, 90);
 
 $light-faded: hsb(0, 0, 55);
-$dark-faded: hsb($dark-bg-hue, 8, 55);
-
 $dark-bright: hsb($dark-fg-hue, 5, 100);
+$dark-faded: hsb(120, 5, 46);
 
 body {
   font-family: portada-text, Georgia, serif;
