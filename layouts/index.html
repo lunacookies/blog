@@ -1,0 +1,79 @@
+{{ define "body" }}
+  <header>
+    <h1>Luna Razzaghipour</h1>
+    <p class="subtitle">(she / her)</p>
+  </header>
+
+  <h2>About me</h2>
+
+  <ul>
+    <li>student who loves programming</li>
+    <li><a href="https://github.com/arzg">@arzg</a> on GitHub</li>
+    <li>I like making compilers with a focus on IDE tooling</li>
+    <li>obsessed with typography and color schemes</li>
+  </ul>
+
+  <h2>Projects</h2>
+
+  <ul>
+    <li>
+      <a href="https://github.com/arzg/psychic-telegram">
+        &lt;name pending&gt;
+      </a>
+      programming language
+    </li>
+    <li>
+      <a href="https://github.com/gingerbread-lang/gingerbread">Gingerbread</a>
+      programming language
+    </li>
+    <li>
+      <a href="https://arzg.github.io/lang">Make A Language</a> tutorial series
+    </li>
+    <li>
+      <a href="https://github.com/arzg/fjord">Fjord</a> programming language /
+      shell
+    </li>
+  </ul>
+
+  <h2>Posts</h2>
+
+  <ul>
+    {{ range .Pages }}
+      <li class="post">
+        <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+        <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+      </li>
+    {{ end }}
+  </ul>
+
+  <h2>Colophon</h2>
+
+  <p>
+    This site is generated using <a href="https://gohugo.io">Hugo</a>, styled
+    with <a href="https://sass-lang.com">SCSS</a> and hosted on
+    <a href="https://pages.github.com">GitHub&nbsp;Pages</a>. Take a look at
+    <a href="https://github.com/arzg/website">the source code</a> if you’re
+    curious!
+  </p>
+  <p>
+    It is set in
+    <a href="https://www.type-together.com/portada-font">
+      the Portada family
+    </a>
+    by Veronika&nbsp;Burian &amp; José&nbsp;Scaglione: body text uses
+    Portada&nbsp;Text, and page titles and subtitles use Portada. Code samples
+    are set in
+    <a href="https://input.djr.com">Input&nbsp;Mono</a> by
+    <abbr title="David Jonathan Ross">DJR</abbr> (switching to
+    Input&nbsp;Mono&nbsp;Narrow on small screens). All fonts are served by
+    <a href="https://fonts.adobe.com">Adobe&nbsp;Fonts</a>.
+  </p>
+  <p>
+    In dark mode, the whole site uses a slight variant of the colors found in
+    Jeet&nbsp;Sukumaran’s
+    <a href="https://www.vim.org/scripts/script.php?script_id=3299">Sorcerer</a>
+    theme. This is especially evident in the syntax highlighting I use for code
+    blocks. I tried my best to adapt Sorcerer to light mode, but I don’t think
+    it does the original justice.
+  </p>
+{{ end }}
