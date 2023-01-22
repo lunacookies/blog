@@ -299,7 +299,7 @@ pre {
 :not(pre) > code,
 pre {
   @include element-border();
-  background-color: hsb(0, 0, 98);
+  background-color: hsb(0, 0, 99);
   @media (prefers-color-scheme: dark) {
     background-color: hsb(0, 0, 10);
   }
