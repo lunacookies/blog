@@ -144,6 +144,11 @@ header {
   }
 }
 
+.signature {
+  text-align: right;
+  margin-top: 2rem;
+}
+
 footer {
   @include small();
   font-style: italic;
@@ -321,18 +326,6 @@ pre {
   background-color: hsb(0, 0, 98);
   @media (prefers-color-scheme: dark) {
     background-color: hsb($dark-bg-hue, 2, 13);
-  }
-}
-
-nav {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-
-  // avoid element following navigation
-  // having phantom spacing
-  & + * {
-    margin-top: 0;
   }
 }
 
