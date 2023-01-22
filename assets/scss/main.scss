@@ -320,6 +320,10 @@ pre {
   @media (max-width: 500px) {
     padding: 0.5rem;
   }
+  margin: {
+    top: 1.5rem;
+    bottom: 1.5rem;
+  }
 
   overflow-x: auto;
 }
@@ -334,13 +338,6 @@ pre {
   background-color: hsb(0, 0, 98);
   @media (prefers-color-scheme: dark) {
     background-color: hsb($dark-bg-hue, 2, 13);
-  }
-}
-
-pre {
-  margin: {
-    top: 1.5rem;
-    bottom: 1.5rem;
   }
 }
 
