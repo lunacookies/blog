@@ -12,7 +12,7 @@
   border-radius: 0.25rem;
   border: 1px solid hsb(0, 0, 90);
   @media (prefers-color-scheme: dark) {
-    border: 1px solid hsb($dark-bg-hue, 20, 25);
+    border: 1px solid hsb(0, 0, 20);
   }
 }
 
@@ -64,14 +64,13 @@ html {
   color-scheme: light dark;
 }
 
-$dark-bg-hue: 220;
 $dark-fg-hue: 55;
 
 $light-bg: hsb(0, 0, 97);
-$dark-bg: hsb($dark-bg-hue, 5, 15);
+$dark-bg: hsb(0, 0, 12);
 
 $light-fg: black;
-$dark-fg: hsb($dark-fg-hue, 5, 90);
+$dark-fg: hsb($dark-fg-hue, 7, 90);
 
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
@@ -302,7 +301,7 @@ pre {
   @include element-border();
   background-color: hsb(0, 0, 98);
   @media (prefers-color-scheme: dark) {
-    background-color: hsb($dark-bg-hue, 2, 13);
+    background-color: hsb(0, 0, 10);
   }
 }
 
