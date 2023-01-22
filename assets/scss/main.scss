@@ -86,11 +86,7 @@ body {
     left: auto;
     right: auto;
   }
-
-  padding: 8rem 1rem;
-  @media (max-width: 500px) {
-    padding: 4rem 1rem;
-  }
+  padding: 2rem 1rem;
 
   background-color: $light-bg;
   color: $light-fg;
