@@ -187,13 +187,14 @@ footer {
 }
 
 a {
-  $light-underline: $light-fg;
-  $dark-underline: rgba($dark-fg, 0.8);
+  color: hsb(210, 100, 80);
+  @media (prefers-color-scheme: dark) {
+    color: hsb(210, 30, 80);
+  }
 
-  background-image: linear-gradient($light-underline, $light-underline);
+  background-image: linear-gradient(currentColor, currentColor);
   @include text-shadow($light-bg);
   @media (prefers-color-scheme: dark) {
-    background-image: linear-gradient($dark-underline, $dark-underline);
     @include text-shadow($dark-bg);
   }
 
