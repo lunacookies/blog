@@ -251,6 +251,11 @@ video {
   display: block;
   max-width: 100%;
   @include element-border();
+
+  margin: {
+    top: 1.5rem;
+    bottom: 1.5rem;
+  }
 }
 
 table {
