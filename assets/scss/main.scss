@@ -268,7 +268,7 @@ code {
     "ss11",
     // “boring” curly braces
     "ss12";
-  font-size: 0.86em;
+  font-size: 0.9em;
 }
 pre {
   > code {
@@ -284,20 +284,14 @@ pre {
   @media (max-width: 500px) {
     padding: 0.5rem;
   }
+
   margin: {
     top: 1.5rem;
     bottom: 1.5rem;
   }
 
   overflow-x: auto;
-}
 
-:not(pre) > code {
-  padding: 0.1rem 0.25rem;
-}
-
-:not(pre) > code,
-pre {
   @include element-border();
   background-color: hsb(0, 0, 99);
   @media (prefers-color-scheme: dark) {
