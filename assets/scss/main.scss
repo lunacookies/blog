@@ -100,8 +100,9 @@ body * + * {
 }
 
 h2 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  @include small-caps();
 }
 
 header {
