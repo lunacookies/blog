@@ -512,7 +512,7 @@ Bold:
 <span class="green gone">██ boldgreen</span>&#9;<span class="brgreen gone">██ boldbrgreen</span>
 <span class="yellow gone">██ boldyellow</span>&#9;<span class="bryellow gone">██ boldbryellow</span>
 <span class="blue gone">██ boldblue</span>&#9;<span class="brblue gone">██ boldbrblue</span>
-<span class="magenta">██ boldmagenta</span>&#9;<span class="brmagenta">██ brmagenta</span>
+<span class="magenta">██ boldmagenta</span>&#9;<span class="brmagenta">██ boldbrmagenta</span>
 <span class="cyan gone">██ boldcyan</span>&#9;<span class="brcyan gone">██ boldbrcyan</span>
 <span class="white gone">██ boldwhite</span>&#9;<span class="brwhite gone">██ boldbrwhite</span></strong>
 % █</div>
