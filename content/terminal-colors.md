@@ -518,8 +518,9 @@ Bold:
 % █</div>
 </div>
 
-Only around 34% of our available palette
-is permissible,
+Only eleven out of our
+thirty-two possible color settings
+are permissible,
 given that we want applications
 to remain readable
 for as many people as we can.
