@@ -33,8 +33,8 @@ the macOS and iOS system memory allocators
 let’s say you’re allocating
 space for a null-terminated string,
 and the memory allocator
-decided to plonk you on top of
-some previously-used but now-freed memory.
+decides to plonk you on top of
+some previously-used but now-free memory.
 After filling the string with data,
 you forget to set the last byte to `'\0'`.
 Your code still works, though,
