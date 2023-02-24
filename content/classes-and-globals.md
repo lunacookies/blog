@@ -73,9 +73,9 @@ which gets passed into each function:
 
 ```c
 typedef struct {
-	static FILE *output_file;
-	static int depth;
-	static Obj *current_fn;
+	FILE *output_file;
+	int depth;
+	Obj *current_fn;
 } Context;
 
 // for example
@@ -123,9 +123,9 @@ public void codegen() {
 }
 
 private class Codegen {
-	private static FILE *output_file;
-	private static int depth;
-	private static Obj *current_fn;
+	private FILE *output_file;
+	private int depth;
+	private Obj *current_fn;
 
 	private void println(char *fmt, ...) {
 		// we can access output_file without writing `this.output_file`
