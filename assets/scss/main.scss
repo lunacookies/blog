@@ -313,14 +313,17 @@ pre {
 // keywords
 pre .keyword,
 pre .operator,
-pre .rule {
+pre .rule,
+pre.language-ini .header,
+pre.language-ini .punctuation {
   color: hsb(210, 100, 80);
 }
 
 // types
 pre .class-name,
 pre.language-css .property,
-pre.language-scss .property {
+pre.language-scss .property,
+pre.language-ini .attr-name {
   color: hsb(230, 45, 65);
 }
 
@@ -344,7 +347,8 @@ pre.language-scss .keyword {
 }
 
 // strings
-pre .string {
+pre .string,
+pre.language-ini .attr-value {
   color: hsb(110, 45, 50);
 }
 
@@ -361,14 +365,17 @@ pre .lifetime-annotation {
   // keywords
   pre .keyword,
   pre .operator,
-  pre .rule {
+  pre .rule,
+  pre.language-ini .header,
+  pre.language-ini .punctuation {
     color: hsb(210, 30, 80);
   }
 
   // types
   pre .class-name,
   pre.language-css .property,
-  pre.language-scss .property {
+  pre.language-scss .property,
+  pre.language-ini .attr-name {
     color: hsb(220, 25, 65);
   }
 
@@ -397,7 +404,8 @@ pre .lifetime-annotation {
   }
 
   // strings
-  pre .string {
+  pre .string,
+  pre.language-ini .attr-value {
     color: hsb(110, 30, 65);
   }
 
