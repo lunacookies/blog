@@ -207,7 +207,7 @@ You can find your public key in `~/.ssh/id_ed25519.pub`
 If you trust me, though, you can leave my email-key pair in there :P
 
 ```
-lunarazzaghipour@gmail.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJC/Yu7JxBQSDUY013mO7L2nRl0xHQJkr0ysdE4zGeAo luna@firestorm.local
+lunarazzaghipour@gmail.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o= GitHub@secretive.firestorm.local
 foo@bar.org public-key-here
 ```
 
@@ -280,17 +280,17 @@ For example, here is the output from the key I use for signing commits:
 
 ```
 $ ssh-keygen -lvf ~/.ssh/github
-256 SHA256:Kywsc1vHG9+wPIxhxODjWIPvSdz5cteDXqpkYCB1qDo luna@firestorm.local (ED25519)
-+--[ED25519 256]--+
-|      ...        |
-|     .o.         |
-|    .+.o         |
-|    o.=.o        |
-|   . * =S.       |
-|  E...=o=o       |
-|  o.+o+o==+  o.  |
-|   + +oooB=+ooo  |
-|    .   .o==+  . |
+256 SHA256:lmMzeq1AyvNz2MiIWA/tPnteHkr8zyHsD2x9gSZaBbk no comment (ECDSA)
++---[ECDSA 256]---+
+|        ..       |
+|        ..       |
+|         ..      |
+|        Eo .     |
+|   .  . S o .    |
+|  o..+ O O   .   |
+| o =+o*+X + .    |
+|. . =+*Xo* o     |
+|   .o=+o=o+      |
 +----[SHA256]-----+
 ```
 
