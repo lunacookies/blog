@@ -4,6 +4,17 @@ date: "2023-03-02"
 description: "Featuring Git, SSH and Keychain"
 ---
 
+> Edit:
+> It has been one day since I posted this.
+> I have now learned of the existence of [Secretive] and [YubiKeys],
+> and how keeping a private key in a file accessible to, say, malware,
+> might not be the best idea.
+>
+> If you have a capable Mac, I highly recommend playing around with Secretive!
+> It and the Secure Enclave are very cool pieces of technology.
+> Once again: let this be a lesson to not take security advice
+> from some random blog post :)
+
 Let me preface this with a disclaimer: I am not a security expert,
 and I in fact know very little about either digital security or cryptography.
 This is just a little note on what I’ve learned about this topic
@@ -300,6 +311,8 @@ It is my hope that, with SSH keys being so easy to work with
 and with GitHub and GitLab both supporting them,
 more developers will start signing their commits.
 
+[secretive]: https://github.com/maxgoedjen/secretive
+[yubikeys]: https://www.yubico.com/products/yubikey-5-overview/
 [tty]: https://github.com/arzg/dotfiles/commit/45cca19c4527fb8aab92f2d30aad17fd9b7657c1
 [i gave up]: https://github.com/arzg/dotfiles/commit/404711565c61725efa9d79aed702c3297715d69d
 [openssh]: https://www.agwa.name/blog/post/ssh_signatures
