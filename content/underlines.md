@@ -79,7 +79,7 @@ the shadows disappear when the text is selected.
 
 Regrettably, I couldn’t resist not doing this
 when I made my
-[Make A Language](https://arzg.github.io/lang) tutorial series.
+[Make A Language](https://lunacookies.github.io/lang) tutorial series.
 To give you an idea of what’s involved,
 I’ve reproduced an edited version of the code
 necessary for implementing this below.

@@ -1,8 +1,8 @@
 {
-  "name": "arzg.github.io",
+  "name": "lunacookies.github.io",
   "version": "0.0.1",
   "private": true,
-  "description": "arzg’s blog",
+  "description": "Luna’s Website",
   "scripts": {
     "start": "hugo server --minify --buildFuture"
   },

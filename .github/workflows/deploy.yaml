@@ -29,4 +29,4 @@ jobs:
           publish_dir: ./public
           publish_branch: main
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: arzg/arzg.github.io
+          external_repository: lunacookies/lunacookies.github.io

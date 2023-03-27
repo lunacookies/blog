@@ -299,7 +299,7 @@ Seriously, try it!
 It fetches my public key from GitHub, and then runs it through `ssh-keygen`:
 
 ```
-$ curl https://github.com/arzg.keys \
+$ curl https://github.com/lunacookies.keys \
 	| ssh-keygen -lvf /dev/stdin
 ```
 
@@ -313,8 +313,8 @@ more developers will start signing their commits.
 
 [secretive]: https://github.com/maxgoedjen/secretive
 [yubikeys]: https://www.yubico.com/products/yubikey-5-overview/
-[tty]: https://github.com/arzg/dotfiles/commit/45cca19c4527fb8aab92f2d30aad17fd9b7657c1
-[i gave up]: https://github.com/arzg/dotfiles/commit/404711565c61725efa9d79aed702c3297715d69d
+[tty]: https://github.com/lunacookies/dotfiles/commit/45cca19c4527fb8aab92f2d30aad17fd9b7657c1
+[i gave up]: https://github.com/lunacookies/dotfiles/commit/404711565c61725efa9d79aed702c3297715d69d
 [openssh]: https://www.agwa.name/blog/post/ssh_signatures
 [github]: https://github.blog/changelog/2022-08-23-ssh-commit-verification-now-supported/
 [store]: https://git-scm.com/docs/git-credential-store
