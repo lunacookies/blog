@@ -207,7 +207,7 @@ You can find your public key in `~/.ssh/id_ed25519.pub`
 If you trust me, though, you can leave my email-key pair in there :P
 
 ```
-lunarazzaghipour@gmail.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o= GitHub@secretive.firestorm.local
+lunarazzaghipour@gmail.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o=
 foo@bar.org public-key-here
 ```
 
