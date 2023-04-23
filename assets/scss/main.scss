@@ -187,9 +187,7 @@ a {
 }
 
 blockquote {
-  font-size: 0.9rem;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
+  @include small();
   padding-left: 4rem;
   margin: {
     top: 1.5rem;
