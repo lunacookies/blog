@@ -3,12 +3,17 @@
 
 <title>{{ .Title }} · {{ .Site.Title }}</title>
 
-{{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
+{{ $mainStyles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
   rel="stylesheet"
-  href="{{ $styles.Permalink }}"
-  integrity="{{ $styles.Data.Integrity }}"
+  href="{{ $mainStyles.Permalink }}"
+  integrity="{{ $mainStyles.Data.Integrity }}"
 />
+
+{{ $fontStyles := resources.Get "scss/fonts.scss" | toCSS | postCSS }}
+<style>
+{{ safeCSS $fontStyles.Content }}
+</style>
 
 <script src="https://unpkg.com/prismjs@1.25.0/components/prism-core.min.js"></script>
 <script src="https://unpkg.com/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>

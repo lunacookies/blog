@@ -1,5 +1,3 @@
-@import "fonts.scss";
-
 @function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
   @if $b-hsb == 0 {
     @return hsla(0, 0, 0, $a);
