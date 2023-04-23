@@ -7,13 +7,15 @@
     </p>
   </header>
 
-  {{ .Page.Content }}
+  <main>
+    {{ .Page.Content }}
 
 
-  <p class="signature">
-    <a href="{{ .Site.BaseURL }}">Luna Razzaghipour</a><br />
-    {{ .Date.Format "2 January 2006" }}
-  </p>
+    <p class="signature">
+      <a href="{{ .Site.BaseURL }}">Luna Razzaghipour</a><br />
+      {{ .Date.Format "2 January 2006" }}
+    </p>
+  </main>
 
   <footer>
     <p>

@@ -91,17 +91,28 @@ $mono-font: input-mono, ui-monospace, Consolas, Menlo, DejaVu Sans Mono,
   monospace;
 $narrow-mono-font: input-mono-narrow, $mono-font;
 
+html {
+  background-color: hsb(0, 0, 50);
+  @media (prefers-color-scheme: dark) {
+    background-color: hsb(0, 0, 20);
+  }
+}
+
 body {
   font-family: $text-font;
   font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.5;
 
-  max-width: 32rem;
+  max-width: 42rem;
   margin: {
     left: auto;
     right: auto;
   }
-  padding: 2rem 1rem;
+
+  padding: 2rem;
+  @media (max-width: 700px) {
+    padding: 2rem 1rem;
+  }
 
   background-color: $light-bg;
   color: $light-fg;
@@ -113,6 +124,10 @@ body {
 
 body * + * {
   margin-top: 1em;
+}
+
+main {
+  max-width: 25rem;
 }
 
 h2 {
@@ -132,6 +147,7 @@ header {
   > .subtitle {
     font-family: $subhead-font;
     margin-top: 0;
+    max-width: 30rem;
   }
 }
 
@@ -144,6 +160,7 @@ footer {
   @include small();
   font-style: italic;
   margin-top: 8rem;
+  max-width: 20rem;
 }
 
 .post {

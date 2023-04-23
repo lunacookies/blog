@@ -4,96 +4,107 @@
     <p class="subtitle">(she / her)</p>
   </header>
 
-  <h2>About me</h2>
+  <main>
+    <h2>About me</h2>
 
-  <ul>
-    <li>
-      studying compsci at the
-      <abbr title="Australian National University">ANU</abbr>
-    </li>
-    <li>i love programming and typography</li>
-    <li>totally obsessed with compilers</li>
-    <li>currently interested in data-oriented design</li>
-    <li><a href="https://github.com/lunacookies">@lunacookies</a> on GitHub</li>
-  </ul>
-
-  <h2>Projects I’ve worked on</h2>
-
-  <ul>
-    <li>
-      <a href="https://github.com/lunacookies/minic">minic</a>
-      (programming language)
-    </li>
-    <li>
-      <a href="https://github.com/gingerbread-lang/gingerbread">Gingerbread</a>
-      (programming language)
-    </li>
-    <li>
-      <a href="https://lunacookies.github.io/lang">Make A Language</a> (tutorial
-      series)
-    </li>
-    <li><a href="https://github.com/lunacookies/fjord">Fjord</a> (shell)</li>
-  </ul>
-
-  <h2>Posts</h2>
-
-  <ul>
-    {{ range .Pages }}
-      <li class="post">
-        <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-        <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+    <ul>
+      <li>
+        studying compsci at the
+        <abbr title="Australian National University">ANU</abbr>
       </li>
-    {{ end }}
-  </ul>
+      <li>i love programming and typography</li>
+      <li>totally obsessed with compilers</li>
+      <li>currently interested in data-oriented design</li>
+      <li>
+        <a href="https://github.com/lunacookies">@lunacookies</a> on GitHub
+      </li>
+    </ul>
 
-  <h2>SSH keys and stuff</h2>
+    <h2>Projects I’ve worked on</h2>
 
-  <p>
-    Finally I can be one of <em>those people</em> who have a public key on their
-    website! (I’ll be totally honest, I don’t actually have a good reason for
-    this to be here. I mean, it’s not like anyone’s sending me vulnerability
-    disclosures through encrypted email. Really, I’ve put it here to force
-    myself to keep using the same key.) Anyways, I intend to sign commits and
-    releases in all my personal projects with the following SSH key:
-  </p>
+    <ul>
+      <li>
+        <a href="https://github.com/lunacookies/minic">minic</a>
+        (programming language)
+      </li>
+      <li>
+        <a href="https://github.com/gingerbread-lang/gingerbread"
+          >Gingerbread</a
+        >
+        (programming language)
+      </li>
+      <li>
+        <a href="https://lunacookies.github.io/lang">Make A Language</a>
+        (tutorial series)
+      </li>
+      <li><a href="https://github.com/lunacookies/fjord">Fjord</a> (shell)</li>
+    </ul>
 
-  <pre><code>        public key: ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o=
+    <h2>Posts</h2>
+
+    <ul>
+      {{ range .Pages }}
+        <li class="post">
+          <p class="title">
+            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+          </p>
+          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+        </li>
+      {{ end }}
+    </ul>
+
+    <h2>SSH keys and stuff</h2>
+
+    <p>
+      Finally I can be one of <em>those people</em> who have a public key on
+      their website! (I’ll be totally honest, I don’t actually have a good
+      reason for this to be here. I mean, it’s not like anyone’s sending me
+      vulnerability disclosures through encrypted email. Really, I’ve put it
+      here to force myself to keep using the same key.) Anyways, I intend to
+      sign commits and releases in all my personal projects with the following
+      SSH key:
+    </p>
+
+    <pre><code>        public key: ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o=
 SHA256 fingerprint: SHA256:lmMzeq1AyvNz2MiIWA/tPnteHkr8zyHsD2x9gSZaBbk
    MD5 fingerprint: 60:28:c9:eb:c7:2d:bd:91:ad:43:a1:97:66:50:e8:2d</code></pre>
 
-  <p>
-    You can also access it
-    <a href="https://github.com/lunacookies.keys">on GitHub</a> if you prefer.
-  </p>
+    <p>
+      You can also access it
+      <a href="https://github.com/lunacookies.keys">on GitHub</a> if you prefer.
+    </p>
 
-  <h2>Colophon</h2>
+    <h2>Colophon</h2>
 
-  <p>
-    This site is generated using <a href="https://gohugo.io">Hugo</a>, styled
-    with <a href="https://sass-lang.com">SCSS</a> and hosted on
-    <a href="https://pages.github.com">GitHub&nbsp;Pages</a>. Take a look at
-    <a href="https://github.com/lunacookies/website">the source code</a> if
-    you’re curious!
-  </p>
-  <p>
-    It is set in
-    <a href="https://www.type-together.com/portada-font">
-      the Portada family
-    </a>
-    by Veronika&nbsp;Burian &amp; José&nbsp;Scaglione: body text uses
-    Portada&nbsp;Text, and page titles and subtitles use Portada. Code samples
-    are set in
-    <a href="https://input.djr.com">Input&nbsp;Mono</a> by
-    <abbr title="David Jonathan Ross">DJR</abbr> (switching to
-    Input&nbsp;Mono&nbsp;Narrow on small screens). All fonts are served by
-    <a href="https://fonts.adobe.com">Adobe&nbsp;Fonts</a>.
-  </p>
-  <p>
-    In dark mode, the whole site uses a slight variant of the colors found in
-    Jeet&nbsp;Sukumaran’s
-    <a href="https://www.vim.org/scripts/script.php?script_id=3299">Sorcerer</a>
-    theme. This is especially evident in the syntax highlighting I use for code
-    blocks. I tried my best to adapt Sorcerer to light mode, but I don’t think
-    it does the original justice.
-  </p>
+    <p>
+      This site is generated using <a href="https://gohugo.io">Hugo</a>, styled
+      with <a href="https://sass-lang.com">SCSS</a> and hosted on
+      <a href="https://pages.github.com">GitHub&nbsp;Pages</a>. Take a look at
+      <a href="https://github.com/lunacookies/website">the source code</a> if
+      you’re curious!
+    </p>
+    <p>
+      It is set in
+      <a href="https://www.type-together.com/portada-font">
+        the Portada family
+      </a>
+      by Veronika&nbsp;Burian &amp; José&nbsp;Scaglione: body text uses
+      Portada&nbsp;Text, and page titles and subtitles use Portada. Code samples
+      are set in
+      <a href="https://input.djr.com">Input&nbsp;Mono</a> by
+      <abbr title="David Jonathan Ross">DJR</abbr> (switching to
+      Input&nbsp;Mono&nbsp;Narrow on small screens). All fonts are served by
+      <a href="https://fonts.adobe.com">Adobe&nbsp;Fonts</a>.
+    </p>
+    <p>
+      In dark mode, the whole site uses a slight variant of the colors found in
+      Jeet&nbsp;Sukumaran’s
+      <a href="https://www.vim.org/scripts/script.php?script_id=3299"
+        >Sorcerer</a
+      >
+      theme. This is especially evident in the syntax highlighting I use for
+      code blocks. I tried my best to adapt Sorcerer to light mode, but I don’t
+      think it does the original justice.
+    </p>
+  </main>
 {{ end }}
