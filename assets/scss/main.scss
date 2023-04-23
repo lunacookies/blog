@@ -311,6 +311,7 @@ table {
 
 code {
   @include monospace();
+  hyphens: none;
 }
 pre {
   > code {
