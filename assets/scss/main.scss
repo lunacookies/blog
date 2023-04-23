@@ -274,12 +274,7 @@ code {
 pre {
   > code {
     display: block;
-
-    padding: 1rem;
-    @media (max-width: 500px) {
-      padding: 0.5rem;
-    }
-
+    padding: 0.5rem;
     overflow-x: auto;
 
     font-size: 0.8rem;
@@ -287,11 +282,6 @@ pre {
     @media (max-width: 600px) {
       font-family: $narrow-mono-font;
     }
-  }
-
-  margin: {
-    top: 1.5rem;
-    bottom: 1.5rem;
   }
 
   @include element-border();
