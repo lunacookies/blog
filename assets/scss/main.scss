@@ -35,7 +35,7 @@
 }
 
 @mixin monospace {
-  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+  font-family: $mono-font;
   font-feature-settings:
   // monocular g
     "ss02",
@@ -88,6 +88,10 @@ $dark-fg: hsb($dark-fg-hue, 7, 90);
 
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
+
+$mono-font: input-mono, ui-monospace, Consolas, Menlo, DejaVu Sans Mono,
+  monospace;
+$narrow-mono-font: input-mono-narrow, $mono-font;
 
 body {
   font-family: portada-text, Georgia, serif;
@@ -293,7 +297,7 @@ pre {
     font-size: 0.8rem;
     line-height: 1.4;
     @media (max-width: 600px) {
-      font-family: input-mono-narrow;
+      font-family: $narrow-mono-font;
     }
   }
 
