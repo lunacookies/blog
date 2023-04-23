@@ -4,7 +4,7 @@ description: "Do methods float in the C, or will they drown?"
 date: 2023-04-24
 ---
 
-Sorry you had to read that.
+Sorry you had to read that “joke”.
 
 I’d been working on this article
 on and off for around a month or so
