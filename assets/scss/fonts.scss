@@ -1,14 +1,5 @@
 @font-face {
   font-family: "input-mono";
-  src: url("https://use.typekit.net/af/c3093e/00000000000000007735b116/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
-    format("woff2");
-  font-display: swap;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "input-mono";
   src: url("https://use.typekit.net/af/f1b774/00000000000000007735b11b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
     format("woff2");
   font-display: swap;
@@ -18,11 +9,11 @@
 
 @font-face {
   font-family: "input-mono";
-  src: url("https://use.typekit.net/af/038dc3/00000000000000007735b127/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+  src: url("https://use.typekit.net/af/c3093e/00000000000000007735b116/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
     format("woff2");
   font-display: swap;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 @font-face {
@@ -31,6 +22,15 @@
     format("woff2");
   font-display: swap;
   font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "input-mono";
+  src: url("https://use.typekit.net/af/038dc3/00000000000000007735b127/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
+    format("woff2");
+  font-display: swap;
+  font-style: italic;
   font-weight: 700;
 }
 
