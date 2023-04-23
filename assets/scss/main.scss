@@ -17,6 +17,7 @@
 }
 
 @mixin small {
+  font-family: $caption-font;
   font-size: 0.85rem;
   letter-spacing: 0.02em;
   line-height: 1.7;
@@ -80,12 +81,18 @@ $dark-fg: hsb($dark-fg-hue, 7, 90);
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
 
+$text-font: "guyot-press-2", ui-serif, Georgia, serif;
+
+$caption-font: "guyot-press-3", $text-font;
+$subhead-font: "guyot-press-1", $text-font;
+$display-font: "guyot-headline", $text-font;
+
 $mono-font: input-mono, ui-monospace, Consolas, Menlo, DejaVu Sans Mono,
   monospace;
 $narrow-mono-font: input-mono-narrow, $mono-font;
 
 body {
-  font-family: portada-text, Georgia, serif;
+  font-family: $text-font;
   font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.5;
 
@@ -115,11 +122,15 @@ h2 {
 }
 
 header {
-  font-family: portada;
   font-size: 1.2rem;
   margin-bottom: 8rem;
 
+  > h1 {
+    font-family: $display-font;
+  }
+
   > .subtitle {
+    font-family: $subhead-font;
     margin-top: 0;
   }
 }
