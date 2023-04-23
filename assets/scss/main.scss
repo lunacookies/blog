@@ -16,13 +16,6 @@
   }
 }
 
-@mixin color-faded {
-  color: $light-faded;
-  @media (prefers-color-scheme: dark) {
-    color: $dark-faded;
-  }
-}
-
 @mixin small {
   font-size: 0.85rem;
   letter-spacing: 0.02em;
@@ -128,7 +121,6 @@ header {
 
   > .subtitle {
     margin-top: 0;
-    @include color-faded();
   }
 }
 
