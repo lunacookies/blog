@@ -19,8 +19,8 @@
 @mixin small {
   font-family: $caption-font;
   font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  line-height: 1.7;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
 @mixin small-caps {
@@ -37,7 +37,7 @@
     "ss11",
     // “boring” curly braces
     "ss12";
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 *,
@@ -59,7 +59,10 @@ strong {
 }
 
 html {
-  font-size: 18px;
+  font-size: 24px;
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
   @media (max-width: 500px) {
     font-size: 17px;
   }
@@ -101,7 +104,7 @@ html {
 body {
   font-family: $text-font;
   font-variant-numeric: proportional-nums oldstyle-nums;
-  line-height: 1.5;
+  line-height: 1.3;
   hyphens: auto;
 
   max-width: 42rem;
@@ -138,16 +141,26 @@ h2 {
 }
 
 header {
-  font-size: 1.2rem;
   margin-bottom: 8rem;
   hyphens: none;
 
   > h1 {
     font-family: $display-font;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+    font-size: 2.5rem;
+    line-height: 1.1;
+    @media (max-width: 700px) {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
   }
 
   > .subtitle {
     font-family: $subhead-font;
+    font-size: 1.5rem;
+    line-height: 1.3;
     margin-top: 0;
     max-width: 30rem;
   }
@@ -208,7 +221,7 @@ a {
   }
 
   background-repeat: no-repeat;
-  background-position: 0 87%;
+  background-position: 0 95%;
   background-size: 100% 1px;
 
   &:active {
@@ -236,7 +249,8 @@ ol {
 }
 
 ul > li::before {
-  content: "•";
+  content: "·";
+  font-weight: 700;
   position: absolute;
   width: 1em;
   margin-left: -1.5em;
@@ -307,7 +321,9 @@ pre {
     padding: 0.5rem;
     overflow-x: auto;
 
-    font-size: 0.8rem;
+    // Here we use em instead of rem so code blocks
+    // in e.g. blockquotes get smaller.
+    font-size: 0.65em;
     line-height: 1.4;
     @media (max-width: 600px) {
       font-family: $narrow-mono-font;

@@ -16,20 +16,21 @@
 }
 
 .term {
+  font-size: 0.7rem;
   border-radius: 0.5rem;
   overflow: hidden;
 
   margin: {
-    top: 1.5rem;
-    bottom: 1.5rem;
+    top: 2rem;
+    bottom: 2rem;
   }
 
   > .titlebar {
     text-align: center;
     font-family: system-ui;
     font-weight: 700;
-    font-size: 0.8rem;
-    padding: 0.4rem;
+    font-size: 0.55rem;
+    padding: 0.35rem;
     line-height: 1;
   }
 
@@ -48,6 +49,7 @@
 
   > .code {
     @include monospace();
+    line-height: 1.5;
     white-space: pre;
     margin-top: 0;
     padding: 0.5rem;
