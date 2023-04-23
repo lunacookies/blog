@@ -38,10 +38,10 @@ Please excuse the disjointed prose,
 the arguments that feel like they’re going somewhere
 but then just ... don’t,
 and the overall aura of unease.
-\_Look at those section headings.
+_Look at those section headings.
 They’re taunting you, aren’t they?
 And the code blocks, oh god the code blocks
-there’s so many a͟a͜a̴̧͙̥̟ͫ̂̐ͪ̔͂̀ḁ̶͔̦̆̎̓ą͈̰̞̻̩̘̩̅̔͐͌ͯ͛ͫ͆ͬa̛̠̻̭̘͕͓̋̽̓̎ͤ́a̵͔̳̗̫̻̦̲ͧ̓́ͧ̎͟á̻͔̏ͬ͜
+there’s so many_ a͟a͜a̴̧͙̥̟ͫ̂̐ͪ̔͂̀ḁ̶͔̦̆̎̓ą͈̰̞̻̩̘̩̅̔͐͌ͯ͛ͫ͆ͬa̛̠̻̭̘͕͓̋̽̓̎ͤ́a̵͔̳̗̫̻̦̲ͧ̓́ͧ̎͟á̻͔̏ͬ͜
 
 Ahem.
 
