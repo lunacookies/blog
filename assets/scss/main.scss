@@ -25,6 +25,7 @@
 
 @mixin small-caps {
   font-variant-caps: all-small-caps;
+  font-variant-numeric: proportional-nums lining-nums;
   letter-spacing: 0.05em;
 }
 
