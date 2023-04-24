@@ -229,14 +229,23 @@ footer {
 }
 
 a {
-  color: hsb(320, 100, 60);
-  @media (prefers-color-scheme: dark) {
-    color: hsb(210, 30, 80);
-  }
+  $light-link-color: hsb(320, 100, 60);
+  $light-underline-color: hsb(320, 30, 80);
+  $dark-link-color: hsb(210, 30, 80);
+  $dark-underline-color: hsb(210, 40, 50);
 
-  background-image: linear-gradient(currentColor, currentColor);
+  color: $light-link-color;
+  background-image: linear-gradient(
+    $light-underline-color,
+    $light-underline-color
+  );
   @include text-shadow($light-bg);
   @media (prefers-color-scheme: dark) {
+    color: $dark-link-color;
+    background-image: linear-gradient(
+      $dark-underline-color,
+      $dark-underline-color
+    );
     @include text-shadow($dark-bg);
   }
 
