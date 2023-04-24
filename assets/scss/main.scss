@@ -176,14 +176,36 @@ footer {
   max-width: 20rem;
 }
 
-.post {
-  > .title,
-  > .date {
-    margin-top: 0;
+.post-list {
+  hyphens: none;
+
+  > .post + .post {
+    margin-top: 1rem;
   }
 
-  & + & {
-    margin-top: 0.5rem;
+  > .post {
+    > * {
+      margin-top: 0;
+    }
+
+    // Remove link underlines.
+    > .title > a {
+      background-image: none;
+    }
+
+    > .date {
+      @include small();
+      > .num {
+        font-feature-settings: "c2sc";
+        font-variant-numeric: lining-nums;
+      }
+    }
+  }
+
+  // Remove ul styling.
+  margin-left: 0;
+  > .post::before {
+    content: none;
   }
 }
 
