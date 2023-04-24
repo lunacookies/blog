@@ -266,6 +266,10 @@ ul,
 ol {
   list-style-type: none;
   margin-left: 1.5em;
+
+  > li {
+    margin-top: 0;
+  }
 }
 
 ul > li::before {
@@ -285,11 +289,6 @@ ol > li::before {
   position: absolute;
   width: 1em;
   margin-left: -1.5em;
-}
-
-ul *,
-ol * {
-  margin-top: 0;
 }
 
 img,
