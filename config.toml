@@ -1,5 +1,5 @@
 baseURL = "https://lunacookies.github.io/"
-languageCode = "en-uk"
+languageCode = "en-us"
 title = "Luna’s Blog"
 
 # disable Hugo’s syntax highlighting since we use PrismJS instead
