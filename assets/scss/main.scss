@@ -139,8 +139,11 @@ h2 {
 }
 
 header {
-  margin-bottom: 8rem;
   hyphens: none;
+  margin-bottom: 4rem;
+  @media (max-height: 800px) {
+    margin-bottom: 2rem;
+  }
 
   > h1 {
     font-family: $display-font;
