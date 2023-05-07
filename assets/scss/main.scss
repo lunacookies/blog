@@ -69,6 +69,8 @@ html {
 
   // dark scroll bars in OS dark mode
   color-scheme: light dark;
+
+  scroll-behavior: smooth;
 }
 
 $dark-fg-hue: 55;
@@ -136,6 +138,17 @@ h2 {
   margin-top: 2rem;
   font-weight: 700;
   hyphens: none;
+
+  > a {
+    // Remove link formatting.
+    background-image: none;
+    color: inherit;
+
+    &:hover::after {
+      content: "🔗";
+      margin-left: 0.5rem;
+    }
+  }
 }
 
 header {
