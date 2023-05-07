@@ -12,8 +12,8 @@
 
 
     <p class="signature">
-      <a href="{{ .Site.BaseURL }}">Luna Razzaghipour</a><br />
-      {{ .Date.Format "2 January 2006" }}
+      Luna Razzaghipour<br />
+      {{ .Date.Format "2 January 2006" }}<br />
     </p>
   </main>
 
@@ -23,5 +23,12 @@
       <a href="mailto:lunarazzaghipour@gmail.com">Email&nbsp;me!</a>
       I’d&nbsp;like nothing more than to hear from you.
     </p>
+
+    <div class="link-cluster">
+      <p><a href="{{ .Site.BaseURL }}">more posts</a></p>
+      <p><a href="http://lunaa.me">homepage</a></p>
+      <p><a href="http://git.lunaa.me">cgit</a></p>
+      <p><a href="https://github.com/lunacookies">github</a></p>
+    </div>
   </footer>
 {{ end }}

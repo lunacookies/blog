@@ -199,9 +199,14 @@ header {
 
 footer {
   @include small();
-  font-style: italic;
   margin-top: 8rem;
-  max-width: 20rem;
+  max-width: 16rem;
+
+  > .link-cluster {
+    > * {
+      margin-top: 0;
+    }
+  }
 }
 
 .post-list {
