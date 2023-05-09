@@ -141,6 +141,7 @@ h2 {
   > a {
     // Remove link formatting.
     background-image: none;
+    text-shadow: none;
     color: inherit;
 
     &:hover::after {
@@ -221,6 +222,7 @@ footer {
     // Remove link underlines.
     > .title > a {
       background-image: none;
+      text-shadow: none;
     }
 
     > .date {
