@@ -115,6 +115,8 @@ body {
     right: auto;
   }
 
+  overflow-y: scroll;
+
   padding: 2rem;
   @media (max-width: 700px) {
     padding: 2rem 1rem;
