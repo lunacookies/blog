@@ -131,7 +131,9 @@ body {
 }
 
 main {
-  max-width: 25rem;
+  > * {
+    max-width: 25rem;
+  }
   * + * {
     margin-top: 1em;
   }
@@ -349,11 +351,6 @@ video {
 }
 
 table {
-  margin: {
-    left: auto;
-    right: auto;
-  }
-
   border-collapse: collapse;
 
   // gap between columns
@@ -394,6 +391,8 @@ pre {
       font-family: $narrow-mono-font;
     }
   }
+
+  max-width: initial;
 
   @include element-border();
   background-color: hsb(0, 0, 99);
