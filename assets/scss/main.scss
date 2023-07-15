@@ -298,7 +298,12 @@ a {
 
 blockquote {
   @include small();
+
   padding-left: 4rem;
+  @media (max-width: 600px) {
+    padding-left: 2rem;
+  }
+
   margin: {
     top: 1.5rem;
     bottom: 1.5rem;
