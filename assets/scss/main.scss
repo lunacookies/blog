@@ -343,6 +343,14 @@ ol > li::before {
   margin-left: -1.5em;
 }
 
+.footnotes {
+  @include small();
+
+  > ol > li + li {
+    margin-top: 1em;
+  }
+}
+
 img,
 video {
   display: block;
