@@ -385,6 +385,15 @@ table {
   }
 }
 
+sup {
+  vertical-align: initial;
+  font-variant-position: super;
+
+  & > a {
+    background-position-y: 68%;
+  }
+}
+
 code {
   @include monospace();
   hyphens: none;
