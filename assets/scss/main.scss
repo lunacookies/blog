@@ -359,6 +359,10 @@ table {
   font-variant-numeric: lining-nums tabular-nums;
   hyphens: none;
 
+  display: block;
+  overflow-x: auto;
+  max-width: initial;
+
   border-collapse: collapse;
 
   // gap between columns
