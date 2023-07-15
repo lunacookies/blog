@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>{{ .Title }} · {{ .Site.Title }}</title>
+<title>{{ .Title | markdownify | plainify }} · {{ .Site.Title }}</title>
 
 {{ $mainStyles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
