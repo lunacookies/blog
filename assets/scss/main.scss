@@ -356,6 +356,9 @@ video {
 }
 
 table {
+  font-variant-numeric: lining-nums tabular-nums;
+  hyphens: none;
+
   border-collapse: collapse;
 
   // gap between columns
