@@ -18,3 +18,13 @@
   src="{{ $addAnchors.Permalink }}"
   integrity="{{ $addAnchors.Data.Integrity }}"
 ></script>
+
+<script>
+  Prism.languages["a64asm"] = {
+    number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
+    operator: /[!]/,
+    keyword: /\n\t[a-zA-Z0-9.]+/m,
+    "class-name": /([wx][0-9]+|lr|fp|sp)/,
+    string: /'[a-z]+'/,
+  };
+</script>
