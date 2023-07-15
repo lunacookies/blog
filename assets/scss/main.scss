@@ -402,6 +402,16 @@ sup {
   }
 }
 
+hr {
+  border: none;
+  text-align: center;
+
+  &::before {
+    content: "· · ·";
+    font-weight: 700;
+  }
+}
+
 code {
   @include monospace();
   hyphens: none;
