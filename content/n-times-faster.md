@@ -76,23 +76,23 @@ Next, let’s take a look at the corresponding A64 assembly for this C:
 
 ```a64asm
 basic:
-	mov	w8, #0
+	mov     w8, #0
 loop:
-	ldrb	w9, [x0], #1
-	cbz	w9, exit
-	cmp	w9, 'p'
-	b.eq	p
-	cmp	w9, 's'
-	b.ne	loop
-	mov	w9, #1
-	add	w8, w8, w9
-	b	loop
+	ldrb    w9, [x0], #1
+	cbz     w9, exit
+	cmp     w9, 'p'
+	b.eq    p
+	cmp     w9, 's'
+	b.ne    loop
+	mov     w9, #1
+	add     w8, w8, w9
+	b       loop
 p:
-	mov	w9, #-1
-	add	w8, w8, w9
-	b	loop
+	mov     w9, #-1
+	add     w8, w8, w9
+	b       loop
 exit:
-	mov	x0, x8
+	mov     x0, x8
 	ret
 ```
 
@@ -140,21 +140,21 @@ This completely pales in comparison to the 4&nbsp;GB/s Owen achieved, though :(
 
 ```a64asm
 table:
-	ldrb	w9, [x0]
-	cbz	w9, exit
-	mov	x8, x0
-	mov	w0, #0
-	add	x8, x8, #1
-	adr	x10, to_add
+	ldrb    w9, [x0]
+	cbz     w9, exit
+	mov     x8, x0
+	mov     w0, #0
+	add     x8, x8, #1
+	adr     x10, to_add
 	nop
 loop:
-	ldr	w9, [x10, w9, uxtw #2]
-	add	w0, w9, w0
-	ldrb	w9, [x8], #1
-	cbnz	w9, loop
+	ldr     w9, [x10, w9, uxtw #2]
+	add     w0, w9, w0
+	ldrb    w9, [x8], #1
+	cbnz    w9, loop
 	ret
 exit:
-	mov	w0, #0
+	mov     w0, #0
 	ret
 ```
 
@@ -399,66 +399,66 @@ resulting in this very fast but very lengthy mess:
 
 ```a64asm
 table_8:
-	stp	x22, x21, [sp, #-0x30]!
-	stp	x20, x19, [sp, #0x10]
-	stp	x29, x30, [sp, #0x20]
-	add	x29, sp, #0x20
-	mov	x20, x1
-	mov	x21, x0
-	ands	x8, x0, #0x7
-	mov	w9, #8
-	sub	x8, x9, x8
-	tst	x0, #0x7
-	csel	x22, xzr, x8, eq
-	mov	x1, x22
-	bl	table_length
-	mov	x19, x0
-	add	x0, x21, x22
-	sub	x8, x20, x22
-	cmp	x8, #8
-	b.lo	slack
-	lsr	x10, x8, #3
-	add	x9, x0, x10, lsl #3
-	lsl	x10, x10, #3
-	adr	x11, to_add
+	stp     x22, x21, [sp, #-0x30]!
+	stp     x20, x19, [sp, #0x10]
+	stp     x29, x30, [sp, #0x20]
+	add     x29, sp, #0x20
+	mov     x20, x1
+	mov     x21, x0
+	ands    x8, x0, #0x7
+	mov     w9, #8
+	sub     x8, x9, x8
+	tst     x0, #0x7
+	csel    x22, xzr, x8, eq
+	mov     x1, x22
+	bl      table_length
+	mov     x19, x0
+	add     x0, x21, x22
+	sub     x8, x20, x22
+	cmp     x8, #8
+	b.lo    slack
+	lsr     x10, x8, #3
+	add     x9, x0, x10, lsl #3
+	lsl     x10, x10, #3
+	adr     x11, to_add
 	nop
 loop:
-	ldr	x12, [x0], #8
-	and	x13, x12, #0xff
-	ldr	w13, [x11, x13, lsl #2]
-	add	w13, w13, w19
-	ubfx	x14, x12, #8, #8
-	ldr	w14, [x11, x14, lsl #2]
-	ubfx	x15, x12, #16, #8
-	ldr	w15, [x11, x15, lsl #2]
-	add	w14, w15, w14
-	add	w13, w14, w13
-	ubfx	x14, x12, #24, #8
-	ldr	w14, [x11, x14, lsl #2]
-	ubfx	x15, x12, #32, #8
-	ldr	w15, [x11, x15, lsl #2]
-	ubfx	x16, x12, #40, #8
-	ldr	w16, [x11, x16, lsl #2]
-	add	w14, w15, w14
-	add	w14, w16, w14
-	add	w13, w14, w13
-	ubfx	x14, x12, #48, #8
-	ldr	w14, [x11, x14, lsl #2]
-	lsr	x12, x12, #54
-	and	x12, x12, #0x3fc
-	ldr	w12, [x11, x12]
-	add	w12, w12, w14
-	add	w19, w12, w13
-	subs	x10, x10, #8
-	b.ne	loop
-	mov	x0, x9
+	ldr     x12, [x0], #8
+	and     x13, x12, #0xff
+	ldr     w13, [x11, x13, lsl #2]
+	add     w13, w13, w19
+	ubfx    x14, x12, #8, #8
+	ldr     w14, [x11, x14, lsl #2]
+	ubfx    x15, x12, #16, #8
+	ldr     w15, [x11, x15, lsl #2]
+	add     w14, w15, w14
+	add     w13, w14, w13
+	ubfx    x14, x12, #24, #8
+	ldr     w14, [x11, x14, lsl #2]
+	ubfx    x15, x12, #32, #8
+	ldr     w15, [x11, x15, lsl #2]
+	ubfx    x16, x12, #40, #8
+	ldr     w16, [x11, x16, lsl #2]
+	add     w14, w15, w14
+	add     w14, w16, w14
+	add     w13, w14, w13
+	ubfx    x14, x12, #48, #8
+	ldr     w14, [x11, x14, lsl #2]
+	lsr     x12, x12, #54
+	and     x12, x12, #0x3fc
+	ldr     w12, [x11, x12]
+	add     w12, w12, w14
+	add     w19, w12, w13
+	subs    x10, x10, #8
+	b.ne    loop
+	mov     x0, x9
 slack:
-	and	x1, x8, #0x7
-	bl	table_length
-	add	w0, w0, w19
-	ldp	x29, x30, [sp, #0x20]
-	ldp	x20, x19, [sp, #0x10]
-	ldp	x22, x21, [sp], #0x30
+	and     x1, x8, #0x7
+	bl      table_length
+	add     w0, w0, w19
+	ldp     x29, x30, [sp, #0x20]
+	ldp     x20, x19, [sp, #0x10]
+	ldp     x22, x21, [sp], #0x30
 	ret
 ```
 

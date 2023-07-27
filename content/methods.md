@@ -60,11 +60,11 @@ Let’s take the interface of a dynamic array as an example.
 
 ```c
 typedef struct Array {
-	uint32_t	length;
-	uint32_t	capacity;
-	uint32_t	element_size;
-	float		growth_factor;
-	void		*ptr;
+	uint32_t length;
+	uint32_t capacity;
+	uint32_t element_size;
+	float    growth_factor;
+	void     *ptr;
 } Array;
 
 Array init(
@@ -175,11 +175,11 @@ typedef struct Parser {
 	// fields
 } Parser;
 
-Statement	parser_parse_statement(Parser *p);
-Expression	parser_parse_expression(Parser *p);
-void		parser_expect(Parser *p, const char *message);
-void		parser_next(Parser *p);
-TokenKind	parser_current(const Parser *p);
+Statement  parser_parse_statement(Parser *p);
+Expression parser_parse_expression(Parser *p);
+void       parser_expect(Parser *p, const char *message);
+void       parser_next(Parser *p);
+TokenKind  parser_current(const Parser *p);
 ```
 
 In such a case it makes sense to me to group all this code
