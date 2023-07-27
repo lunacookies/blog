@@ -425,9 +425,16 @@ pre {
     // Here we use em instead of rem so code blocks
     // in e.g. blockquotes get smaller.
     font-size: 0.65em;
+
     line-height: 1.4;
+
+    tab-size: 8;
     @media (max-width: 600px) {
+      tab-size: 4;
       font-family: $narrow-mono-font;
+    }
+    @media (max-width: 500px) {
+      tab-size: 3;
     }
   }
 
