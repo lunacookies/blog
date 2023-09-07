@@ -10,10 +10,13 @@
     <ul class="post-list">
       {{ range .Pages }}
         <li class="post">
-          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
           <p class="title">
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
           </p>
+          <p class="subtitle">
+            {{ .Description | markdownify }}
+          </p>
+          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
         </li>
       {{ end }}
     </ul>

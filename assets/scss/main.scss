@@ -94,15 +94,24 @@ footer {
 }
 
 .post-list {
-  hyphens: none;
   margin-bottom: 4rem;
 
   > .post + .post {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 
-  > .post > * {
-    margin-top: 0;
+  > .post {
+    > .subtitle,
+    > .date {
+      color: #888;
+      @media (prefers-color-scheme: dark) {
+        color: #999;
+      }
+    }
+
+    > * {
+      margin-top: 0.25rem;
+    }
   }
 
   // Remove ul styling.
