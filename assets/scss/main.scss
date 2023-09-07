@@ -27,6 +27,13 @@ html {
   scroll-behavior: smooth;
 }
 
+@mixin gray() {
+  color: #888;
+  @media (prefers-color-scheme: dark) {
+    color: #999;
+  }
+}
+
 body {
   background-color: #fbfbfb;
   @media (prefers-color-scheme: dark) {
@@ -72,10 +79,7 @@ header {
 
   > .subtitle {
     margin-top: 0.5rem;
-    color: #888;
-    @media (prefers-color-scheme: dark) {
-      color: #999;
-    }
+    @include gray();
   }
 }
 
@@ -103,10 +107,7 @@ footer {
   > .post {
     > .subtitle,
     > .date {
-      color: #888;
-      @media (prefers-color-scheme: dark) {
-        color: #999;
-      }
+      @include gray();
     }
 
     > * {
@@ -244,10 +245,7 @@ pre {
 .chroma {
   .c1,
   .cm {
-    color: #888;
-    @media (prefers-color-scheme: dark) {
-      color: #999;
-    }
+    @include gray();
   }
 }
 
