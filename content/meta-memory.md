@@ -1,7 +1,7 @@
 ---
-title: Meta Memory
-description: An abstraction of memory on top of memory
-date: 2022-08-08
+title: "Meta Memory"
+date: "2022-08-08"
+description: "An abstraction of memory on top of memory"
 ---
 
 Let’s take a tree structure
