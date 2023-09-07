@@ -1,48 +1,3 @@
-@import "fonts";
-
-@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
-  @if $b-hsb == 0 {
-    @return hsla(0, 0, 0, $a);
-  } @else {
-    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
-    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
-  }
-}
-
-@mixin element-border {
-  border-radius: 0.25rem;
-  border: 1px solid hsb(0, 0, 90);
-  @media (prefers-color-scheme: dark) {
-    border: 1px solid hsb(0, 0, 20);
-  }
-}
-
-@mixin small {
-  font-family: $caption-font;
-  font-size: 0.85rem;
-  letter-spacing: 0.01em;
-  line-height: 1.5;
-}
-
-@mixin small-caps {
-  font-variant-caps: all-small-caps;
-  font-variant-numeric: proportional-nums lining-nums;
-  letter-spacing: 0.05em;
-}
-
-@mixin monospace {
-  font-family: $mono-font;
-  font-feature-settings:
-  // monocular g
-    "ss02",
-    // centred asterisk
-    "ss11",
-    // “boring” curly braces
-    "ss12";
-  font-size: 0.8em;
-}
-
 *,
 ::before,
 ::after {
@@ -58,141 +13,68 @@ em {
   font-style: italic;
 }
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 html {
-  font-size: 24px;
+  font-size: 16px;
   @media (max-width: 700px) {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   text-size-adjust: 100%;
-
-  // dark scroll bars in OS dark mode
   color-scheme: light dark;
-
   scroll-behavior: smooth;
 }
 
-$dark-fg-hue: 55;
-
-$light-bg: hsb(0, 0, 97);
-$dark-bg: hsb(0, 0, 12);
-
-$light-fg: black;
-$dark-fg: hsb($dark-fg-hue, 7, 90);
-
-$light-faded: hsb(0, 0, 55);
-$dark-faded: hsb(120, 5, 46);
-
-$text-font: "guyot-press-2", ui-serif, Georgia, serif;
-
-$caption-font: "guyot-press-3", $text-font;
-$subhead-font: "guyot-press-1", $text-font;
-$display-font: "guyot-headline", $text-font;
-
-$mono-font: input-mono, ui-monospace, Consolas, Menlo, DejaVu Sans Mono,
-  monospace;
-$narrow-mono-font: input-mono-narrow, $mono-font;
-
-html {
-  background-color: hsb(0, 0, 50);
-  @media (prefers-color-scheme: dark) {
-    background-color: hsb(0, 0, 20);
-  }
-}
-
 body {
-  font-family: $text-font;
-  font-variant-numeric: proportional-nums oldstyle-nums;
-  line-height: 1.4;
-  hyphens: auto;
+  background-color: #fbfbfb;
+  @media (prefers-color-scheme: dark) {
+    background-color: #1e1e1e;
+    color: #eee;
+  }
 
-  max-width: 42rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  padding: 1.5rem;
+  max-width: 35rem;
   margin: {
     left: auto;
     right: auto;
   }
-
   overflow-y: scroll;
-
-  padding: 2rem;
-  @media (max-width: 900px) {
-    padding: 2rem 1rem;
-  }
-
-  background-color: $light-bg;
-  color: $light-fg;
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-bg;
-    color: $dark-fg;
-  }
 }
 
-main {
-  > * {
-    max-width: 25rem;
-  }
-  * + * {
-    margin-top: 1em;
-  }
+main * + * {
+  margin-top: 1.5em;
+}
+
+main p + p {
+  margin-top: 1em;
 }
 
 h2 {
-  margin-top: 2rem;
   font-weight: 700;
-  hyphens: none;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 
-  > a {
-    // Remove link formatting.
+  > a:not(:hover) {
     background-image: none;
-    text-shadow: none;
-    color: inherit;
-
-    &:hover::after {
-      content: "🔗";
-      margin-left: 0.5rem;
-    }
   }
 }
 
 header {
-  hyphens: none;
-  margin-bottom: 4rem;
-  @media (max-height: 800px) {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 8rem;
 
   > h1 {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-
-    font-family: $display-font;
-    font-size: 2.5rem;
-    line-height: 1.1;
-
-    @media (max-width: 700px) {
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    @media (max-width: 500px) {
-      font-family: $text-font;
-      font-size: 1.3rem;
-      line-height: 1.3;
-    }
+    font-size: 1.2rem;
   }
 
   > .subtitle {
-    font-family: $subhead-font;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    max-width: 30rem;
-
-    @media (max-width: 500px) {
-      hyphens: auto;
-      @include small();
+    margin-top: 0.5rem;
+    color: #888;
+    @media (prefers-color-scheme: dark) {
+      color: #999;
     }
   }
 }
@@ -203,9 +85,8 @@ header {
 }
 
 footer {
-  @include small();
   margin-top: 8rem;
-  max-width: 16rem;
+  max-width: 18rem;
 
   > .link-cluster {
     margin-top: 1em;
@@ -220,24 +101,8 @@ footer {
     margin-top: 1rem;
   }
 
-  > .post {
-    > * {
-      margin-top: 0;
-    }
-
-    // Remove link underlines.
-    > .title > a {
-      background-image: none;
-      text-shadow: none;
-    }
-
-    > .date {
-      @include small();
-      > .num {
-        font-feature-settings: "c2sc";
-        font-variant-numeric: lining-nums;
-      }
-    }
+  > .post > * {
+    margin-top: 0;
   }
 
   // Remove ul styling.
@@ -247,48 +112,10 @@ footer {
   }
 }
 
-@mixin text-shadow($background) {
-  $shadows: ();
-
-  @for $x from -3 through 3 {
-    @for $y from -1 through 1 {
-      // A shadow at 0px, 0px has no effect, so we omit it.
-      @if not($x==0 and $y==0) {
-        $shadows: append(
-          $shadows,
-          unquote("#{$x}px #{$y}px #{$background}"),
-          $separator: comma
-        );
-      }
-    }
-  }
-
-  text-shadow: $shadows;
-}
-
 a {
-  $light-link-color: hsb(320, 100, 60);
-  $light-underline-color: hsb(320, 30, 80);
-  $dark-link-color: hsb(210, 30, 80);
-  $dark-underline-color: hsb(210, 40, 50);
-
-  color: $light-link-color;
-  background-image: linear-gradient(
-    $light-underline-color,
-    $light-underline-color
-  );
-  @include text-shadow($light-bg);
-  @media (prefers-color-scheme: dark) {
-    color: $dark-link-color;
-    background-image: linear-gradient(
-      $dark-underline-color,
-      $dark-underline-color
-    );
-    @include text-shadow($dark-bg);
-  }
-
+  background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
-  background-position: 0 95%;
+  background-position-y: 100%;
   background-size: 100% 1px;
 
   &:active {
@@ -297,21 +124,8 @@ a {
 }
 
 blockquote {
-  @include small();
-
-  padding-left: 4rem;
-  @media (max-width: 600px) {
-    padding-left: 2rem;
-  }
-
-  margin: {
-    top: 1.5rem;
-    bottom: 1.5rem;
-  }
-}
-
-abbr {
-  @include small-caps();
+  padding-left: 3rem;
+  font-size: 0.85rem;
 }
 
 ul,
@@ -325,8 +139,7 @@ ol {
 }
 
 ul > li::before {
-  content: "·";
-  font-weight: 700;
+  content: "•";
   position: absolute;
   width: 1em;
   margin-left: -1.5em;
@@ -337,6 +150,7 @@ ol > li {
 }
 
 ol > li::before {
+  font-variant-numeric: tabular-nums;
   content: counter(ol) ".";
   position: absolute;
   width: 1em;
@@ -344,8 +158,6 @@ ol > li::before {
 }
 
 .footnotes {
-  @include small();
-
   > ol > li + li {
     margin-top: 1em;
   }
@@ -355,21 +167,13 @@ img,
 video {
   display: block;
   max-width: 100%;
-  @include element-border();
-
-  margin: {
-    top: 1.5rem;
-    bottom: 1.5rem;
-  }
 }
 
 table {
-  font-variant-numeric: lining-nums tabular-nums;
-  hyphens: none;
+  font-variant-numeric: tabular-nums;
 
   display: block;
   overflow-x: auto;
-  max-width: initial;
 
   border-collapse: collapse;
 
@@ -380,7 +184,7 @@ table {
   }
 
   thead > tr > th {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   // border with space above and below
@@ -394,12 +198,8 @@ table {
 }
 
 sup {
-  vertical-align: initial;
-  font-variant-position: super;
-
-  & > a {
-    background-position-y: 68%;
-  }
+  font-size: 0.7em;
+  line-height: 0;
 }
 
 hr {
@@ -407,176 +207,39 @@ hr {
   text-align: center;
 
   &::before {
-    content: "· · ·";
-    font-weight: 700;
+    content: "• • •";
   }
+}
+
+@mixin monospace {
+  font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace;
+  font-size: 0.95em;
 }
 
 code {
   @include monospace();
-  hyphens: none;
 }
+
 pre {
-  > code {
-    display: block;
-    padding: 0.5rem;
-    overflow-x: auto;
-
-    // Here we use em instead of rem so code blocks
-    // in e.g. blockquotes get smaller.
-    font-size: 0.65em;
-
-    line-height: 1.4;
-
-    tab-size: 8;
-    @media (max-width: 600px) {
-      tab-size: 4;
-      font-family: $narrow-mono-font;
-    }
-    @media (max-width: 500px) {
-      tab-size: 3;
-    }
-  }
-
-  max-width: initial;
-
-  @include element-border();
-  background-color: hsb(0, 0, 99);
+  background-color: #f3f3f3;
   @media (prefers-color-scheme: dark) {
-    background-color: hsb(0, 0, 10);
+    background-color: #181818;
   }
+
+  padding: 1.5rem;
+  font-size: 0.85em;
+  line-height: 1.3;
+  overflow-x: auto;
 }
 
-// keywords
-pre .keyword,
-pre .operator,
-pre .rule,
-pre.language-ini .header,
-pre.language-ini .punctuation {
-  color: hsb(210, 100, 80);
-}
-
-// types
-pre .class-name,
-pre.language-css .property,
-pre.language-scss .property,
-pre.language-ini .attr-name {
-  color: hsb(230, 45, 65);
-}
-
-// numbers
-pre .number {
-  color: hsb(40, 100, 70);
-}
-
-// constants
-pre .constant,
-pre.language-scss .variable {
-  color: hsb(35, 100, 80);
-}
-
-// preprocessor directives
-pre .directive,
-pre .directive-hash,
-pre .macro,
-pre.language-scss .keyword {
-  color: hsb(180, 40, 50);
-}
-
-// strings
-pre .string,
-pre.language-ini .attr-value {
-  color: hsb(110, 45, 50);
-}
-
-// lifetimes
-pre .lifetime-annotation {
-  color: hsb(75, 100, 50);
-}
-
-// comments
-pre .comment {
-  color: hsb(120, 5, 65);
-}
-
-@media (prefers-color-scheme: dark) {
-  pre {
-    color: hsb($dark-fg-hue, 10, 80);
+.chroma {
+  .c1,
+  .cm {
+    color: #888;
+    @media (prefers-color-scheme: dark) {
+      color: #999;
+    }
   }
-
-  // keywords
-  pre .keyword,
-  pre .operator,
-  pre .rule,
-  pre.language-ini .header,
-  pre.language-ini .punctuation {
-    color: hsb(210, 30, 80);
-  }
-
-  // types
-  pre .class-name,
-  pre.language-css .property,
-  pre.language-scss .property,
-  pre.language-ini .attr-name {
-    color: hsb(220, 25, 65);
-  }
-
-  // numbers
-  pre .number {
-    color: hsb(40, 100, 80);
-  }
-
-  // constants
-  pre .constant,
-  pre.language-scss .variable {
-    color: hsb(35, 100, 100);
-  }
-
-  // functions
-  pre .function {
-    color: hsb($dark-fg-hue, 20, 100);
-  }
-
-  // preprocessor directives
-  pre .directive,
-  pre .directive-hash,
-  pre .macro,
-  pre.language-scss .keyword {
-    color: hsb(180, 40, 65);
-  }
-
-  // strings
-  pre .string,
-  pre.language-ini .attr-value {
-    color: hsb(110, 30, 65);
-  }
-
-  // lifetimes
-  pre .lifetime-annotation {
-    color: hsb(75, 95, 65);
-  }
-
-  // comments
-  pre .comment {
-    color: hsb(120, 5, 45);
-  }
-}
-
-pre .comment {
-  font-style: italic;
-  font-feature-settings:
-    // monocular a
-    "ss01",
-    // monocular g
-    "ss02",
-    // hooked i
-    "ss09",
-    // hooked l
-    "ss10",
-    // centred asterisk
-    "ss11",
-    // “boring” curly braces
-    "ss12";
 }
 
 @import "term.scss";

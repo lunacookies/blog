@@ -2,9 +2,8 @@ baseURL = "https://blog.lunaa.me/"
 languageCode = "en-us"
 title = "Luna’s Blog"
 
-# disable Hugo’s syntax highlighting since we use PrismJS instead
 [markup.highlight]
-codeFences = false
+noClasses = false
 
 [markup.goldmark.renderer]
 unsafe = true
