@@ -1,7 +1,7 @@
 ---
 title: "Side-Effectful Expressions in C"
 date: "2023-04-24"
-description: "I am desperately seeking validation for my difficulty in understanding some overly-terse K&R-style one-line loops."
+description: "An analysis of why they’re a bad idea"
 ---
 
 This article began from a list of reasons I was making

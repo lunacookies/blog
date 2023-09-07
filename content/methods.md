@@ -1,10 +1,8 @@
 ---
 title: "Methods in Languages for Systems Programming"
-description: "Do methods float in the C, or will they drown?"
+description: "A few random thoughts"
 date: 2023-04-24
 ---
-
-Sorry you had to read that “joke”.
 
 I’d been working on this article
 on and off for around a month or so

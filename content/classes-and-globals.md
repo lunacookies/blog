@@ -1,7 +1,7 @@
 ---
-title: Classes and Globals
-description: Turns out an old-school C pattern is actually analogous to Java classes
-date: 2022-12-09
+title: "Classes and Globals"
+date: "2022-12-09"
+description: "An unlikely equivalence"
 ---
 
 As of late I’ve been going through the commit history

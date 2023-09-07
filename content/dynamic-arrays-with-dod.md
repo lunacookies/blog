@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Arrays with Data-Oriented Design"
 date: "2023-02-16"
-description: "You ain’t gonna need it … if you’re statically allocating everything, that is"
+description: "Do a bit of upfront thinking and you’ll be rewarded with predictable performance and simple code"
 ---
 
 I would say that dynamic arrays are

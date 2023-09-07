@@ -1,7 +1,7 @@
 ---
-title: A Little Hack for Nicer Underlines in CSS
-description: It’s not too bad, I promise
-date: 2022-10-07
+title: "A Little Hack for Nicer Underlines in CSS"
+date: "2022-10-07"
+description: "It’s not too bad, I promise"
 ---
 
 `text-decoration: underline` looks <span style="text-decoration: underline">like this</span>.

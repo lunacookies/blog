@@ -1,7 +1,7 @@
 ---
 title: "My Webfont Contradiction"
 date: "2023-02-17"
-description: "I bet most people don’t care about this, but the people who do, care a lot"
+description: "Huh, navel-gazing? What’s that?"
 ---
 
 I’ve seen lots of tech people complain online
