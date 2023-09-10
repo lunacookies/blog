@@ -1,7 +1,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>{{ .Title | markdownify | plainify }} · {{ .Site.Title }}</title>
+<title>
+  {{ if eq .Title .Site.Title }}
+    {{ .Site.Title }}
+  {{ else }}
+    {{ $title := .Title | markdownify | plainify }}
+    {{ printf "%s · %s" $title .Site.Title }}
+  {{ end }}
+</title>
 
 {{ $mainStyles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
