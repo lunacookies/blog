@@ -116,7 +116,7 @@ Rust not being biased to a particular integer type:
 
 ```rust
 fn demo() {
-    let x = 1; // x: i32
+	let x = 1; // x: i32
 }
 ```
 
