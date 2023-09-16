@@ -1,7 +1,6 @@
 ---
 title: "How to Choose Colors for Your CLI Applications"
 date: "2023-01-29"
-description: "A plea to CLI developers"
 ---
 
 Let’s say you’re creating

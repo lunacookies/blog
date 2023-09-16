@@ -1,7 +1,6 @@
 ---
 title: "Side-Effectful Expressions in C"
 date: "2023-04-24"
-description: "An analysis of why they’re a bad idea"
 ---
 
 This article began from a list of reasons I was making

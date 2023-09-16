@@ -1,7 +1,6 @@
 ---
 title: "Hidden Overheads"
 date: "2023-05-10"
-description: "Why do we tolerate some hidden performance costs in systems programming languages, but not others?"
 ---
 
 One day I was sitting around thinking about performance,

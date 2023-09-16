@@ -1,7 +1,6 @@
 ---
 title: "A Simple Yet Useful Version of Generics"
 date: "2023-02-17"
-description: "Inspired by a classic C idiom"
 ---
 
 Traditionally,

@@ -76,11 +76,6 @@ header {
   > h1 {
     font-size: 1.2rem;
   }
-
-  > .subtitle {
-    margin-top: 0.5rem;
-    @include gray();
-  }
 }
 
 .signature {
@@ -104,15 +99,9 @@ footer {
     margin-top: 2rem;
   }
 
-  > .post {
-    > .subtitle,
-    > .date {
-      @include gray();
-    }
-
-    > * {
-      margin-top: 0.25rem;
-    }
+  > .post > .date {
+    @include gray();
+    margin-top: 0.25rem;
   }
 
   // Remove ul styling.

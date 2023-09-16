@@ -1,7 +1,6 @@
 ---
 title: "Don’t Zero Out Memory By Default"
 date: "2023-02-19"
-description: "Instead, fill it with a sentinel value"
 ---
 
 A common practice in

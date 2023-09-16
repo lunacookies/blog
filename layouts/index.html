@@ -1,9 +1,6 @@
 {{ define "body" }}
   <header>
     <h1>Luna’s Blog</h1>
-    <p class="subtitle">
-      Random thoughts and ideas I’ve had, mostly about programming.
-    </p>
   </header>
 
   <main>
@@ -12,9 +9,6 @@
         <li class="post">
           <p class="title">
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </p>
-          <p class="subtitle">
-            {{ .Description | markdownify }}
           </p>
           <p class="date">{{ .Date.Format "2 January 2006" }}</p>
         </li>

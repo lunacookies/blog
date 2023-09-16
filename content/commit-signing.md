@@ -1,7 +1,6 @@
 ---
 title: "Signing Your Commits in 2023 on macOS"
 date: "2023-03-02"
-description: "Featuring Git, SSH and Keychain"
 ---
 
 Let me preface this with a disclaimer: I am not a security expert,

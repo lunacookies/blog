@@ -1,7 +1,6 @@
 ---
 title: "_n_ times faster than C, Arm edition"
 date: "2023-07-15"
-description: "where _n_ is actually no you can’t beat the compiler, silly!"
 ---
 
 The other day I read a two-parter blog post by Owen&nbsp;Shepherd,

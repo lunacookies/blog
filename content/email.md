@@ -1,7 +1,6 @@
 ---
 title: "I Love Email"
 date: "2023-01-23"
-description: "Please hear me out"
 ---
 
 I constantly hear about

@@ -1,7 +1,6 @@
 ---
 title: "Prefer Passing By Pointer"
 date: "2023-09-15"
-description: "For simplicity and performance"
 ---
 
 Before the standardization of C,

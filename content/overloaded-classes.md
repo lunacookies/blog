@@ -1,7 +1,6 @@
 ---
 title: "Classes Are Overloaded"
 date: "2023-07-29"
-description: "Overused, bloated & misunderstood"
 ---
 
 I realize it’s unusual to do some good old-fashioned object-oriented programming

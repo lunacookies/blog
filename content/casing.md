@@ -1,7 +1,6 @@
 ---
 title: "Escaping the Identifier Casing Orthodoxy"
 date: "2023-02-16"
-description: "I practically live in this bikeshed now"
 ---
 
 My initial programming experience

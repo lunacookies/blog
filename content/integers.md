@@ -1,7 +1,6 @@
 ---
 title: "Thoughts On Integers"
 date: "2023-09-14"
-description: "Signedness, overflow behavior and size"
 ---
 
 In this post I’ll lay out my views on integer types,

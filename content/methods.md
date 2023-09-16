@@ -1,6 +1,5 @@
 ---
 title: "Methods in Languages for Systems Programming"
-description: "A few random thoughts"
 date: 2023-04-24
 ---
 

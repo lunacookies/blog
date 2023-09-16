@@ -1,7 +1,6 @@
 ---
 title: "My Webfont Contradiction"
 date: "2023-02-17"
-description: "Huh, navel-gazing? What’s that?"
 ---
 
 I’ve seen lots of tech people complain online
