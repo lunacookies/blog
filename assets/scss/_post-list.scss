@@ -2,11 +2,16 @@
   margin-bottom: 4rem;
 
   > .post + .post {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 
-  > .post > .date {
-    @include gray();
-    margin-top: 0.25rem;
+  > .post {
+    > .title > a {
+      background-image: none;
+    }
+
+    > .date {
+      @include gray();
+    }
   }
 }
