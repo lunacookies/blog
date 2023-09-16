@@ -9,8 +9,8 @@ article {
 
   h2 {
     font-weight: 700;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-top: 5em;
+    margin-bottom: 2em;
 
     > a:not(:hover) {
       background-image: none;
@@ -69,7 +69,7 @@ article {
     // gap between columns
     td + td,
     th + th {
-      padding-left: 1rem;
+      padding-left: 1em;
     }
 
     thead > tr > th {
@@ -79,10 +79,10 @@ article {
     // border with space above and below
     thead > tr > th {
       border-bottom: 1px solid;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.5em;
     }
     tbody > :first-child > td {
-      padding-top: 0.5rem;
+      padding-top: 0.5em;
     }
   }
 
@@ -110,7 +110,7 @@ article {
       background-color: #181818;
     }
 
-    padding: 1.5rem;
+    padding: 1.5em;
     font-size: 0.85em;
     line-height: 1.3;
     overflow-x: auto;
