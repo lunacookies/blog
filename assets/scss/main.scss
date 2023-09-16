@@ -1,4 +1,4 @@
-@import "reset.scss";
+@import "reset";
 
 html {
   font-size: 16px;
@@ -50,8 +50,8 @@ a {
   font-size: 0.95em;
 }
 
-@import "article.scss";
-@import "post-list.scss";
-@import "footer.scss";
-@import "page-title.scss";
-@import "term.scss";
+@import "article";
+@import "post-list";
+@import "footer";
+@import "page-title";
+@import "term";
