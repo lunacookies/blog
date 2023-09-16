@@ -1,0 +1,12 @@
+.post-list {
+  margin-bottom: 4rem;
+
+  > .post + .post {
+    margin-top: 2rem;
+  }
+
+  > .post > .date {
+    @include gray();
+    margin-top: 0.25rem;
+  }
+}
