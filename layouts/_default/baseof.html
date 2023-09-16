@@ -5,6 +5,11 @@
   </head>
 
   <body>
+    <h1>
+      {{ block "h1" . }}
+      {{ end }}
+    </h1>
+
     {{ block "body" . }}
     {{ end }}
   </body>

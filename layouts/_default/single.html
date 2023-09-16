@@ -1,13 +1,9 @@
+{{ define "h1" }}
+  {{ .Title | markdownify }}
+{{ end }}
+
 {{ define "body" }}
-  <header>
-    <h1>{{ .Title | markdownify }}</h1>
-
-    <p class="subtitle">
-      {{ .Description | markdownify }}
-    </p>
-  </header>
-
-  <main>
+  <article>
     {{ .Page.Content }}
 
 
@@ -15,7 +11,7 @@
       Luna Razzaghipour<br />
       {{ .Date.Format "2 January 2006" }}<br />
     </p>
-  </main>
+  </article>
 
   <footer>
     <p>

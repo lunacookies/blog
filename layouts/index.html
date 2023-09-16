@@ -1,20 +1,20 @@
+{{ define "h1" }}
+  Luna’s Blog
+{{ end }}
+
 {{ define "body" }}
-  <header>
-    <h1>Luna’s Blog</h1>
-  </header>
+  <ul class="post-list">
+    {{ range .Pages }}
+      <li class="post">
+        <p class="title">
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </p>
+        <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+      </li>
+    {{ end }}
+  </ul>
 
-  <main>
-    <ul class="post-list">
-      {{ range .Pages }}
-        <li class="post">
-          <p class="title">
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </p>
-          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
-        </li>
-      {{ end }}
-    </ul>
-
+  <article>
     <p>
       This site is generated using <a href="https://gohugo.io">Hugo</a>, styled
       with <a href="https://sass-lang.com">SCSS</a> and hosted on an old iMac.
@@ -22,5 +22,5 @@
       <a href="https://github.com/lunacookies/blog">GitHub</a>
       if you’re curious!
     </p>
-  </main>
+  </article>
 {{ end }}
