@@ -35,11 +35,6 @@ body {
   overflow-y: scroll;
 }
 
-body > h1 {
-  font-size: 1.2rem;
-  margin-bottom: 8rem;
-}
-
 a {
   background-image: linear-gradient(currentColor, currentColor);
   background-position-y: 100%;
@@ -58,4 +53,5 @@ a {
 @import "article.scss";
 @import "post-list.scss";
 @import "footer.scss";
+@import "page-title.scss";
 @import "term.scss";
