@@ -42,7 +42,7 @@ round_up:
 can take up to nine cycles on [the M1’s Firestorm cores][dougallj],
 while `msub`, which includes a multiplication, can take up to three cycles.
 Theoretically, in the best case this function will take ten cycles.
-Surely we do better since we know that `p` is a power of two?
+Surely we can do better since we know that `p` is a power of two?
 
 ## Rounding down efficiently
 
