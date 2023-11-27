@@ -114,7 +114,7 @@ Code was compiled using Clang 14 at `-O3`.)
 
 First, we have the A64 assembly for the newer form:
 
-```c
+```a64asm
 demo:
 	// function prologue
 	sub     sp, sp, #0x70
@@ -164,7 +164,7 @@ so our only option to avoid these copies is to pass by pointer.
 
 Reverting back to the old style, we get this assembly:
 
-```c
+```a64asm
 demo:
 	// function prologue
 	sub     sp, sp, #0x30

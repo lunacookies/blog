@@ -1,43 +1,93 @@
 @import "reset";
 
 html {
-  font-size: 16px;
+  font-size: 17px;
   @media (max-width: 700px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   color-scheme: light dark;
   scroll-behavior: smooth;
 }
 
-@mixin gray() {
-  color: #888;
-  @media (prefers-color-scheme: dark) {
-    color: #999;
+@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
+  @if $b-hsb == 0 {
+    @return hsla(0, 0, 0, $a);
+  } @else {
+    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
   }
 }
 
+$dark-fg-hue: 55;
+
+$light-bg: hsb(0, 0, 97);
+$dark-bg: hsb(0, 0, 12);
+
+$light-fg: black;
+$dark-fg: hsb($dark-fg-hue, 7, 90);
+
+$light-faded: hsb(0, 0, 55);
+$dark-faded: hsb(120, 5, 46);
+
+$serif: tisa, Georgia, serif;
+$sans: tisa-sans, Seravek, sans-serif;
+
 body {
-  background-color: #f8f8f8;
+  background-color: $light-bg;
+  color: $light-fg;
   @media (prefers-color-scheme: dark) {
-    background-color: #242424;
-    color: #eee;
+    background-color: $dark-bg;
+    color: $dark-fg;
   }
 
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
+  font-family: $serif;
+  font-variant-numeric: proportional-nums oldstyle-nums;
+  line-height: 1.4;
+
   padding: 1.5rem;
-  max-width: 35rem;
+  max-width: 33rem;
   margin: {
     left: auto;
     right: auto;
   }
+
   overflow-y: scroll;
 }
 
+@mixin text-shadow($background) {
+  $shadows: ();
+
+  @for $x from -2 through 2 {
+    @for $y from -1 through 1 {
+      // A shadow at 0px, 0px has no effect, so we omit it.
+      @if not($x==0 and $y==0) {
+        $shadows: append(
+          $shadows,
+          unquote("#{$x}px #{$y}px #{$background}"),
+          $separator: comma
+        );
+      }
+    }
+  }
+
+  text-shadow: $shadows;
+}
+
 a {
+  color: hsb(210, 100, 80);
+  @media (prefers-color-scheme: dark) {
+    color: hsb(210, 30, 80);
+  }
+
   background-image: linear-gradient(currentColor, currentColor);
-  background-position-y: 100%;
+  @include text-shadow($light-bg);
+  @media (prefers-color-scheme: dark) {
+    @include text-shadow($dark-bg);
+  }
+
+  background-position: 0 90%;
   background-size: 100% 1px;
 
   &:active {
@@ -46,10 +96,19 @@ a {
 }
 
 @mixin monospace {
-  font-family: ui-monospace, SF Mono, Menlo, Consolas, monospace;
-  font-size: 0.95em;
+  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+  font-feature-settings:
+  // monocular g
+    "ss02",
+    // centred asterisk
+    "ss11",
+    // “boring” curly braces
+    "ss12";
+  font-size: 0.85em;
+  line-height: 1;
 }
 
+@import "fonts";
 @import "article";
 @import "post-list";
 @import "footer";

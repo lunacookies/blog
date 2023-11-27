@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Luna’s Blog"
 
 [markup.highlight]
-noClasses = false
+codeFences = false
 
 [markup.goldmark.renderer]
 unsafe = true

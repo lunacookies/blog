@@ -27,7 +27,7 @@ then add that onto `n`, and return.
 A little fiddly, but it’s quite simple all up.
 The resulting assembly is no fun, though:
 
-```
+```a64asm
 round_up:
 	sdiv    x8, x0, x1
 	msub    x8, x8, x1, x0
@@ -113,7 +113,7 @@ let’s see if we can modify `n` so we can round down every time instead.
 Say we want to round some numbers up to the next multiple of 4.
 We’d expect the following results from our function:
 
-```
+```a64asm
 ...
 round_up(55, 4) == 56
 round_up(56, 4) == 56
@@ -178,7 +178,7 @@ round_up(int64_t n, int64_t p)
 The compiler, which in this case is Apple Clang 15.0.0,
 does something which surprised me when I first saw it:
 
-```
+```a64asm
 round_up:
 	add     x8, x0, x1
 	sub     x8, x8, #1
@@ -248,7 +248,7 @@ round_up(int64_t n, int64_t p)
 Finally, this incarnation of `round_up`
 compiles down to just three instructions:
 
-```c
+```a64asm
 round_up:
 	sub     x8, x1, #1
 	add     x9, x8, x0

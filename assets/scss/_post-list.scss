@@ -7,11 +7,17 @@
 
   > .post {
     > .title > a {
-      background-image: none;
+      color: inherit;
+      &:not(:hover) {
+        background-image: none;
+      }
     }
 
     > .date {
-      @include gray();
+      color: $light-faded;
+      @media (prefers-color-scheme: dark) {
+        color: $dark-faded;
+      }
     }
   }
 }

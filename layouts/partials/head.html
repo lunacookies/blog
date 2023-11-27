@@ -10,11 +10,14 @@
   {{ end }}
 </title>
 
-{{ $mainStyles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
+<script src="https://unpkg.com/prismjs@1.25.0/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+{{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
   rel="stylesheet"
-  href="{{ $mainStyles.Permalink }}"
-  integrity="{{ $mainStyles.Data.Integrity }}"
+  href="{{ $styles.Permalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
 />
 
 {{ $addAnchors := resources.Get "js/addAnchors.js" | fingerprint }}
@@ -22,3 +25,14 @@
   src="{{ $addAnchors.Permalink }}"
   integrity="{{ $addAnchors.Data.Integrity }}"
 ></script>
+
+<script>
+  Prism.languages["a64asm"] = {
+    number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
+    operator: /[!]/,
+    keyword: /\n\t[a-zA-Z0-9.]+/m,
+    "class-name": /([wx][0-9]+|lr|fp|sp)/,
+    string: /'[a-z]+'/,
+    comment: /\/\/(?:[^\n])*/,
+  };
+</script>
