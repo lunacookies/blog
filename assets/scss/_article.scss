@@ -33,20 +33,30 @@ article {
     font-size: 0.85rem;
   }
 
+  $list-prefix-used-width: 0.6em;
+  $list-prefix-element-width: 2em;
+  $list-prefix-gutter: 1em;
+
   ul,
   ol {
-    margin-left: 1.5em;
+    @media (max-width: 700px) {
+      margin-left: $list-prefix-used-width + $list-prefix-gutter;
+    }
 
     > li {
       margin-top: 0;
+
+      &::before {
+        position: absolute;
+        width: $list-prefix-element-width;
+        margin-left: -($list-prefix-element-width + $list-prefix-gutter);
+        text-align: right;
+      }
     }
   }
 
   ul > li::before {
     content: "•";
-    position: absolute;
-    width: 1em;
-    margin-left: -1.5em;
   }
 
   ol > li {
@@ -56,9 +66,6 @@ article {
   ol > li::before {
     font-variant-numeric: tabular-nums oldstyle-nums;
     content: counter(ol);
-    position: absolute;
-    width: 1em;
-    margin-left: -1.5em;
   }
 
   table {
