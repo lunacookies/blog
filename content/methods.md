@@ -153,7 +153,7 @@ Let’s take the example of a programming language parser.
 In Zig:
 
 ```zig
-struct Parser {
+const Parser = struct {
 	// fields
 
 	fn parse_statement(self: *Parser) Statement;
@@ -161,7 +161,7 @@ struct Parser {
 	fn expect(self: *Parser, message: []const u8);
 	fn next(self: *Parser);
 	fn current(self: *const Parser) TokenKind;
-}
+};
 ```
 
 In Odin or Hare I believe you’d just end up
@@ -236,7 +236,7 @@ because “structs don’t exist”?
 
 On the other hand, I entirely sympathize with
 wanting to remove unnecessary language complexity and abstractions.
-It is arguable whether the (minimal) savings in typing methods cause
+It is debatable whether the (minimal) savings in typing methods cause
 outweigh the (minimal) complexity they add.
 
 In my opinion, methods aren’t _evil;_
