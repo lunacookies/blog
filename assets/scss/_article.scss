@@ -138,8 +138,14 @@ article {
   }
 
   > .footnotes {
-    > ol > li + li {
-      margin-top: 1em;
+    > ol {
+      @media (min-width: 600px) {
+        margin-left: 0;
+      }
+
+      > li + li {
+        margin-top: 1em;
+      }
     }
   }
 
