@@ -31,8 +31,8 @@ $dark-fg: hsb($dark-fg-hue, 7, 90);
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
 
-$serif: tisa, Georgia, serif;
-$sans: tisa-sans, Seravek, sans-serif;
+$serif: tisa, Iowan Old Style, Georgia, serif;
+$sans: tisa-sans, Seravek, Segoe UI, sans-serif;
 
 body {
   background-color: $light-bg;
