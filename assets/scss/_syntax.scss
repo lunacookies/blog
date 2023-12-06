@@ -40,7 +40,8 @@
   color: hsb(110, 45, 50);
 }
 
-// lifetimes
+// builtins and lifetimes
+.builtin,
 .lifetime-annotation {
   color: hsb(75, 100, 50);
 }
@@ -100,7 +101,8 @@
     color: hsb(110, 30, 65);
   }
 
-  // lifetimes
+  // builtins and lifetimes
+  .builtin,
   .lifetime-annotation {
     color: hsb(75, 95, 65);
   }
