@@ -148,6 +148,8 @@ article {
 
   > .footnotes {
     > ol {
+      font-size: 0.85rem;
+
       @media (min-width: 600px) {
         margin-left: 0;
       }
