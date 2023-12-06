@@ -30,7 +30,10 @@ article {
 
   blockquote {
     padding-left: 3rem;
-    font-size: 0.85rem;
+
+    > * {
+      font-size: 0.85rem;
+    }
   }
 
   ul,
