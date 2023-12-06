@@ -1,10 +1,16 @@
 article {
   * + * {
-    margin-top: 1.5em;
+    margin-top: 1em;
   }
 
-  p + p {
-    margin-top: 1em;
+  table,
+  pre,
+  blockquote,
+  hr {
+    * + &,
+    & + * {
+      margin-top: 1.5em;
+    }
   }
 
   h2 {
