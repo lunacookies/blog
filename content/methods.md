@@ -156,8 +156,8 @@ In Zig:
 const Parser = struct {
 	// fields
 
-	fn parse_statement(self: *Parser) Statement;
-	fn parse_expression(self: *Parser) Expression;
+	fn parseStatement(self: *Parser) Statement;
+	fn parseExpression(self: *Parser) Expression;
 	fn expect(self: *Parser, message: []const u8);
 	fn next(self: *Parser);
 	fn current(self: *const Parser) TokenKind;
