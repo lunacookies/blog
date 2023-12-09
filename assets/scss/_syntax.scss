@@ -23,6 +23,7 @@
 
 // constants
 .constant,
+.char,
 &.language-scss .variable {
   color: hsb(35, 100, 80);
 }
@@ -80,6 +81,7 @@
 
   // constants
   .constant,
+  .char,
   &.language-scss .variable {
     color: hsb(35, 100, 100);
   }
