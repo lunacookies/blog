@@ -260,9 +260,9 @@ Go, Odin and Jai are three examples we can draw from.
 Let’s start with the obvious:
 all three languages default to zeroing out local variables
 which don’t have initializers.
-I say “default to” since Odin and Jai both let you
+(I say “default to” since Jai lets you
 specify the default value for a struct field,
-so it technically isn’t 100% zero-initialization.
+so it technically isn’t 100% zero-initialization.)
 This also applies to struct literals; unspecified fields are zero-initialized,
 just as in C’s designated initializers.
 
