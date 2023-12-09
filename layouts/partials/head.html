@@ -33,6 +33,9 @@
     keyword: /\n\t[a-zA-Z0-9.]+/m,
     "class-name": /([wxvqdshb][0-9]+|lr|fp|sp)/,
     string: /'[a-z]+'/,
-    comment: /\/\/(?:[^\n])*/,
+    comment: {
+      pattern: /\/\/[^\n]*/,
+      greedy: true,
+    },
   };
 </script>
