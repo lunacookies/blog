@@ -1,8 +1,8 @@
-{{ define "title" }}
-  {{ .Title | markdownify }}
-{{ end }}
-
 {{ define "body" }}
+  <h1 class="page-title">
+    {{ .Title | markdownify }}
+  </h1>
+
   <article>
     {{ .Page.Content }}
 
