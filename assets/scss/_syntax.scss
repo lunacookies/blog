@@ -23,6 +23,7 @@
 
 // constants
 .constant,
+.boolean,
 .char,
 &.language-scss .variable {
   color: hsb(35, 100, 80);
@@ -81,6 +82,7 @@
 
   // constants
   .constant,
+  .boolean,
   .char,
   &.language-scss .variable {
     color: hsb(35, 100, 100);
