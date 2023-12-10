@@ -32,6 +32,7 @@
     operator: /[!]/,
     keyword: /\n\t[a-zA-Z0-9.]+/m,
     register: /\b[wxvqdshb][0-9]+|lr|fp|sp\b/,
+    constant: /\b[xw]zr\b/,
     char: /'[a-z]+'/,
     function: /\b[a-zA-Z0-9_.]+\b/,
     comment: {
