@@ -31,8 +31,8 @@
     number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
     operator: /[!]/,
     keyword: /\n\t[a-zA-Z0-9.]+/m,
-    "class-name": /([wxvqdshb][0-9]+|lr|fp|sp)/,
     string: /'[a-z]+'/,
+    register: /\b[wxvqdshb][0-9]+|lr|fp|sp\b/,
     function: /\b[a-zA-Z0-9_.]+\b/,
     comment: {
       pattern: /\/\/[^\n]*/,
