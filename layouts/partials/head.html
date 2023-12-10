@@ -30,7 +30,7 @@
   Prism.languages["a64asm"] = {
     number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
     operator: /[!]/,
-    keyword: /\n\t[a-zA-Z0-9.]+/m,
+    keyword: [/\n\t[a-zA-Z0-9.]+/m, /\buxtw|sxtw|sxtx|lsl\b/],
     register: /\b[wxvqdshb][0-9]+|lr|fp|sp\b/,
     constant: /\b[xw]zr\b/,
     char: /'[a-z]+'/,
