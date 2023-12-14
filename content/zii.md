@@ -293,7 +293,7 @@ Rather, Odin’s various allocators keep track of
 which memory is fresh from the OS and which memory is being recycled,
 explicitly zeroing out allocations only when necessary.
 Odin makes this optional, so you don’t have to pay the cost of that zeroing
-if ZII isn’t useful to you,
+if ZII isn’t useful to you.
 
 A curious point here is how zeroed allocations interact with huge allocations.
 One common piece of advice for improving software performance
