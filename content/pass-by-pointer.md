@@ -147,7 +147,7 @@ loop:
 ```
 
 The call to `player_create` has been compiled nicely,
-with the result (`x8`) being placed directly into p’s stack slot (`x29 - 0x20`).
+with the result (`x8`) being placed directly into `p`’s stack slot (`x29 - 0x20`).
 The update loop isn’t looking so good though --
 first we copy `p` into a temporary,
 then call `player_update` which puts its result into another temporary,
