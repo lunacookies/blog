@@ -95,8 +95,7 @@ a {
   }
 }
 
-@mixin monospace {
-  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+@mixin regular-monospace-font-features {
   font-feature-settings:
   // monocular g
     "ss02",
@@ -104,6 +103,27 @@ a {
     "ss11",
     // “boring” curly braces
     "ss12";
+}
+
+@mixin italic-monospace-font-features {
+  font-feature-settings:
+    // monocular a
+    "ss01",
+    // monocular g
+    "ss02",
+    // hooked i
+    "ss09",
+    // hooked l
+    "ss10",
+    // centred asterisk
+    "ss11",
+    // “boring” curly braces
+    "ss12";
+}
+
+@mixin monospace {
+  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+  @include regular-monospace-font-features();
 }
 
 @import "fonts";

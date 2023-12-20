@@ -122,6 +122,10 @@ article {
     line-height: 1;
   }
 
+  em code {
+    @include italic-monospace-font-features();
+  }
+
   pre {
     background-color: hsb(0, 0, 99);
     @media (prefers-color-scheme: dark) {
