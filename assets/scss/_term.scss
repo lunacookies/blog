@@ -35,20 +35,20 @@
   }
 
   &.light {
-    @include light-terminal();
+    @include light-terminal;
   }
   &.dark {
-    @include dark-terminal();
+    @include dark-terminal;
   }
   &.auto {
-    @include light-terminal();
+    @include light-terminal;
     @media (prefers-color-scheme: dark) {
-      @include dark-terminal();
+      @include dark-terminal;
     }
   }
 
   > .code {
-    @include monospace();
+    @include monospace;
     line-height: 1.5;
     white-space: pre;
     margin-top: 0;

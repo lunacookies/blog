@@ -117,13 +117,13 @@ article {
   }
 
   code {
-    @include monospace();
+    @include monospace;
     font-size: 0.85em;
     line-height: 1;
   }
 
   em code {
-    @include italic-monospace-font-features();
+    @include italic-monospace-font-features;
   }
 
   pre {

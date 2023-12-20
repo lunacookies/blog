@@ -123,7 +123,7 @@ a {
 
 @mixin monospace {
   font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
-  @include regular-monospace-font-features();
+  @include regular-monospace-font-features;
 }
 
 @import "fonts";
