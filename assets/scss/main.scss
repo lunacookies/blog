@@ -33,6 +33,7 @@ $dark-faded: hsb(120, 5, 46);
 
 $serif: tisa, Iowan Old Style, Georgia, serif;
 $sans: tisa-sans, Seravek, Segoe UI, sans-serif;
+$monospace: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
 
 body {
   background-color: $light-bg;
@@ -122,7 +123,7 @@ a {
 }
 
 @mixin monospace {
-  font-family: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+  font-family: $monospace;
   @include regular-monospace-font-features;
 }
 
