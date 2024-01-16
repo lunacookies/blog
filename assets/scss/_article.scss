@@ -14,7 +14,8 @@ article {
   }
 
   h2 {
-    font-family: $sans;
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.05em;
     margin-top: 5em;
     margin-bottom: 2em;
 
