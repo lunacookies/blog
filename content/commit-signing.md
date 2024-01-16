@@ -188,7 +188,7 @@ $ git log --show-signature
 error: gpg.ssh.allowedSignersFile needs to be configured and exist for ssh signature verification
 commit 366b70abf747b990fd4c6c239ce55bae012aabd1 (HEAD -> main)
 No signature
-Author: Luna Razzaghipour <lunarazzaghipour@gmail.com>
+Author: Luna Razzaghipour <luna@xoria.org>
 Date:   Thu Mar 2 20:12:18 2023 +1100
 
     Initialize repository
@@ -209,7 +209,7 @@ You can find your public key in `~/.ssh/id_ed25519.pub`
 If you trust me, though, you can leave my email-key pair in there :P
 
 ```
-lunarazzaghipour@gmail.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o=
+luna@xoria.org ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLTxD1PsPaEPdLiwXOEdINDuwv8Pn3E+GvkeJ75LyV4qEjxjmnwRzUCbn8k497Sy3jbTuNR/c7SX5/w5S7tpl4o=
 foo@bar.org public-key-here
 ```
 
@@ -226,8 +226,8 @@ you should see something like this instead:
 ```
 $ git log --show-signature
 commit 366b70abf747b990fd4c6c239ce55bae012aabd1 (HEAD -> main)
-Good "git" signature for lunarazzaghipour@gmail.com with ED25519 key SHA256:Kywsc1vHG9+wPIxhxODjWIPvSdz5cteDXqpkYCB1qDo
-Author: Luna Razzaghipour <lunarazzaghipour@gmail.com>
+Good "git" signature for luna@xoria.org with ED25519 key SHA256:Kywsc1vHG9+wPIxhxODjWIPvSdz5cteDXqpkYCB1qDo
+Author: Luna Razzaghipour <luna@xoria.org>
 Date:   Thu Mar 2 20:12:18 2023 +1100
 
     Initialize repository
