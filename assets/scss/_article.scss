@@ -84,7 +84,9 @@ article {
   }
 
   ol > li::before {
-    font-variant-numeric: tabular-nums oldstyle-nums;
+    // Literata doesn’t have tabular oldstyle figures,
+    // so we inherit proportional oldstyle figures from <body>
+    // as the next-best alternative.
     content: counter(ol);
   }
 
