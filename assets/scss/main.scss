@@ -1,9 +1,9 @@
 @import "reset";
 
 html {
-  font-size: 17px;
+  font-size: 16px;
   @media (max-width: 700px) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   color-scheme: light dark;
@@ -31,8 +31,10 @@ $dark-fg: hsb($dark-fg-hue, 7, 90);
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
 
-$serif: tisa, Iowan Old Style, Georgia, serif;
-$monospace: input-mono, Consolas, Menlo, DejaVu Sans Mono, monospace;
+$serif: "literata", "Iowan Old Style", "Georgia", serif;
+$monospace: "monaspace-argon", "Consolas", "Menlo", "DejaVu Sans Mono",
+  monospace;
+$italic-monospace: "monaspace-radon", $monospace;
 
 body {
   background-color: $light-bg;
@@ -43,11 +45,12 @@ body {
   }
 
   font-family: $serif;
+  font-variation-settings: "opsz" 9;
   font-variant-numeric: proportional-nums oldstyle-nums;
-  line-height: 1.4;
+  line-height: 1.5;
 
   padding: 1.5rem;
-  max-width: 33rem;
+  max-width: 37rem;
   margin: {
     left: auto;
     right: auto;
@@ -87,7 +90,7 @@ a {
     @include text-shadow($dark-bg);
   }
 
-  background-position: 0 90%;
+  background-position: 0 93%;
   background-size: 100% 1px;
 
   &:active {
@@ -95,35 +98,13 @@ a {
   }
 }
 
-@mixin regular-monospace-font-features {
-  font-feature-settings:
-  // monocular g
-    "ss02",
-    // centred asterisk
-    "ss11",
-    // “boring” curly braces
-    "ss12";
-}
+@mixin italic-monospace {
+  font-family: $italic-monospace;
 
-@mixin italic-monospace-font-features {
-  font-feature-settings:
-    // monocular a
-    "ss01",
-    // monocular g
-    "ss02",
-    // hooked i
-    "ss09",
-    // hooked l
-    "ss10",
-    // centred asterisk
-    "ss11",
-    // “boring” curly braces
-    "ss12";
-}
-
-@mixin monospace {
-  font-family: $monospace;
-  @include regular-monospace-font-features;
+  // For future reference: `font-style: italic` with Monaspace is broken
+  // so if we wanted to use slant need to set the `slnt` axis manually
+  // using `font-variation-settings: "slnt" -11;`
+  font-style: normal;
 }
 
 @import "fonts";

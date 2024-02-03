@@ -130,6 +130,5 @@
 }
 
 .comment {
-  font-style: italic;
-  @include italic-monospace-font-features;
+  @include italic-monospace();
 }

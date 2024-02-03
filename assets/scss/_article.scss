@@ -13,6 +13,12 @@ article {
     }
   }
 
+  @mixin small() {
+    font-size: 0.85em;
+    font-variation-settings: "opsz" 7;
+    font-weight: 440;
+  }
+
   h2 {
     font-variant-caps: all-small-caps;
     letter-spacing: 0.05em;
@@ -39,7 +45,7 @@ article {
     padding-left: 3em;
 
     > * {
-      font-size: 0.85em;
+      @include small();
     }
   }
 
@@ -117,13 +123,13 @@ article {
   }
 
   code {
-    @include monospace;
-    font-size: 0.85em;
+    font-family: $monospace;
+    font-size: 0.95em;
     line-height: 1;
   }
 
   em code {
-    @include italic-monospace-font-features;
+    @include italic-monospace();
   }
 
   pre {
@@ -144,7 +150,7 @@ article {
 
     > code {
       display: block;
-      font-size: 0.75em;
+      font-size: 0.85em;
       line-height: 1.3;
     }
 
@@ -153,7 +159,7 @@ article {
 
   > .footnotes {
     > ol {
-      font-size: 0.85rem;
+      @include small();
 
       @media (min-width: 600px) {
         margin-left: 0;

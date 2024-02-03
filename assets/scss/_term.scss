@@ -48,7 +48,7 @@
   }
 
   > .code {
-    @include monospace;
+    font-family: $monospace;
     line-height: 1.5;
     white-space: pre;
     margin-top: 0;
