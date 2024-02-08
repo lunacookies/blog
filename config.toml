@@ -2,6 +2,11 @@ baseURL = "https://blog.xoria.org/"
 languageCode = "en-us"
 title = "Luna’s Blog"
 
+[params.author]
+name = "Luna Razzaghipour"
+email = "luna@xoria.org"
+uri = "https://xoria.org"
+
 [markup.highlight]
 codeFences = false
 
@@ -10,3 +15,15 @@ unsafe = true
 
 [minify.tdewolff.html]
 keepWhitespace = false
+
+[mediaTypes]
+[mediaTypes."application/atom"]
+suffix = "xml"
+
+[outputFormats.Atom]
+mediaType = "application/atom"
+baseName = "atom.xml"
+isPlainText = false
+
+[outputs]
+home = ["HTML", "Atom"]

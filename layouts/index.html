@@ -1,5 +1,9 @@
 {{ define "body" }}
-  <h1 class="page-title">Luna’s Blog</h1>
+  <h1 class="page-title">
+    Luna’s Blog<a class="feed-link" href="{{ .Site.BaseURL }}atom.xml"
+      >atom feed</a
+    >
+  </h1>
 
   <ul class="post-list">
     {{ range .Pages }}

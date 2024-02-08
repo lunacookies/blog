@@ -16,12 +16,13 @@
   <footer>
     <p>
       Thoughts, comments, corrections or suggestions?
-      <a href="mailto:luna@xoria.org">Email&nbsp;me!</a>
+      <a href="mailto:{{ .Site.Params.author.email }}">Email&nbsp;me!</a>
       I’d&nbsp;like nothing more than to hear from you.
     </p>
 
     <div class="link-cluster">
       <p><a href="{{ .Site.BaseURL }}">more posts</a></p>
+      <p><a href="{{ .Site.BaseURL }}atom.xml">atom feed</a></p>
       <p><a href="https://xoria.org">homepage</a></p>
       <p><a href="https://github.com/lunacookies">github</a></p>
     </div>

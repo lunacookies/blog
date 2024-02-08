@@ -1,4 +1,13 @@
 .page-title {
   text-wrap: balance;
   margin-bottom: 8rem;
+
+  > .feed-link {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+
+    &:not(:hover) {
+      background-image: none;
+    }
+  }
 }
