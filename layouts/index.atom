@@ -14,7 +14,7 @@
 
   {{ range .Pages }}
     <entry>
-      {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title }}]]></title>
+      {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title | markdownify }}]]></title>
       <link href="{{ .Permalink }}"/>
       <id>{{ .Permalink }}</id>
       <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>

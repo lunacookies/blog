@@ -19,6 +19,8 @@ article {
     font-weight: 440;
   }
 
+  @import "markdown";
+
   h2 {
     text-wrap: balance;
     font-variant-caps: all-small-caps;
@@ -37,14 +39,6 @@ article {
       font-variant-caps: normal;
       letter-spacing: 0;
     }
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  strong {
-    font-weight: 700;
   }
 
   blockquote {
@@ -128,16 +122,6 @@ article {
     &::before {
       content: "•   •   •";
     }
-  }
-
-  code {
-    font-family: $monospace;
-    font-size: 0.95em;
-    line-height: 1;
-  }
-
-  em code {
-    @include italic-monospace();
   }
 
   pre {

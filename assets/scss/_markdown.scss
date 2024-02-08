@@ -1,0 +1,17 @@
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+code {
+  font-family: $monospace;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+em code {
+  @include italic-monospace();
+}
