@@ -7,12 +7,25 @@
 
   <ul class="post-list">
     {{ range .Pages }}
-      <li class="post">
-        <p class="title">
-          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-        </p>
-        <p class="date">{{ .Date.Format "2 January 2006" }}</p>
-      </li>
+      {{ if not (isset .Params "date") }}
+        <li class="post -draft">
+          <p class="title">
+            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+          </p>
+          <p class="date">draft post</p>
+        </li>
+      {{ end }}
+    {{ end }}
+
+    {{ range .Pages }}
+      {{ if isset .Params "date" }}
+        <li class="post">
+          <p class="title">
+            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+          </p>
+          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
 

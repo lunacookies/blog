@@ -23,5 +23,9 @@
         color: $dark-faded;
       }
     }
+
+    &.-draft {
+      opacity: 0.5;
+    }
   }
 }
