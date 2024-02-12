@@ -12,7 +12,8 @@
 .builtin-type,
 &.language-css .property,
 &.language-scss .property,
-&.language-ini .attr-name {
+&.language-ini .attr-name,
+&.language-go .builtin {
   color: hsb(230, 45, 65);
 }
 
@@ -76,7 +77,8 @@
   .builtin-type,
   &.language-css .property,
   &.language-scss .property,
-  &.language-ini .attr-name {
+  &.language-ini .attr-name,
+  &.language-go .builtin {
     color: hsb(220, 25, 65);
   }
 
