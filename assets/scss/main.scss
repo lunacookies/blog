@@ -34,7 +34,6 @@ $dark-faded: hsb(120, 5, 46);
 $serif: "literata", "Iowan Old Style", "Georgia", serif;
 $monospace: "monaspace-argon", "Consolas", "Menlo", "DejaVu Sans Mono",
   monospace;
-$italic-monospace: "monaspace-radon", $monospace;
 
 body {
   background-color: $light-bg;
@@ -99,12 +98,10 @@ a {
 }
 
 @mixin italic-monospace {
-  font-family: $italic-monospace;
-
-  // For future reference: `font-style: italic` with Monaspace is broken
-  // so if we wanted to use slant need to set the `slnt` axis manually
-  // using `font-variation-settings: "slnt" -11;`
+  // `font-style: italic` with Monaspace is broken
+  // so we need to set the variation axis manually.
   font-style: normal;
+  font-variation-settings: "slnt" -8;
 }
 
 @import "fonts";
