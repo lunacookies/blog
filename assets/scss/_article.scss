@@ -7,13 +7,22 @@ article {
     margin-top: 1em;
   }
 
-  table,
+  ul,
+  ol,
   pre,
   blockquote,
   hr {
     * + &,
     & + * {
       margin-top: 1.5em;
+    }
+  }
+
+  table,
+  figure {
+    * + &,
+    & + * {
+      margin-top: 2em;
     }
   }
 
