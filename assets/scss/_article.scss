@@ -110,6 +110,7 @@ article {
     display: block;
     border-collapse: collapse;
     overflow-x: auto;
+    text-wrap: balance;
 
     tbody > tr:first-child {
       border-top: 1px solid;
