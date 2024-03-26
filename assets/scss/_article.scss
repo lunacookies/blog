@@ -179,7 +179,7 @@ article {
     > ol {
       @include small();
 
-      @media (min-width: 600px) {
+      @media (min-width: 850px) {
         margin-left: 0;
       }
 
