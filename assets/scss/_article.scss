@@ -108,23 +108,28 @@ article {
     font-variant-numeric: tabular-nums lining-nums;
 
     display: block;
+    border-collapse: collapse;
     overflow-x: auto;
 
-    border-collapse: collapse;
-
-    // gap between columns
-    td + td,
-    th + th {
-      padding-left: 1em;
+    tbody > tr:first-child {
+      border-top: 1px solid;
     }
 
-    // border with space above and below
+    $column-padding: 1em;
+    $row-padding: 0.25em;
+    $head-adjacent-row-padding: 0.75em;
+
+    th,
+    td {
+      padding: $row-padding $column-padding;
+    }
+
     thead > tr > th {
-      border-bottom: 1px solid;
-      padding-bottom: 0.5em;
+      padding-bottom: $head-adjacent-row-padding;
     }
-    tbody > :first-child > td {
-      padding-top: 0.5em;
+
+    tbody > tr:first-child > td {
+      padding-top: $head-adjacent-row-padding;
     }
   }
 
