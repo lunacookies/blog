@@ -104,6 +104,7 @@ article {
   }
 
   table {
+    @include small();
     font-variant-numeric: tabular-nums lining-nums;
 
     display: block;
