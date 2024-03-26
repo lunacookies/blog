@@ -1,4 +1,8 @@
 article {
+  > * {
+    max-width: 37rem;
+  }
+
   * + * {
     margin-top: 1em;
   }
@@ -11,6 +15,12 @@ article {
     & + * {
       margin-top: 1.5em;
     }
+  }
+
+  pre,
+  table,
+  figure {
+    max-width: none;
   }
 
   @mixin small() {
