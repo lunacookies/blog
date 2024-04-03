@@ -1,4 +1,4 @@
-@mixin light-terminal() {
+@mixin light-terminal {
   box-shadow: 0 0 0 1px rgba(black, 0.2), 0 1rem 2rem rgba(black, 0.5);
   > .titlebar {
     background-color: #fdfdfd;
@@ -6,7 +6,7 @@
     border-bottom: 1px solid #dddddd;
   }
 }
-@mixin dark-terminal() {
+@mixin dark-terminal {
   box-shadow: 0 0 0 1px #505050, 0 0 0 2px black, 0 1rem 2rem rgba(black, 0.5);
   > .titlebar {
     background-color: #383838;

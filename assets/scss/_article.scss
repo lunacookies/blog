@@ -32,7 +32,7 @@ article {
     max-width: none;
   }
 
-  @mixin small() {
+  @mixin small {
     font-size: 0.85em;
     font-variation-settings: "opsz" 7;
     font-weight: 440;
@@ -64,7 +64,7 @@ article {
     padding-left: 3em;
 
     > * {
-      @include small();
+      @include small;
     }
   }
 
@@ -104,7 +104,7 @@ article {
   }
 
   table {
-    @include small();
+    @include small;
     font-variant-numeric: tabular-nums lining-nums;
 
     display: block;
@@ -177,7 +177,7 @@ article {
 
   > .footnotes {
     > ol {
-      @include small();
+      @include small;
 
       @media (min-width: 850px) {
         margin-left: 0;
