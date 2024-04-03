@@ -32,8 +32,8 @@ $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
 
 $serif: "literata", "Iowan Old Style", "Georgia", serif;
-$monospace: "monaspace-argon", "Consolas", "Menlo", "DejaVu Sans Mono",
-  monospace;
+$monospace: "Consolas", "Noto Sans Mono", "noto-sans-mono", "Menlo",
+  "DejaVu Sans Mono", monospace;
 
 $page-padding: 1.5rem;
 $textblock-width: 36rem;
@@ -105,11 +105,9 @@ a {
   }
 }
 
-@mixin italic-monospace {
-  // `font-style: italic` with Monaspace is broken
-  // so we need to set the variation axis manually.
-  font-style: normal;
-  font-variation-settings: "slnt" -8;
+@mixin monospace {
+  font-family: $monospace;
+  font-variant-numeric: lining-nums;
 }
 
 @import "fonts";

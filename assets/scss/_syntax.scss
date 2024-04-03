@@ -130,7 +130,3 @@
     color: hsb(120, 5, 45);
   }
 }
-
-.comment {
-  @include italic-monospace();
-}

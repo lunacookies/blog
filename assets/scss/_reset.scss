@@ -16,6 +16,10 @@ html {
   text-size-adjust: 100%;
 }
 
+body {
+  font-size-adjust: ex-height from-font;
+}
+
 img,
 video {
   display: block;

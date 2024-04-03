@@ -7,11 +7,6 @@ strong {
 }
 
 code {
-  font-family: $monospace;
-  font-size: 0.95em;
+  @include monospace;
   line-height: 1;
-}
-
-em code {
-  @include italic-monospace();
 }
