@@ -213,7 +213,7 @@ but also several of those segfault-triggering bytes following it!
                                vvv
 ..........spspspspspspspspspsp0..........
           \______/\______/\______/
-	  8       8       8
+          8       8       8
                                   KABOOM!
 ```
 
@@ -231,7 +231,7 @@ separately, byte-by-byte at the end.
 ```
 ..........spspspspspspspspspsp0..........
           \______/\______/^^^^|
-	  8       8
+          8       8
                                   all good :)
 ```
 
