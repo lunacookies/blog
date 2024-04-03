@@ -35,6 +35,11 @@ $serif: "literata", "Iowan Old Style", "Georgia", serif;
 $monospace: "monaspace-argon", "Consolas", "Menlo", "DejaVu Sans Mono",
   monospace;
 
+$page-padding: 1.5rem;
+$textblock-width: 36rem;
+$wide-page-width: 50rem;
+$wide-page-breakpoint: 650px;
+
 body {
   background-color: $light-bg;
   color: $light-fg;
@@ -48,8 +53,11 @@ body {
   font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.5;
 
-  padding: 1.5rem;
-  max-width: 50rem;
+  padding: $page-padding;
+  max-width: $wide-page-width + 2 * $page-padding;
+  @media (max-width: $wide-page-breakpoint) {
+    max-width: $textblock-width + 2 * $page-padding;
+  }
   margin: {
     left: auto;
     right: auto;

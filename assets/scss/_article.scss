@@ -1,6 +1,9 @@
 article {
   > * {
-    max-width: 37rem;
+    max-width: $textblock-width;
+    @media (max-width: $wide-page-breakpoint) {
+      max-width: initial;
+    }
   }
 
   * + * {
