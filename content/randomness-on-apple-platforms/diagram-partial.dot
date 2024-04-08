@@ -1,0 +1,123 @@
+digraph {
+	fontname = "system-ui";
+
+	edge [
+		fontname = "system-ui",
+		fontsize = 12,
+	];
+
+	node [
+		fontname = "system-ui",
+		fontsize = 16,
+		shape = "box",
+		style = "filled, solid",
+		color = "#00000022",
+		fillcolor = "#FFFFFF",
+		height = 0,
+		margin = "0.2,0.05",
+	];
+
+	subgraph kernelspace {
+		cluster = true;
+		label = "kernelspace";
+		labelloc = "b";
+		fontsize = 20;
+		style = "filled";
+		color = "#00000011";
+
+		"getentropy(2)";
+		"/dev/random";
+		"/dev/urandom";
+
+		subgraph kernelimpl {
+			cluster = true;
+			label = "implementation details";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			"kernel???" [label = "???"];
+		}
+	}
+
+	subgraph userspace {
+		cluster = true;
+		label = "userspace";
+		fontsize = 20;
+		style = "filled";
+		color = "#00000011";
+
+		subgraph libSystem {
+			cluster = true;
+			label = "libSystem";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			subgraph libc {
+				cluster = true;
+				label = "libc";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"rand(3)";
+				"rand48(3)";
+				"random(3)";
+				"arc4random(3)";
+			}
+
+			subgraph CommonCrypto {
+				cluster = true;
+				label = "CommonCrypto";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"CCRandomCopyBytes";
+				"CCRandomGenerateBytes";
+			}
+
+			subgraph corecrypto {
+				cluster = true;
+				label = "corecrypto private API";
+				labelloc = "b";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"ccrng";
+				"ccrng???" [label = "???"];
+			}
+		}
+
+		"user-provided seed";
+
+		subgraph Security {
+			cluster = true;
+			label = "Security.framework";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			"SecRandomCopyBytes";
+		}
+	}
+
+	"getentropy(2)" -> "kernel???";
+
+	"rand(3)" -> "user-provided seed";
+	"rand48(3)" -> "user-provided seed";
+	"random(3)" -> "user-provided seed";
+
+	"SecRandomCopyBytes" -> "CCRandomCopyBytes";
+	"CCRandomCopyBytes" -> "CCRandomGenerateBytes";
+	"CCRandomGenerateBytes" -> "ccrng";
+	"arc4random(3)" -> "ccrng";
+
+	"ccrng" -> "ccrng???";
+	"ccrng???" -> "getentropy(2)";
+
+	"/dev/random" -> "kernel???";
+	"/dev/urandom" -> "kernel???";
+}

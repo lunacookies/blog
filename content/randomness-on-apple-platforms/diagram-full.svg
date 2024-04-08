@@ -1,0 +1,165 @@
+<svg viewBox="0 0 1273 737.6" xmlns="http://www.w3.org/2000/svg">
+  <g class="graph" transform="translate(4 733.6)">
+    <path fill="#fff" d="M-4 4v-737.6h1273V4H-4z"/>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M8-8v-393.5h352V-8H8z"/>
+      <text text-anchor="middle" x="184" y="-378.5" font-family="system-ui" font-size="20">kernelspace</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M16-16v-290.8h210V-16H16z"/>
+      <text text-anchor="middle" x="121" y="-25" font-family="system-ui" font-size="20">implementation details</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M368-216.1v-505.5h889v505.5H368z"/>
+      <text text-anchor="middle" x="812.5" y="-698.6" font-family="system-ui" font-size="20">userspace</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M376-224.1v-374.8h709v374.8H376z"/>
+      <text text-anchor="middle" x="730.5" y="-575.9" font-family="system-ui" font-size="20">libSystem</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M610-409.5v-74.7h467v74.7H610z"/>
+      <text text-anchor="middle" x="843.5" y="-461.2" font-family="system-ui" font-size="20">libc</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M384-409.5v-149.4h218v149.4H384z"/>
+      <text text-anchor="middle" x="493" y="-535.9" font-family="system-ui" font-size="20">CommonCrypto</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M418-232.1v-137.4h205v137.4H418z"/>
+      <text text-anchor="middle" x="520.5" y="-241.1" font-family="system-ui" font-size="20">corecrypto private API</text>
+    </g>
+    <g class="cluster">
+      <path fill-opacity=".07" stroke="#000" stroke-opacity=".07" d="M395-606.9v-74.7h196v74.7H395z"/>
+      <text text-anchor="middle" x="493" y="-658.6" font-family="system-ui" font-size="20">Security.framework</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M168.9-361.5H59.1v26.7h109.8v-26.7z"/>
+      <text text-anchor="middle" x="114" y="-342.7" font-family="system-ui" font-size="16">/dev/random</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M215.52-298.8H100.48v26.7h115.04v-26.7z"/>
+      <text text-anchor="middle" x="158" y="-280" font-family="system-ui" font-size="16">random_read</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="m123.12-334.57 19.21 26.51"/>
+      <path d="m144.97-310.39 3.04 10.15-8.71-6.04 5.67-4.11z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M305.02-361.5H186.97v26.7h118.05v-26.7z"/>
+      <text text-anchor="middle" x="246" y="-342.7" font-family="system-ui" font-size="16">/dev/urandom</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="m227.77-334.57-41.82 28.84"/>
+      <path d="m187.98-302.88-10.22 2.8 6.24-8.56 3.98 5.76z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M352.4-298.8H233.6v26.7h118.8v-26.7z"/>
+      <text text-anchor="middle" x="293" y="-280" font-family="system-ui" font-size="16">getentropy(2)</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M216.52-208.1H101.48v26.7h115.04v-26.7z"/>
+      <text text-anchor="middle" x="159" y="-189.3" font-family="system-ui" font-size="16">read_random</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M284.54-271.64c-10.83 15.42-31.05 41.05-54.54 55.54a96.17 96.17 0 0 1-4.98 2.85"/>
+      <path d="m226.83-210.24-10.54 1.04 7.59-7.39 2.95 6.35z"/>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="m158.14-271.74.59 52.16"/>
+      <path d="m162.23-219.99-3.39 10.04-3.61-9.96 7-.08z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M199.28-145.4h-80.56v26.7h80.56v-26.7z"/>
+      <text text-anchor="middle" x="159" y="-126.6" font-family="system-ui" font-size="16">cckprng</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M159-181.17v24.22"/>
+      <path d="m162.5-157.12-3.5 10-3.5-10h7z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M186-82.7h-54V-56h54v-26.7z"/>
+      <text text-anchor="middle" x="159" y="-63.9" font-family="system-ui" font-size="16">???</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M159-118.47v24.22"/>
+      <path d="m162.5-94.42-3.5 10-3.5-10h7z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M1069.4-444.2h-76.8v26.7h76.8v-26.7z"/>
+      <text text-anchor="middle" x="1031" y="-425.4" font-family="system-ui" font-size="16">rand(3)</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M1248.78-361.5h-155.56v26.7h155.56v-26.7z"/>
+      <text text-anchor="middle" x="1171" y="-342.7" font-family="system-ui" font-size="16">user-provided seed</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="m1053.18-417.06 85.89 49.5"/>
+      <path d="m1140.69-370.66 6.92 8.03-10.41-1.96 3.49-6.07z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M858.77-444.2h-95.54v26.7h95.54v-26.7z"/>
+      <text text-anchor="middle" x="811" y="-425.4" font-family="system-ui" font-size="16">rand48(3)</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M844.19-417.08A379.35 379.35 0 0 0 868-409.5c70.93 19.61 152.87 35.54 213.64 46.1"/>
+      <path d="m1081.98-366.9 9.27 5.15-10.45 1.75 1.18-6.9z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M974.9-444.2h-97.8v26.7h97.8v-26.7z"/>
+      <text text-anchor="middle" x="926" y="-425.4" font-family="system-ui" font-size="16">random(3)</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M962.15-417.01c7.23 2.52 14.77 5.13 21.85 7.51a8833.2 8833.2 0 0 0 135.72 44.18"/>
+      <path d="m1120.5-368.74 8.47 6.36-10.59.31 2.12-6.67z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M745.52-444.2H618.48v26.7h127.04v-26.7z"/>
+      <text text-anchor="middle" x="682" y="-425.4" font-family="system-ui" font-size="16">arc4random(3)</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M525.4-361.5h-64.8v26.7h64.8v-26.7z"/>
+      <text text-anchor="middle" x="493" y="-342.7" font-family="system-ui" font-size="16">ccrng</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M638.86-417.03A457.05 457.05 0 0 1 606-409.5c-16.92 3.12-62.21-.79-77 8-11.38 6.76-20 18.68-25.95 29.45"/>
+      <path d="m506.26-370.65-7.59 7.38 1.33-10.51 6.26 3.13z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M580.9-518.9H405.1v26.7h175.8v-26.7z"/>
+      <text text-anchor="middle" x="493" y="-500.1" font-family="system-ui" font-size="16">CCRandomCopyBytes</text>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M594.02-444.2H391.98v26.7h202.04v-26.7z"/>
+      <text text-anchor="middle" x="493" y="-425.4" font-family="system-ui" font-size="16">CCRandomGenerateBytes</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M493-491.89v36.37"/>
+      <path d="m496.5-455.88-3.5 10-3.5-10h7z"/>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M493-417.24v44.14"/>
+      <path d="m496.5-373.45-3.5 10-3.5-10h7z"/>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="m460.42-337.26-114.2 34.66"/>
+      <path d="m347.35-299.29-10.58-.44 8.55-6.26 2.03 6.7z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M526.52-298.8h-67.04v26.7h67.04v-26.7z"/>
+      <text text-anchor="middle" x="493" y="-280" font-family="system-ui" font-size="16">ccaes</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M493-334.57v24.22"/>
+      <path d="m496.5-310.52-3.5 10-3.5-10h7z"/>
+    </g>
+    <g class="node">
+      <path fill="#fff" stroke="#000" stroke-opacity=".13" d="M582.77-641.6H403.23v26.7h179.54v-26.7z"/>
+      <text text-anchor="middle" x="493" y="-622.8" font-family="system-ui" font-size="16">SecRandomCopyBytes</text>
+    </g>
+    <g class="edge" stroke="#000">
+      <path fill="none" d="M493-614.79v84.47"/>
+      <path d="m496.5-530.64-3.5 10-3.5-10h7z"/>
+    </g>
+  </g>
+</svg>

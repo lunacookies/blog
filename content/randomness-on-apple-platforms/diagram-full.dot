@@ -1,0 +1,129 @@
+digraph {
+	fontname = "system-ui";
+
+	edge [
+		fontname = "system-ui",
+		fontsize = 12,
+	];
+
+	node [
+		fontname = "system-ui",
+		fontsize = 16,
+		shape = "box",
+		style = "filled, solid",
+		color = "#00000022",
+		fillcolor = "#FFFFFF",
+		height = 0,
+		margin = "0.2,0.05",
+	];
+
+	subgraph kernelspace {
+		cluster = true;
+		label = "kernelspace";
+		fontsize = 20;
+		style = "filled";
+		color = "#00000011";
+
+		"/dev/random";
+		"/dev/urandom";
+		"getentropy(2)";
+
+		subgraph kernelimpl {
+			cluster = true;
+			label = "implementation details";
+			labelloc = "b";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			"random_read";
+			"read_random";
+			"cckprng";
+			"???";
+		}
+	}
+
+	subgraph userspace {
+		cluster = true;
+		label = "userspace";
+		fontsize = 20;
+		style = "filled";
+		color = "#00000011";
+
+		subgraph libSystem {
+			cluster = true;
+			label = "libSystem";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			subgraph libc {
+				cluster = true;
+				label = "libc";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"rand(3)";
+				"rand48(3)";
+				"random(3)";
+				"arc4random(3)";
+			}
+
+			subgraph CommonCrypto {
+				cluster = true;
+				label = "CommonCrypto";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"CCRandomCopyBytes";
+				"CCRandomGenerateBytes";
+			}
+
+			subgraph corecrypto {
+				cluster = true;
+				label = "corecrypto private API";
+				labelloc = "b";
+				fontsize = 20;
+				style = "filled";
+				color = "#00000011";
+
+				"ccrng";
+				"ccaes";
+			}
+		}
+
+		"user-provided seed";
+
+		subgraph Security {
+			cluster = true;
+			label = "Security.framework";
+			fontsize = 20;
+			style = "filled";
+			color = "#00000011";
+
+			"SecRandomCopyBytes";
+		}
+	}
+
+	"random_read" -> "read_random";
+	"getentropy(2)" -> "read_random";
+	"read_random" -> "cckprng";
+	"cckprng" -> "???";
+
+	"rand(3)" -> "user-provided seed";
+	"rand48(3)" -> "user-provided seed";
+	"random(3)" -> "user-provided seed";
+
+	"SecRandomCopyBytes" -> "CCRandomCopyBytes";
+	"CCRandomCopyBytes" -> "CCRandomGenerateBytes";
+	"CCRandomGenerateBytes" -> "ccrng";
+	"arc4random(3)" -> "ccrng";
+
+	"ccrng" -> "ccaes";
+	"ccrng" -> "getentropy(2)";
+
+	"/dev/random" -> "random_read";
+	"/dev/urandom" -> "random_read";
+}
