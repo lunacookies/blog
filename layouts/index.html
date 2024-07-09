@@ -5,29 +5,33 @@
     >
   </h1>
 
-  <ul class="post-list">
-    {{ range .Pages }}
-      {{ if not (isset .Params "date") }}
-        <li class="post -draft">
-          <p class="title">
+  {{ $draftPosts := where .Pages "Params.date" "eq" nil }}
+  {{ $publishedPosts := where .Pages "Params.date" "ne" nil }}
+
+
+  <section class="post-list">
+    {{ if gt (len $draftPosts) 0 }}
+      <section class="post-group">
+        <p class="group-name">drafts</p>
+        {{ range $draftPosts }}
+          <li class="post">
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </p>
-          <p class="date">draft post</p>
-        </li>
-      {{ end }}
+          </li>
+        {{ end }}
+      </section>
     {{ end }}
 
-    {{ range .Pages }}
-      {{ if isset .Params "date" }}
-        <li class="post">
-          <p class="title">
+    {{ range $publishedPosts.GroupByDate "2006" }}
+      <section class="post-group">
+        <p class="group-name">{{ .Key }}</p>
+        {{ range .Pages }}
+          <li class="post">
             <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </p>
-          <p class="date">{{ .Date.Format "2 January 2006" }}</p>
-        </li>
-      {{ end }}
+          </li>
+        {{ end }}
+      </section>
     {{ end }}
-  </ul>
+  </section>
 
   <article>
     <p>

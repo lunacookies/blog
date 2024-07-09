@@ -1,14 +1,13 @@
 .post-list {
   margin-bottom: 4rem;
 
-  > .post + .post {
-    margin-top: 1.5rem;
-  }
+  > .post-group {
+    > .group-name {
+      margin-bottom: 1.5rem;
+    }
 
-  > .post {
-    > .title {
+    > .post {
       @import "markdown";
-
       > a {
         color: inherit;
         &:not(:hover) {
@@ -17,15 +16,12 @@
       }
     }
 
-    > .date {
-      color: $light-faded;
-      @media (prefers-color-scheme: dark) {
-        color: $dark-faded;
-      }
+    > .post + .post {
+      margin-top: 0.25rem;
     }
+  }
 
-    &.-draft {
-      opacity: 0.5;
-    }
+  > .post-group + .post-group {
+    margin-top: 4rem;
   }
 }
