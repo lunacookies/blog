@@ -1,7 +1,7 @@
 @import "reset";
 
 html {
-  font-size: 16px;
+  font-size: 17px;
   @media (max-width: 700px) {
     font-size: 15px;
   }
@@ -36,8 +36,8 @@ $monospace: "Consolas", "Liberation Mono", "Cousine", "Menlo",
   "DejaVu Sans Mono", monospace;
 
 $page-padding: 1.5rem;
-$textblock-width: 36rem;
-$wide-page-width: 50rem;
+$textblock-width: 34rem;
+$wide-page-width: 48rem;
 $wide-page-breakpoint: 650px;
 
 body {
