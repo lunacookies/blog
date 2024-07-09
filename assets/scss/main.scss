@@ -31,8 +31,8 @@ $dark-fg: hsb($dark-fg-hue, 7, 90);
 $light-faded: hsb(0, 0, 55);
 $dark-faded: hsb(120, 5, 46);
 
-$serif: "literata", "Iowan Old Style", "Georgia", serif;
-$monospace: "Consolas", "Noto Sans Mono", "noto-sans-mono", "Menlo",
+$serif: "Iowan Old Style", "crimson", "Georgia", serif;
+$monospace: "Consolas", "Liberation Mono", "Cousine", "Menlo",
   "DejaVu Sans Mono", monospace;
 
 $page-padding: 1.5rem;
@@ -49,7 +49,6 @@ body {
   }
 
   font-family: $serif;
-  font-variation-settings: "opsz" 9;
   font-variant-numeric: proportional-nums oldstyle-nums;
   line-height: 1.5;
 

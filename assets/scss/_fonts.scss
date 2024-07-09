@@ -1,23 +1,31 @@
 @font-face {
-  font-family: "literata";
-  src: url("/fonts/literata.woff2");
+  font-family: "crimson";
+  src: url("/fonts/crimson-400.woff2");
   font-display: swap;
   font-style: normal;
-  font-weight: 200 900;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "literata";
-  src: url("/fonts/literata-italic.woff2");
+  font-family: "crimson";
+  src: url("/fonts/crimson-400-italic.woff2");
   font-display: swap;
   font-style: italic;
-  font-weight: 200 900;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "noto-sans-mono";
-  src: url("/fonts/noto-sans-mono.ttf");
+  font-family: "crimson";
+  src: url("/fonts/crimson-700.woff2");
   font-display: swap;
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "crimson";
+  src: url("/fonts/crimson-700-italic.woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 700;
 }

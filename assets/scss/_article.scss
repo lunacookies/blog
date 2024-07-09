@@ -33,20 +33,13 @@ article {
     max-width: none;
   }
 
-  @mixin small {
-    font-size: 0.85em;
-    font-variation-settings: "opsz" 7;
-    font-weight: 440;
-  }
-
   @import "markdown";
 
   h2 {
     text-wrap: balance;
-    font-variant-caps: all-small-caps;
-    letter-spacing: 0.05em;
-    margin-top: 5em;
-    margin-bottom: 2em;
+    font-size: 1.1em;
+    margin-top: 4em;
+    margin-bottom: 1.5em;
 
     > a {
       color: inherit;
@@ -65,7 +58,7 @@ article {
     padding-left: 3em;
 
     > * {
-      @include small;
+      font-size: 0.85em;
     }
   }
 
@@ -98,14 +91,12 @@ article {
   }
 
   ol > li::before {
-    // Literata doesn’t have tabular oldstyle figures,
-    // so we inherit proportional oldstyle figures from <body>
-    // as the next-best alternative.
+    font-variant-numeric: tabular-nums oldstyle-nums;
     content: counter(ol);
   }
 
   table {
-    @include small;
+    font-size: 0.85em;
     font-variant-numeric: tabular-nums lining-nums;
 
     display: block;
@@ -136,10 +127,10 @@ article {
   }
 
   sup {
-    font-variant-position: super;
-    > a {
-      background-position: 0 65%;
-    }
+    font-variant-numeric: proportional-nums lining-nums;
+    font-weight: 700;
+    vertical-align: top;
+    font-size: 0.65em;
   }
 
   hr {
@@ -178,7 +169,7 @@ article {
 
   > .footnotes {
     > ol {
-      @include small;
+      font-size: 0.85em;
 
       @media (min-width: 850px) {
         margin-left: 0;
