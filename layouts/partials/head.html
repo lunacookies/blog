@@ -65,12 +65,17 @@
     number: /\b[0-9]+\b/,
     operator: /\+\+|--|:=|\.\.[<=]?|(?:&~|[-!*+/=~]|[%&<>|]{1,2})=?|[?^]/,
 
-    "builtin-types":
+    "builtin-type":
       /\b(int|uint|byte|uintptr|bool|rawptr|typeid|any|string|cstring|rune|(i|b|u|f|complex|quaternion)[0-9]+(be|le)?)\b/,
 
     "procedure-definition": {
       pattern: /\b\w+(?=\s*::\s*proc\b)/,
       alias: "function",
+    },
+
+    "type-definition": {
+      pattern: /\b[A-Z]\w+(?=\s*::)/,
+      alias: "class-name",
     },
 
     keyword:
