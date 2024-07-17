@@ -6,7 +6,7 @@
     {{ .Site.Title }}
   {{ else }}
     {{ $title := .Title | markdownify | plainify }}
-    {{ printf "%s · %s" $title .Site.Title }}
+    {{ safe.HTML (printf "%s · %s" $title .Site.Title) }}
   {{ end }}
 </title>
 
