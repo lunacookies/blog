@@ -50,8 +50,8 @@ For example, enums aren’t allowed to hold arbitrary integer values:
 enum MyEnum { A, B, C }
 
 fn main() {
-    let n: u8 = 5;
-    let e: MyEnum = unsafe { std::mem::transmute(n) }; // UB!
+	let n: u8 = 5;
+	let e: MyEnum = unsafe { std::mem::transmute(n) }; // UB!
 }
 ```
 
