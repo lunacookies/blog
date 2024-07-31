@@ -1,5 +1,5 @@
 ---
-title: "Invalid Values"
+title: "Invalid Values and String Types"
 date: "2024-07-31"
 ---
 
