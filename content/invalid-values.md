@@ -92,6 +92,95 @@ or actual named enum values and random 32-bit integers.
 Encoding in the type system how we want data to be interpreted
 allows metaprogrammed code like this to adapt accordingly.
 
+In Zig, these sorts of things have no way of
+telling strings apart from 8-bit integer sequences.
+As a result, `std.fmt.format`
+always interprets `[]const u8` as an integer sequence
+when using the default struct formatting,
+while `std.json` always interprets `[]const u8` as a string:
+
+```zig
+const std = @import("std");
+
+const Person = struct {
+	name: []const u8,
+	age: u32,
+};
+
+const SomeNumbers = struct {
+	eight_bit_numbers: []const u8,
+};
+
+pub fn main() !void {
+	var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
+	const allocator = arena.allocator();
+
+	{
+		const person = Person{ .name = "Sarah", .age = 92 };
+		const json = try std.json.stringifyAlloc(allocator, person, .{});
+		std.debug.print("{}\n", .{person});
+		std.debug.print("{s}\n", .{json});
+	}
+
+	{
+		const numbers = SomeNumbers{ .eight_bit_numbers = &[_]u8{ 1, 2, 3, 4 } };
+		const json = try std.json.stringifyAlloc(allocator, numbers, .{});
+		std.debug.print("{}\n", .{numbers});
+		std.debug.print("{s}\n", .{json});
+	}
+}
+```
+
+```
+$ zig run main.zig
+main.Person{ .name = { 83, 97, 114, 97, 104 }, .age = 92 }
+{"name":"Sarah","age":92}
+main.SomeNumbers{ .eight_bit_numbers = { 1, 2, 3, 4 } }
+{"eight_bit_numbers":"\u0001\u0002\u0003\u0004"}
+```
+
+Ouch. The equivalent Odin program does what you’d expect:
+
+```odin
+package main
+
+import "core:encoding/json"
+import "core:fmt"
+
+Person :: struct {
+	name: string,
+	age: int,
+}
+
+Some_Numbers :: struct {
+	eight_bit_numbers: []u8,
+}
+
+main :: proc() {
+	{
+		person := Person{name = "Sarah", age = 92}
+		json, _ := json.marshal(person)
+		fmt.println(person)
+		fmt.println(string(json))
+	}
+
+	{
+		numbers := Some_Numbers{{1, 2, 3, 4}}
+		json, _ := json.marshal(numbers)
+		fmt.println(numbers)
+		fmt.println(string(json))
+	}
+}
+```
+
+```
+$ odin run main.odin -file
+Person{name = "Sarah", age = 92}
+{"name":"Sarah","age":92}
+Some_Numbers{eight_bit_numbers = [1, 2, 3, 4]}
+{"eight_bit_numbers":[1,2,3,4]}
+```
+
 ## Some philosophizing
 
 Philosophically I disagree with the concept of invalid values
