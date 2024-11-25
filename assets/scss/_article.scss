@@ -95,6 +95,24 @@ article {
     content: counter(ol);
   }
 
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: baseline;
+    column-gap: 1em;
+    row-gap: 0.5em;
+
+    > dt {
+      text-align: right;
+      font-style: italic;
+    }
+
+    > dt,
+    > dd {
+      margin-top: 0;
+    }
+  }
+
   table {
     font-size: 0.85em;
     font-variant-numeric: tabular-nums lining-nums;
