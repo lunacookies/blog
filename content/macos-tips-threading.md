@@ -52,8 +52,8 @@ User Initiated
 : the user must wait for this work to finish before they can keep using your app,
 e.g. loading the contents of a document that was just opened
 
-Legacy
-: used for threads which don’t have a QoS class assigned
+Default
+: [used as a fallback][guide] for threads which don’t have a QoS class assigned
 
 Utility
 : the user knows this work is happening but doesn’t wait for it to finish
@@ -139,7 +139,7 @@ knowing that your QoS will be boosted only when needed.
 
 ## Prioritizing work
 
-When you make a new thread its QoS class defaults to Legacy,
+When you make a new thread its QoS class defaults to, well, Default,
 which isn’t what you want.
 At minimum, consciously decide how important the work that thread is doing is
 and assign a QoS class to the thread with `pthread_set_qos_class_self_np(3)`.
@@ -197,3 +197,4 @@ so using it pervasively might make your life easier later on.
 [patent]: https://patents.google.com/patent/US9053058B2/en
 [bazel]: https://jmmv.dev/2019/03/macos-threads-qos-and-bazel.html
 [thread priorities are evil]: https://blog.codinghorror.com/thread-priorities-are-evil/
+[guide]: https://developer.apple.com/library/archive/documentation/Performance/Conceptual/power_efficiency_guidelines_osx/PrioritizeWorkAtTheTaskLevel.html
