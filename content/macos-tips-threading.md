@@ -14,7 +14,7 @@ rather than a server somewhere or whatever
 then this post is for you.
 
 I’ve laid this post out in a typical “problem--solution” format,
-interspersed with **Recommandation**s which I’d encourage you to adopt.
+interspersed with **Recommendation**s which I’d encourage you to adopt.
 
 ## Motivation
 
