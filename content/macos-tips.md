@@ -83,7 +83,7 @@ Rather than something special unto themselves,
 context menus merely display the small subset of menu items
 immediately relevant to whatever object you right-clicked.
 This results in the nice property that
-users can explore what capabilites an app has
+users can explore what capabilities an app has
 just by browsing through the menu items in the menu bar,
 which is always in the same easy-to-reach place on the display
 and always has the same contents for a given app,

@@ -5,7 +5,7 @@ date: "2024-10-15"
 
 In a [previous post](/vector-types/) I mentioned Clang’s OpenCL vector extension.
 Since then I’ve continued playing around with AppKit and Metal programming,
-and my enthusiam for Clang’s OpenCL vectors has only grown since.
+and my enthusiasm for Clang’s OpenCL vectors has only grown since.
 
 It’s often necessary to specify two-dimensional values when doing GUI programming.
 Apple’s frameworks for making GUIs (AppKit, Core Graphics, Core Text, etc)
@@ -259,8 +259,8 @@ How is it possible for `f32x8_inc_neon` to
 have its argument and return value pass solely through registers
 even though they both have a size of 32 bytes?
 Well, it turns out that the AAPCS64
-makes an exception for “Homogenous Floating-Point Aggregates” (HFAs)
-and “Homogenous Short-Vector Aggregates” (HVAs).
+makes an exception for Homogeneous Floating-Point Aggregates” (HFAs)
+and Homogeneous Short-Vector Aggregates” (HVAs).
 These are either arrays or structs where each member has the same type;
 this type is a floating-point number in the case of an HFA,
 or a short vector in the case of an HVA.

@@ -203,7 +203,7 @@ See, A64 has an instruction called Bitwise Bit Clear (or `bic` for short)
 specifically for zeroing out an integer `x`
 at the bit positions where bits are set in another integer `y`.
 In other words, it performs `x & ~y` in one go.
-By merging the calculation of `mask` with the calcuation of its complement,
+By merging the calculation of `mask` with the calculation of its complement,
 the compiler has missed an opportunity to use `bic`.
 I compiled several versions of the function hoping to get Clang to emit `bic`,
 but to no avail :(
