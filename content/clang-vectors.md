@@ -259,8 +259,8 @@ How is it possible for `f32x8_inc_neon` to
 have its argument and return value pass solely through registers
 even though they both have a size of 32 bytes?
 Well, it turns out that the AAPCS64
-makes an exception for "Homogeneous Floating-Point Aggregates” (HFAs)
-and "Homogeneous Short-Vector Aggregates” (HVAs).
+makes an exception for “Homogeneous Floating-Point Aggregates” (HFAs)
+and “Homogeneous Short-Vector Aggregates” (HVAs).
 These are either arrays or structs where each member has the same type;
 this type is a floating-point number in the case of an HFA,
 or a short vector in the case of an HVA.
