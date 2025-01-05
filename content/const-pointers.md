@@ -267,7 +267,7 @@ a feature of the hardware we’re writing our code for:
 the CPU’s memory management unit, or MMU,
 lets us specify the _protection_ for our memory.
 You can think of memory protection like Unix file permissions,
-but with three bits instead of three bytes:
+but with three bits instead of three octets:
 a bit for the ability to read from memory (`PROT_READ`),
 a bit for the ability to write to memory (`PROT_WRITE`),
 and a bit the ability to execute code stored in memory (`PROT_EXEC`).
