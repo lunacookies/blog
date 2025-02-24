@@ -400,3 +400,7 @@ changing formats,
 etc
 come up quite often,
 so it’s handy to have a solid app for those things built-in.
+
+If you’d like more tips,
+I can recommend this [exhaustive list](https://saurabhs.org/macos-tips).
+It has some _really obscure_ ones I guarantee you haven’t heard of.
