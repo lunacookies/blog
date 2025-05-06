@@ -1,31 +1,31 @@
 {{ `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ .Site.Title }}</title>
-  <link rel="self" href="{{ .Permalink }}atom.xml"/>
-  <link rel="alternate" type="text/html" href="{{ .Site.BaseURL }}"/>
-  <id>{{ .Permalink }}</id>
-  <updated>{{ now.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+	<title>{{ .Site.Title }}</title>
+	<link rel="self" href="{{ .Permalink }}atom.xml"/>
+	<link rel="alternate" type="text/html" href="{{ .Site.BaseURL }}"/>
+	<id>{{ .Permalink }}</id>
+	<updated>{{ now.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
 
-  <author>
-    <name>{{ .Site.Params.author.name }}</name>
-    <email>{{ .Site.Params.author.email }}</email>
-    <uri>{{ .Site.Params.author.uri }}</uri>
-  </author>
+	<author>
+		<name>{{ .Site.Params.author.name }}</name>
+		<email>{{ .Site.Params.author.email }}</email>
+		<uri>{{ .Site.Params.author.uri }}</uri>
+	</author>
 
-  {{ range .Pages }}
-    <entry>
-      {{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title | markdownify }}]]></title>
-      <link href="{{ .Permalink }}"/>
-      <id>{{ .Permalink }}</id>
-      <updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
+	{{ range .Pages }}
+		<entry>
+			{{ `<title type="html"><![CDATA[` | safeHTML }}{{ .Title | markdownify }}]]></title>
+			<link href="{{ .Permalink }}"/>
+			<id>{{ .Permalink }}</id>
+			<updated>{{ .Date.Format "2006-01-02T15:04:05-0700" | safeHTML }}</updated>
 
-      <author>
-        <name>{{ .Site.Params.author.name }}</name>
-        <email>{{ .Site.Params.author.email }}</email>
-        <uri>{{ .Site.Params.author.uri }}</uri>
-      </author>
+			<author>
+				<name>{{ .Site.Params.author.name }}</name>
+				<email>{{ .Site.Params.author.email }}</email>
+				<uri>{{ .Site.Params.author.uri }}</uri>
+			</author>
 
-      <content type="html">{{ printf "<![CDATA[%s]]>" .Content | safeHTML }}</content>
-    </entry>
-  {{ end }}
+			<content type="html">{{ printf "<![CDATA[%s]]>" .Content | safeHTML }}</content>
+		</entry>
+	{{ end }}
 </feed>

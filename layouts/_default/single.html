@@ -1,30 +1,30 @@
 {{ define "body" }}
-  <h1 class="page-title">
-    {{ .Title | markdownify }}
-  </h1>
+	<h1 class="page-title">
+		{{ .Title | markdownify }}
+	</h1>
 
-  <article>
-    {{ .Page.Content }}
+	<article>
+		{{ .Page.Content }}
 
 
-    <p class="signature">
-      Luna Razzaghipour<br />
-      {{ .Date.Format "2 January 2006" }}<br />
-    </p>
-  </article>
+		<p class="signature">
+			Luna Razzaghipour<br />
+			{{ .Date.Format "2 January 2006" }}<br />
+		</p>
+	</article>
 
-  <footer>
-    <p>
-      Thoughts, comments, corrections or suggestions?
-      <a href="mailto:{{ .Site.Params.author.email }}">Email&nbsp;me!</a>
-      I’d&nbsp;like nothing more than to hear from you.
-    </p>
+	<footer>
+		<p>
+			Thoughts, comments, corrections or suggestions?
+			<a href="mailto:{{ .Site.Params.author.email }}">Email&nbsp;me!</a>
+			I’d&nbsp;like nothing more than to hear from you.
+		</p>
 
-    <div class="link-cluster">
-      <p><a href="{{ .Site.BaseURL }}">more posts</a></p>
-      <p><a href="{{ .Site.BaseURL }}atom.xml">atom feed</a></p>
-      <p><a href="https://xoria.org">homepage</a></p>
-      <p><a href="https://github.com/lunacookies">github</a></p>
-    </div>
-  </footer>
+		<div class="link-cluster">
+			<p><a href="{{ .Site.BaseURL }}">more posts</a></p>
+			<p><a href="{{ .Site.BaseURL }}atom.xml">atom feed</a></p>
+			<p><a href="https://xoria.org">homepage</a></p>
+			<p><a href="https://github.com/lunacookies">github</a></p>
+		</div>
+	</footer>
 {{ end }}

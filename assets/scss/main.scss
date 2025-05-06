@@ -1,23 +1,24 @@
 @import "reset";
 
 html {
-  font-size: 17px;
-  @media (max-width: 700px) {
-    font-size: 16px;
-  }
+	font-size: 17px;
+	@media (max-width: 700px) {
+		font-size: 16px;
+	}
 
-  color-scheme: light dark;
-  scroll-behavior: smooth;
+	color-scheme: light dark;
+	scroll-behavior: smooth;
 }
 
 @function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
-  @if $b-hsb == 0 {
-    @return hsla(0, 0, 0, $a);
-  } @else {
-    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
-    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
-  }
+	@if $b-hsb == 0 {
+		@return hsla(0, 0, 0, $a);
+	} @else {
+		$l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
+		$s-hsl: ($b-hsb * $s-hsb) /
+			if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
+		@return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+	}
 }
 
 $dark-fg-hue: 55;
@@ -33,7 +34,7 @@ $dark-faded: hsb(120, 5, 46);
 
 $serif: "Iowan Old Style", "crimson", "Georgia", serif;
 $monospace: "Consolas", "Liberation Mono", "Cousine", "Menlo",
-  "DejaVu Sans Mono", monospace;
+	"DejaVu Sans Mono", monospace;
 
 $page-padding: 1.5rem;
 $textblock-width: 34rem;
@@ -41,72 +42,72 @@ $wide-page-width: 48rem;
 $wide-page-breakpoint: 650px;
 
 body {
-  background-color: $light-bg;
-  color: $light-fg;
-  @media (prefers-color-scheme: dark) {
-    background-color: $dark-bg;
-    color: $dark-fg;
-  }
+	background-color: $light-bg;
+	color: $light-fg;
+	@media (prefers-color-scheme: dark) {
+		background-color: $dark-bg;
+		color: $dark-fg;
+	}
 
-  font-family: $serif;
-  font-variant-numeric: proportional-nums oldstyle-nums;
-  line-height: 1.5;
+	font-family: $serif;
+	font-variant-numeric: proportional-nums oldstyle-nums;
+	line-height: 1.5;
 
-  padding: $page-padding;
-  max-width: $wide-page-width + 2 * $page-padding;
-  @media (max-width: $wide-page-breakpoint) {
-    max-width: $textblock-width + 2 * $page-padding;
-  }
-  margin: {
-    left: auto;
-    right: auto;
-  }
+	padding: $page-padding;
+	max-width: $wide-page-width + 2 * $page-padding;
+	@media (max-width: $wide-page-breakpoint) {
+		max-width: $textblock-width + 2 * $page-padding;
+	}
+	margin: {
+		left: auto;
+		right: auto;
+	}
 
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 
 @mixin text-shadow($background) {
-  $shadows: ();
+	$shadows: ();
 
-  @for $x from -2 through 2 {
-    @for $y from -1 through 1 {
-      // A shadow at 0px, 0px has no effect, so we omit it.
-      @if not($x==0 and $y==0) {
-        $shadows: append(
-          $shadows,
-          unquote("#{$x}px #{$y}px #{$background}"),
-          $separator: comma
-        );
-      }
-    }
-  }
+	@for $x from -2 through 2 {
+		@for $y from -1 through 1 {
+			// A shadow at 0px, 0px has no effect, so we omit it.
+			@if not($x==0 and $y==0) {
+				$shadows: append(
+					$shadows,
+					unquote("#{$x}px #{$y}px #{$background}"),
+					$separator: comma
+				);
+			}
+		}
+	}
 
-  text-shadow: $shadows;
+	text-shadow: $shadows;
 }
 
 a {
-  color: hsb(210, 100, 80);
-  @media (prefers-color-scheme: dark) {
-    color: hsb(210, 30, 80);
-  }
+	color: hsb(210, 100, 80);
+	@media (prefers-color-scheme: dark) {
+		color: hsb(210, 30, 80);
+	}
 
-  background-image: linear-gradient(currentColor, currentColor);
-  @include text-shadow($light-bg);
-  @media (prefers-color-scheme: dark) {
-    @include text-shadow($dark-bg);
-  }
+	background-image: linear-gradient(currentColor, currentColor);
+	@include text-shadow($light-bg);
+	@media (prefers-color-scheme: dark) {
+		@include text-shadow($dark-bg);
+	}
 
-  background-position: 0 93%;
-  background-size: 100% 1px;
+	background-position: 0 93%;
+	background-size: 100% 1px;
 
-  &:active {
-    opacity: 0.5;
-  }
+	&:active {
+		opacity: 0.5;
+	}
 }
 
 @mixin monospace {
-  font-family: $monospace;
-  font-variant-numeric: lining-nums;
+	font-family: $monospace;
+	font-variant-numeric: lining-nums;
 }
 
 @import "fonts";

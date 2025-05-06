@@ -48,12 +48,12 @@ the following conventions:
 
 Some examples:
 
-- `struct iovec`
-- `clock_gettime()`
-- `struct sockaddr_storage`
-- `errno`
-- `O_RDONLY`
-- `readdir()`
+-   `struct iovec`
+-   `clock_gettime()`
+-   `struct sockaddr_storage`
+-   `errno`
+-   `O_RDONLY`
+-   `readdir()`
 
 This opened me to the possibility
 of using lowercase types,

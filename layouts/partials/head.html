@@ -2,18 +2,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>
-  {{ if eq .Title .Site.Title }}
-    {{ .Site.Title }}
-  {{ else }}
-    {{ $title := .Title | markdownify | plainify }}
-    {{ safe.HTML (printf "%s · %s" $title .Site.Title) }}
-  {{ end }}
+	{{ if eq .Title .Site.Title }}
+		{{ .Site.Title }}
+	{{ else }}
+		{{ $title := .Title | markdownify | plainify }}
+		{{ safe.HTML (printf "%s · %s" $title .Site.Title) }}
+	{{ end }}
 </title>
 
 <link
-  rel="alternate"
-  type="application/atom+xml"
-  href="{{ .Site.BaseURL }}atom.xml"
+	rel="alternate"
+	type="application/atom+xml"
+	href="{{ .Site.BaseURL }}atom.xml"
 />
 
 <script src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"></script>
@@ -21,70 +21,70 @@
 
 {{ $styles := resources.Get "scss/main.scss" | toCSS | postCSS | fingerprint }}
 <link
-  rel="stylesheet"
-  href="{{ $styles.Permalink }}"
-  integrity="{{ $styles.Data.Integrity }}"
+	rel="stylesheet"
+	href="{{ $styles.Permalink }}"
+	integrity="{{ $styles.Data.Integrity }}"
 />
 
 {{ $addAnchors := resources.Get "js/addAnchors.js" | fingerprint }}
 <script
-  src="{{ $addAnchors.Permalink }}"
-  integrity="{{ $addAnchors.Data.Integrity }}"
+	src="{{ $addAnchors.Permalink }}"
+	integrity="{{ $addAnchors.Data.Integrity }}"
 ></script>
 
 <script>
-  Prism.languages["a64asm"] = {
-    keyword: [
-      /\n\t[a-zA-Z0-9.]+/m,
-      /\b(uxtw|sxtw|sxtx|lsl|eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al)\b/,
-      /\b@(PAGE|PAGEOFF)\b/,
-    ],
-    register: /\b[wxvqdshb][0-9]+|lr|fp|sp\b/,
-    "builtin-type": /(?<=\.)[0-9]*[bhsd]\b/,
-    number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
-    operator: /[!]/,
-    constant: /\b[xw]zr\b/,
-    char: /'[a-z]+'/,
-    function: /\b[a-zA-Z0-9_.]+\b/,
-    comment: {
-      pattern: /\/\/[^\n]*/,
-      greedy: true,
-    },
-  };
+	Prism.languages["a64asm"] = {
+		keyword: [
+			/\n\t[a-zA-Z0-9.]+/m,
+			/\b(uxtw|sxtw|sxtx|lsl|eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al)\b/,
+			/\b@(PAGE|PAGEOFF)\b/,
+		],
+		register: /\b[wxvqdshb][0-9]+|lr|fp|sp\b/,
+		"builtin-type": /(?<=\.)[0-9]*[bhsd]\b/,
+		number: /(#|\b)-?(0x[0-9a-fA-F]+|[0-9]+)/,
+		operator: /[!]/,
+		constant: /\b[xw]zr\b/,
+		char: /'[a-z]+'/,
+		function: /\b[a-zA-Z0-9_.]+\b/,
+		comment: {
+			pattern: /\/\/[^\n]*/,
+			greedy: true,
+		},
+	};
 
-  Prism.languages["odin"] = {
-    comment: {
-      pattern: /\/\/[^\n]*/,
-      greedy: true,
-    },
+	Prism.languages["odin"] = {
+		comment: {
+			pattern: /\/\/[^\n]*/,
+			greedy: true,
+		},
 
-    boolean: /\btrue|false\b/,
-    constant: /\bnil\b/,
-    string: /".*"/,
-    char: /'.*'/,
-    directive: /#\w+/,
-    number: /\b[0-9]+\b/,
-    operator: /\+\+|--|:=|\.\.[<=]?|(?:&~|[-!*+/=~]|[%&<>|]{1,2})=?|[?^]/,
+		boolean: /\btrue|false\b/,
+		constant: /\bnil\b/,
+		string: /".*"/,
+		char: /'.*'/,
+		directive: /#\w+/,
+		number: /\b[0-9]+\b/,
+		operator: /\+\+|--|:=|\.\.[<=]?|(?:&~|[-!*+/=~]|[%&<>|]{1,2})=?|[?^]/,
 
-    "builtin-type":
-      /\b(int|uint|byte|uintptr|bool|rawptr|typeid|any|string|cstring|rune|(i|b|u|f|complex|quaternion)[0-9]+(be|le)?)\b/,
+		"builtin-type":
+			/\b(int|uint|byte|uintptr|bool|rawptr|typeid|any|string|cstring|rune|(i|b|u|f|complex|quaternion)[0-9]+(be|le)?)\b/,
 
-    "procedure-definition": {
-      pattern: /\b\w+(?=\s*::\s*proc\b)/,
-      alias: "function",
-    },
+		"procedure-definition": {
+			pattern: /\b\w+(?=\s*::\s*proc\b)/,
+			alias: "function",
+		},
 
-    "type-definition": {
-      pattern: /\b[A-Z]\w+(?=\s*::)/,
-      alias: "class-name",
-    },
+		"type-definition": {
+			pattern: /\b[A-Z]\w+(?=\s*::)/,
+			alias: "class-name",
+		},
 
-    keyword:
-      /\b(asm|auto_cast|bit_set|break|case|cast|context|continue|defer|distinct|do|dynamic|else|enum|fallthrough|for|foreign|if|import|in|map|matrix|not_in|or_else|or_return|package|proc|return|struct|switch|transmute|typeid|union|using|when|where)\b/,
+		keyword:
+			/\b(asm|auto_cast|bit_set|break|case|cast|context|continue|defer|distinct|do|dynamic|else|enum|fallthrough|for|foreign|if|import|in|map|matrix|not_in|or_else|or_return|package|proc|return|struct|switch|transmute|typeid|union|using|when|where)\b/,
 
-    "procedure-name": {
-      pattern: /\b\w+(?=\s*\()/,
-      alias: "function",
-    },
-  };
+		"procedure-name": {
+			pattern: /\b\w+(?=\s*\()/,
+			alias: "function",
+		},
+	};
 </script>

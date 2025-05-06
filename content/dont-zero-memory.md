@@ -77,11 +77,11 @@ Zig [fills uninitialized memory with `0xaa`][zig].
 why this particular value was chosen.)
 We get the same benefits of null-initialization:
 
-- it’s impossible to rely on
-  what happened to be in memory before
-  by chance
-- it’s impossible to accidentally leak
-  the contents of old allocations
+-   it’s impossible to rely on
+    what happened to be in memory before
+    by chance
+-   it’s impossible to accidentally leak
+    the contents of old allocations
 
 but without the risk of
 relying on memory being all zeroes.

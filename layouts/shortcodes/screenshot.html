@@ -2,15 +2,15 @@
 {{ $lightResource := .Page.Resources.GetMatch "*-light.*" }}
 {{ $darkResource := .Page.Resources.GetMatch "*-dark.*" }}
 <figure>
-  <picture>
-    <source
-      srcset="{{ $darkResource.Permalink }}"
-      media="(prefers-color-scheme: dark)"
-    />
-    <img
-      src="{{ $lightResource.Permalink }}"
-      width="{{ div $lightResource.Width 2 }}"
-    />
-  </picture>
-  <figcaption>{{ .Get "caption" | markdownify }}</figcaption>
+	<picture>
+		<source
+			srcset="{{ $darkResource.Permalink }}"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<img
+			src="{{ $lightResource.Permalink }}"
+			width="{{ div $lightResource.Width 2 }}"
+		/>
+	</picture>
+	<figcaption>{{ .Get "caption" | markdownify }}</figcaption>
 </figure>

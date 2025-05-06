@@ -249,13 +249,13 @@ I decided to take a closer look at Odin.
 Once again, the familiar “modern language” integer system appears,
 with a few twists oriented towards low-level programming:
 
-- `int` and `uint` are address-sized
-- `i8` through to `i128` are signed
-- `u8` through to `u128` are unsigned
-- explicitly-sized types can be suffixed with either `le` or `be`
-  to make their in-memory representation little-endian or big-endian
-- sizes and subscripts use `int`
-- wrap on overflow
+-   `int` and `uint` are address-sized
+-   `i8` through to `i128` are signed
+-   `u8` through to `u128` are unsigned
+-   explicitly-sized types can be suffixed with either `le` or `be`
+    to make their in-memory representation little-endian or big-endian
+-   sizes and subscripts use `int`
+-   wrap on overflow
 
 This time, I decided to have an open mind
 and take a closer look at what benefits this setup might have.

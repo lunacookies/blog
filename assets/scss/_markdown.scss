@@ -1,12 +1,12 @@
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 strong {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 code {
-  @include monospace;
-  line-height: 1;
+	@include monospace;
+	line-height: 1;
 }

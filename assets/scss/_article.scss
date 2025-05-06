@@ -1,216 +1,216 @@
 article {
-  > * {
-    max-width: $textblock-width;
-    @media (max-width: $wide-page-breakpoint) {
-      max-width: initial;
-    }
-  }
+	> * {
+		max-width: $textblock-width;
+		@media (max-width: $wide-page-breakpoint) {
+			max-width: initial;
+		}
+	}
 
-  * + * {
-    margin-top: 1em;
-  }
+	* + * {
+		margin-top: 1em;
+	}
 
-  pre,
-  blockquote,
-  hr {
-    * + &,
-    & + * {
-      margin-top: 1.5em;
-    }
-  }
+	pre,
+	blockquote,
+	hr {
+		* + &,
+		& + * {
+			margin-top: 1.5em;
+		}
+	}
 
-  table,
-  figure {
-    * + &,
-    & + * {
-      margin-top: 2em;
-    }
-  }
+	table,
+	figure {
+		* + &,
+		& + * {
+			margin-top: 2em;
+		}
+	}
 
-  pre,
-  table,
-  figure {
-    max-width: none;
-  }
+	pre,
+	table,
+	figure {
+		max-width: none;
+	}
 
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    > figcaption {
-      font-style: italic;
-      font-size: 0.85em;
-    }
-  }
+	figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		> figcaption {
+			font-style: italic;
+			font-size: 0.85em;
+		}
+	}
 
-  @import "markdown";
+	@import "markdown";
 
-  h2 {
-    text-wrap: balance;
-    font-size: 1.1em;
-    margin-top: 4em;
-    margin-bottom: 1.5em;
+	h2 {
+		text-wrap: balance;
+		font-size: 1.1em;
+		margin-top: 4em;
+		margin-bottom: 1.5em;
 
-    > a {
-      color: inherit;
-      &:not(:hover) {
-        background-image: none;
-      }
-    }
+		> a {
+			color: inherit;
+			&:not(:hover) {
+				background-image: none;
+			}
+		}
 
-    code {
-      font-variant-caps: normal;
-      letter-spacing: 0;
-    }
-  }
+		code {
+			font-variant-caps: normal;
+			letter-spacing: 0;
+		}
+	}
 
-  blockquote {
-    padding-left: 3em;
+	blockquote {
+		padding-left: 3em;
 
-    > * {
-      font-size: 0.85em;
-    }
-  }
+		> * {
+			font-size: 0.85em;
+		}
+	}
 
-  ul,
-  ol {
-    $list-prefix-width: 0.6em;
-    $list-prefix-gutter: 1em;
+	ul,
+	ol {
+		$list-prefix-width: 0.6em;
+		$list-prefix-gutter: 1em;
 
-    margin-left: $list-prefix-width + $list-prefix-gutter;
+		margin-left: $list-prefix-width + $list-prefix-gutter;
 
-    > li {
-      margin-top: 0;
+		> li {
+			margin-top: 0;
 
-      &::before {
-        $element-width: 2em;
-        position: absolute;
-        width: $element-width;
-        margin-left: -($element-width + $list-prefix-gutter);
-        text-align: right;
-      }
-    }
-  }
+			&::before {
+				$element-width: 2em;
+				position: absolute;
+				width: $element-width;
+				margin-left: -($element-width + $list-prefix-gutter);
+				text-align: right;
+			}
+		}
+	}
 
-  ul > li::before {
-    content: "•";
-  }
+	ul > li::before {
+		content: "•";
+	}
 
-  ol > li {
-    counter-increment: ol;
-  }
+	ol > li {
+		counter-increment: ol;
+	}
 
-  ol > li::before {
-    font-variant-numeric: tabular-nums oldstyle-nums;
-    content: counter(ol);
-  }
+	ol > li::before {
+		font-variant-numeric: tabular-nums oldstyle-nums;
+		content: counter(ol);
+	}
 
-  dl {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    align-items: baseline;
-    column-gap: 1em;
-    row-gap: 0.5em;
+	dl {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		align-items: baseline;
+		column-gap: 1em;
+		row-gap: 0.5em;
 
-    > dt {
-      text-align: right;
-      font-style: italic;
-    }
+		> dt {
+			text-align: right;
+			font-style: italic;
+		}
 
-    > dt,
-    > dd {
-      margin-top: 0;
-    }
-  }
+		> dt,
+		> dd {
+			margin-top: 0;
+		}
+	}
 
-  table {
-    font-size: 0.85em;
-    font-variant-numeric: tabular-nums lining-nums;
+	table {
+		font-size: 0.85em;
+		font-variant-numeric: tabular-nums lining-nums;
 
-    display: block;
-    border-collapse: collapse;
-    overflow-x: auto;
-    text-wrap: balance;
+		display: block;
+		border-collapse: collapse;
+		overflow-x: auto;
+		text-wrap: balance;
 
-    tbody > tr:first-child {
-      border-top: 1px solid;
-    }
+		tbody > tr:first-child {
+			border-top: 1px solid;
+		}
 
-    $column-padding: 1em;
-    $row-padding: 0.25em;
-    $head-adjacent-row-padding: 0.75em;
+		$column-padding: 1em;
+		$row-padding: 0.25em;
+		$head-adjacent-row-padding: 0.75em;
 
-    th,
-    td {
-      padding: $row-padding $column-padding;
-    }
+		th,
+		td {
+			padding: $row-padding $column-padding;
+		}
 
-    thead > tr > th {
-      padding-bottom: $head-adjacent-row-padding;
-    }
+		thead > tr > th {
+			padding-bottom: $head-adjacent-row-padding;
+		}
 
-    tbody > tr:first-child > td {
-      padding-top: $head-adjacent-row-padding;
-    }
-  }
+		tbody > tr:first-child > td {
+			padding-top: $head-adjacent-row-padding;
+		}
+	}
 
-  sup {
-    font-variant-numeric: proportional-nums lining-nums;
-    font-weight: 700;
-    vertical-align: top;
-    font-size: 0.65em;
-  }
+	sup {
+		font-variant-numeric: proportional-nums lining-nums;
+		font-weight: 700;
+		vertical-align: top;
+		font-size: 0.65em;
+	}
 
-  hr {
-    border: none;
-    text-align: center;
+	hr {
+		border: none;
+		text-align: center;
 
-    &::before {
-      content: "•   •   •";
-    }
-  }
+		&::before {
+			content: "•   •   •";
+		}
+	}
 
-  pre {
-    background-color: hsb(0, 0, 99);
-    @media (prefers-color-scheme: dark) {
-      color: hsb($dark-fg-hue, 10, 80);
-      background-color: hsb(0, 0, 10);
-    }
+	pre {
+		background-color: hsb(0, 0, 99);
+		@media (prefers-color-scheme: dark) {
+			color: hsb($dark-fg-hue, 10, 80);
+			background-color: hsb(0, 0, 10);
+		}
 
-    border-radius: 0.25rem;
-    border: 1px solid hsb(0, 0, 90);
-    @media (prefers-color-scheme: dark) {
-      border: 1px solid hsb(0, 0, 20);
-    }
+		border-radius: 0.25rem;
+		border: 1px solid hsb(0, 0, 90);
+		@media (prefers-color-scheme: dark) {
+			border: 1px solid hsb(0, 0, 20);
+		}
 
-    padding: 1em;
-    overflow-x: auto;
+		padding: 1em;
+		overflow-x: auto;
 
-    > code {
-      display: block;
-      font-size: 0.85em;
-      line-height: 1.35;
-    }
+		> code {
+			display: block;
+			font-size: 0.85em;
+			line-height: 1.35;
+		}
 
-    @import "syntax";
-  }
+		@import "syntax";
+	}
 
-  > .footnotes {
-    > ol {
-      font-size: 0.85em;
+	> .footnotes {
+		> ol {
+			font-size: 0.85em;
 
-      @media (min-width: 850px) {
-        margin-left: 0;
-      }
+			@media (min-width: 850px) {
+				margin-left: 0;
+			}
 
-      > li + li {
-        margin-top: 1em;
-      }
-    }
-  }
+			> li + li {
+				margin-top: 1em;
+			}
+		}
+	}
 
-  > .signature {
-    text-align: right;
-    margin-top: 2rem;
-  }
+	> .signature {
+		text-align: right;
+		margin-top: 2rem;
+	}
 }

@@ -1,12 +1,11 @@
 {
-  "tabWidth": 2,
-  "useTabs": false,
-  "overrides": [
-    {
-      "files": ["*.html"],
-      "options": {
-        "parser": "go-template"
-      }
-    }
-  ]
+	"tabWidth": 4,
+	"overrides": [
+		{
+			"files": ["*.html"],
+			"options": {
+				"parser": "go-template"
+			}
+		}
+	]
 }

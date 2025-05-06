@@ -1,17 +1,17 @@
 .page-title {
-  font-size: 1.2rem;
-  text-wrap: balance;
-  margin-top: 1rem;
-  margin-bottom: 8rem;
+	font-size: 1.2rem;
+	text-wrap: balance;
+	margin-top: 1rem;
+	margin-bottom: 8rem;
 
-  @import "markdown";
+	@import "markdown";
 
-  > .feed-link {
-    font-size: 0.8rem;
-    margin-left: 1rem;
+	> .feed-link {
+		font-size: 0.8rem;
+		margin-left: 1rem;
 
-    &:not(:hover) {
-      background-image: none;
-    }
-  }
+		&:not(:hover) {
+			background-image: none;
+		}
+	}
 }

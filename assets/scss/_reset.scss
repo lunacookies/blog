@@ -1,27 +1,27 @@
 *,
 ::before,
 ::after {
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  color: inherit;
-  font: inherit;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: inherit;
-  vertical-align: baseline;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	color: inherit;
+	font: inherit;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: inherit;
+	vertical-align: baseline;
 }
 
 html {
-  text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 body {
-  font-size-adjust: ex-height 0.48;
+	font-size-adjust: ex-height 0.48;
 }
 
 img,
 video {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }

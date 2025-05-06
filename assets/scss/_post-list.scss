@@ -1,27 +1,27 @@
 .post-list {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 
-  > .post-group {
-    > .group-name {
-      margin-bottom: 1.5rem;
-    }
+	> .post-group {
+		> .group-name {
+			margin-bottom: 1.5rem;
+		}
 
-    > .post {
-      @import "markdown";
-      > a {
-        color: inherit;
-        &:not(:hover) {
-          background-image: none;
-        }
-      }
-    }
+		> .post {
+			@import "markdown";
+			> a {
+				color: inherit;
+				&:not(:hover) {
+					background-image: none;
+				}
+			}
+		}
 
-    > .post + .post {
-      margin-top: 0.25rem;
-    }
-  }
+		> .post + .post {
+			margin-top: 0.25rem;
+		}
+	}
 
-  > .post-group + .post-group {
-    margin-top: 4rem;
-  }
+	> .post-group + .post-group {
+		margin-top: 4rem;
+	}
 }

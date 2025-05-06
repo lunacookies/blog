@@ -308,10 +308,10 @@ feels a bit silly to me in light of what I’ve discussed in this article.
 [Zig] has two features which attempt to automate
 the transformations I’ve shown in this article.
 
-- Result Location Semantics transform, among other things,
-  structs returned from functions into out-parameters
-- Parameter Reference Optimization
-  automatically passes large arguments by pointer
+-   Result Location Semantics transform, among other things,
+    structs returned from functions into out-parameters
+-   Parameter Reference Optimization
+    automatically passes large arguments by pointer
 
 Though both of these features
 seemed like possibly good ideas to me when I first came across them,

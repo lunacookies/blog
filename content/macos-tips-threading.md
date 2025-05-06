@@ -100,10 +100,10 @@ you’d be right back in “thread priorities are evil” land
 if you don’t use these primitives.
 There are only a few:
 
-- `pthread_mutex`
-- `os_unfair_lock`
-- Dispatch queues and workloops
-- Mach messages
+-   `pthread_mutex`
+-   `os_unfair_lock`
+-   Dispatch queues and workloops
+-   Mach messages
 
 If a high QoS thread tries to take a lock held by a low QoS thread
 _and the lock being used is `pthread_mutex`, `os_unfair_lock`,

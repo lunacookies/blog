@@ -4,7 +4,7 @@
 .rule,
 &.language-ini .header,
 &.language-ini .punctuation {
-  color: hsb(210, 100, 80);
+	color: hsb(210, 100, 80);
 }
 
 // types
@@ -14,12 +14,12 @@
 &.language-scss .property,
 &.language-ini .attr-name,
 &.language-go .builtin {
-  color: hsb(230, 45, 65);
+	color: hsb(230, 45, 65);
 }
 
 // numbers
 .number {
-  color: hsb(40, 100, 70);
+	color: hsb(40, 100, 70);
 }
 
 // constants
@@ -27,7 +27,7 @@
 .boolean,
 .char,
 &.language-scss .variable {
-  color: hsb(35, 100, 80);
+	color: hsb(35, 100, 80);
 }
 
 // preprocessor directives
@@ -35,98 +35,98 @@
 .directive-hash,
 .macro,
 &.language-scss .keyword {
-  color: hsb(180, 40, 50);
+	color: hsb(180, 40, 50);
 }
 
 // strings
 .string,
 &.language-ini .attr-value {
-  color: hsb(110, 45, 50);
+	color: hsb(110, 45, 50);
 }
 
 // builtins and lifetimes
 .builtin,
 .lifetime-annotation {
-  color: hsb(75, 100, 50);
+	color: hsb(75, 100, 50);
 }
 
 // registers
 .register {
-  color: hsb(190, 70, 50);
+	color: hsb(190, 70, 50);
 }
 
 // comments
 .comment {
-  color: hsb(120, 5, 65);
+	color: hsb(120, 5, 65);
 }
 
 @media (prefers-color-scheme: dark) {
-  color: hsb($dark-fg-hue, 10, 80);
+	color: hsb($dark-fg-hue, 10, 80);
 
-  // keywords
-  .keyword,
-  .operator,
-  .rule,
-  &.language-ini .header,
-  &.language-ini .punctuation {
-    color: hsb(210, 30, 80);
-  }
+	// keywords
+	.keyword,
+	.operator,
+	.rule,
+	&.language-ini .header,
+	&.language-ini .punctuation {
+		color: hsb(210, 30, 80);
+	}
 
-  // types
-  .class-name,
-  .builtin-type,
-  &.language-css .property,
-  &.language-scss .property,
-  &.language-ini .attr-name,
-  &.language-go .builtin {
-    color: hsb(220, 25, 65);
-  }
+	// types
+	.class-name,
+	.builtin-type,
+	&.language-css .property,
+	&.language-scss .property,
+	&.language-ini .attr-name,
+	&.language-go .builtin {
+		color: hsb(220, 25, 65);
+	}
 
-  // numbers
-  .number {
-    color: hsb(40, 100, 80);
-  }
+	// numbers
+	.number {
+		color: hsb(40, 100, 80);
+	}
 
-  // constants
-  .constant,
-  .boolean,
-  .char,
-  &.language-scss .variable {
-    color: hsb(35, 100, 100);
-  }
+	// constants
+	.constant,
+	.boolean,
+	.char,
+	&.language-scss .variable {
+		color: hsb(35, 100, 100);
+	}
 
-  // functions
-  .function {
-    color: hsb($dark-fg-hue, 20, 100);
-  }
+	// functions
+	.function {
+		color: hsb($dark-fg-hue, 20, 100);
+	}
 
-  // preprocessor directives
-  .directive,
-  .directive-hash,
-  .macro,
-  &.language-scss .keyword {
-    color: hsb(180, 40, 65);
-  }
+	// preprocessor directives
+	.directive,
+	.directive-hash,
+	.macro,
+	&.language-scss .keyword {
+		color: hsb(180, 40, 65);
+	}
 
-  // strings
-  .string,
-  &.language-ini .attr-value {
-    color: hsb(110, 30, 65);
-  }
+	// strings
+	.string,
+	&.language-ini .attr-value {
+		color: hsb(110, 30, 65);
+	}
 
-  // builtins and lifetimes
-  .builtin,
-  .lifetime-annotation {
-    color: hsb(75, 95, 65);
-  }
+	// builtins and lifetimes
+	.builtin,
+	.lifetime-annotation {
+		color: hsb(75, 95, 65);
+	}
 
-  // registers
-  .register {
-    color: hsb(190, 10, 75);
-  }
+	// registers
+	.register {
+		color: hsb(190, 10, 75);
+	}
 
-  // comments
-  .comment {
-    color: hsb(120, 5, 45);
-  }
+	// comments
+	.comment {
+		color: hsb(120, 5, 45);
+	}
 }

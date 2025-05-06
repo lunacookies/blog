@@ -20,11 +20,11 @@ though I highly recommend you do!
 For context, here’s the environment I’m using
 to obtain benchmark timings and compilation outputs:
 
-- Clang 16.0.6
-- `-O3` and `-g3`
-- Instruments 14.3.1
-- M1 Pro
-- macOS 13.4.1 without any weird kernel boot arguments or anything
+-   Clang 16.0.6
+-   `-O3` and `-g3`
+-   Instruments 14.3.1
+-   M1 Pro
+-   macOS 13.4.1 without any weird kernel boot arguments or anything
 
 All code (plus a nifty benchmarking harness!)
 is available in [this GitHub repo][repo].
@@ -700,14 +700,14 @@ while (chunks != chunks_end) {
 
 Let’s look over each of the intrinsics I’ve used here:
 
-- `vmovq_n_u8`: duplicates a scalar value across all lanes
-- `vceqq_u8`: performs that `cmeq` equality operation from earlier
-  (I don’t know why the intrinsic is named differently to the instruction)
-- `vandq_u8`: bitwise-AND
-- `vorrq_u8`: bitwise-OR
-- `vaddlvq_s8`: adds values across lanes into
-  a scalar which is large enough to hold the result
-  (in this case adding up all 8-bit lanes gives a 16-bit sum)
+-   `vmovq_n_u8`: duplicates a scalar value across all lanes
+-   `vceqq_u8`: performs that `cmeq` equality operation from earlier
+    (I don’t know why the intrinsic is named differently to the instruction)
+-   `vandq_u8`: bitwise-AND
+-   `vorrq_u8`: bitwise-OR
+-   `vaddlvq_s8`: adds values across lanes into
+    a scalar which is large enough to hold the result
+    (in this case adding up all 8-bit lanes gives a 16-bit sum)
 
 You might have noticed how each of these intrinsics
 ends with `u8` except for `vaddlvq_s8`.

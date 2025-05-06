@@ -362,9 +362,9 @@ Here’s `SecRandomCopyBytes`’s interface as listed in the Security framework�
 >
 > Parameters:
 >
-> - `rnd`: Only `kSecRandomDefault` is supported.
-> - `count`: The number of bytes to generate.
-> - `bytes`: A buffer to fill with random output.
+> -   `rnd`: Only `kSecRandomDefault` is supported.
+> -   `count`: The number of bytes to generate.
+> -   `bytes`: A buffer to fill with random output.
 >
 > Return `0` on success, any other value on failure.
 >
@@ -398,8 +398,8 @@ has the docs:
 >
 > Parameters:
 >
-> - `bytes`: Pointer to the return buffer.
-> - `count`: Number of random bytes to return.
+> -   `bytes`: Pointer to the return buffer.
+> -   `count`: Number of random bytes to return.
 >
 > Return `kCCSuccess` on success.
 >
@@ -579,11 +579,11 @@ The [non-corecrypto `arc4random_uniform` implementation][arc4random_uniform old]
 is almost identical, so you can take a look at that if you like.
 Besides, in your own code you’ll most likely want extra APIs like
 
-- random float between zero and one
-- random 64-bit integer, given both a lower and upper bound
-- random float between a lower and upper bound
-- coin flip-style random boolean, given the probability of heads
-- maybe distributions other than uniform?
+-   random float between zero and one
+-   random 64-bit integer, given both a lower and upper bound
+-   random float between a lower and upper bound
+-   coin flip-style random boolean, given the probability of heads
+-   maybe distributions other than uniform?
 
 so saving the effort to write a singular convenience function
 isn’t of any significance when you’ll inevitably take on

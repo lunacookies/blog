@@ -1,45 +1,49 @@
 {{ define "body" }}
-  <h1 class="page-title">
-    Luna’s Blog<a class="feed-link" href="{{ .Site.BaseURL }}atom.xml"
-      >atom feed</a
-    >
-  </h1>
+	<h1 class="page-title">
+		Luna’s Blog<a class="feed-link" href="{{ .Site.BaseURL }}atom.xml"
+			>atom feed</a
+		>
+	</h1>
 
-  {{ $draftPosts := where .Pages "Params.date" "eq" nil }}
-  {{ $publishedPosts := where .Pages "Params.date" "ne" nil }}
+	{{ $draftPosts := where .Pages "Params.date" "eq" nil }}
+	{{ $publishedPosts := where .Pages "Params.date" "ne" nil }}
 
 
-  <section class="post-list">
-    {{ if gt (len $draftPosts) 0 }}
-      <section class="post-group">
-        <p class="group-name">drafts</p>
-        {{ range $draftPosts }}
-          <li class="post">
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </li>
-        {{ end }}
-      </section>
-    {{ end }}
+	<section class="post-list">
+		{{ if gt (len $draftPosts) 0 }}
+			<section class="post-group">
+				<p class="group-name">drafts</p>
+				{{ range $draftPosts }}
+					<li class="post">
+						<a href="{{ .Permalink }}"
+							>{{ .Title | markdownify }}</a
+						>
+					</li>
+				{{ end }}
+			</section>
+		{{ end }}
 
-    {{ range $publishedPosts.GroupByDate "2006" }}
-      <section class="post-group">
-        <p class="group-name">{{ .Key }}</p>
-        {{ range .Pages }}
-          <li class="post">
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-          </li>
-        {{ end }}
-      </section>
-    {{ end }}
-  </section>
+		{{ range $publishedPosts.GroupByDate "2006" }}
+			<section class="post-group">
+				<p class="group-name">{{ .Key }}</p>
+				{{ range .Pages }}
+					<li class="post">
+						<a href="{{ .Permalink }}"
+							>{{ .Title | markdownify }}</a
+						>
+					</li>
+				{{ end }}
+			</section>
+		{{ end }}
+	</section>
 
-  <article>
-    <p>
-      This site is generated using <a href="https://gohugo.io">Hugo</a>, styled
-      with <a href="https://sass-lang.com">SCSS</a> and hosted on an old iMac.
-      Take a look at the source code on
-      <a href="https://github.com/lunacookies/blog">GitHub</a>
-      if you’re curious!
-    </p>
-  </article>
+	<article>
+		<p>
+			This site is generated using <a href="https://gohugo.io">Hugo</a>,
+			styled with <a href="https://sass-lang.com">SCSS</a> and hosted on
+			an old iMac. Take a look at the source code on
+			<a href="https://github.com/lunacookies/blog">GitHub</a>
+			if you’re curious!
+		</p>
+	</article>
 {{ end }}

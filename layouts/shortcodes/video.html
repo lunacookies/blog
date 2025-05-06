@@ -1,7 +1,7 @@
 {{ $src := .Get "src" }}
 {{ $resource := .Page.Resources.Get $src }}
 <figure>
-  <video controls>
-    <source src="{{ $resource.Permalink }}" />
-  </video>
+	<video controls>
+		<source src="{{ $resource.Permalink }}" />
+	</video>
 </figure>

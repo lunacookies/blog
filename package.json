@@ -1,21 +1,21 @@
 {
-  "name": "lunas-blog",
-  "version": "0.0.1",
-  "private": true,
-  "description": "Luna’s Blog",
-  "scripts": {
-    "start": "hugo server --minify --buildFuture"
-  },
-  "browserslist": [
-    "> 1%"
-  ],
-  "devDependencies": {
-    "cssnano": "4",
-    "postcss": "8",
-    "postcss-cli": "8",
-    "postcss-preset-env": "7",
-    "postcss-sorting": "6",
-    "prettier": "2.8.8",
-    "prettier-plugin-go-template": "0.0.13"
-  }
+	"name": "lunas-blog",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Luna’s Blog",
+	"scripts": {
+		"start": "hugo server --minify --buildFuture"
+	},
+	"browserslist": [
+		"> 1%"
+	],
+	"devDependencies": {
+		"cssnano": "4",
+		"postcss": "8",
+		"postcss-cli": "8",
+		"postcss-preset-env": "7",
+		"postcss-sorting": "6",
+		"prettier": "2.8.8",
+		"prettier-plugin-go-template": "0.0.13"
+	}
 }
