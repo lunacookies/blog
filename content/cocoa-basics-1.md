@@ -156,7 +156,7 @@ Current executable set to '/Users/luna/Developer/CocoaBasics/Build/Counter.app' 
 
 To run the app, type `r` and hit enter.
 
-{{< screenshot src="counter-in-dock" caption="Our new Counter app in the Dock." >}}
+{{< screenshot name="counter-in-dock" caption="Our new Counter app in the Dock." small=true >}}
 
 The app now has not only a name, but also the system default app icon!
 We’re finally getting somewhere, it feels like.

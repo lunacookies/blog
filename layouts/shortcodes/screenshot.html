@@ -1,7 +1,12 @@
 {{ $name := .Get "name" }}
-{{ $lightResource := .Page.Resources.GetMatch "*-light.*" }}
-{{ $darkResource := .Page.Resources.GetMatch "*-dark.*" }}
-<figure>
+{{ $lightResource := .Page.Resources.GetMatch (printf "%s-light.*" $name) }}
+{{ $darkResource := .Page.Resources.GetMatch (printf "%s-dark.*" $name) }}
+
+{{ $classList := slice }}
+{{ if .Get "small" }}
+	{{ $classList = $classList | append "small" }}
+{{ end }}
+<figure class="{{ delimit $classList " " }}">
 	<picture>
 		<source
 			srcset="{{ $darkResource.Permalink }}"

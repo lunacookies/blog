@@ -29,7 +29,7 @@ article {
 
 	pre,
 	table,
-	figure {
+	figure:not(.small) {
 		max-width: none;
 	}
 

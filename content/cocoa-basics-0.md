@@ -54,7 +54,7 @@ $ swiftc main.swift && ./main
 
 You should see the executable appear in the Dock and in ⌘-tab!
 
-{{< screenshot name="executable-in-dock" caption="The `main` executable appears in the Dock." >}}
+{{< screenshot name="executable-in-dock" caption="The `main` executable appears in the Dock." small=true >}}
 
 Unfortunately, our application (if you can even call it that) has no menu bar,
 so you’ll need to ⌃-click it in the Dock and select “Quit” to quit it.
