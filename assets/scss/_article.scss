@@ -192,6 +192,11 @@ article {
 			line-height: 1.35;
 		}
 
+		tab-size: 4;
+		@media (max-width: $wide-page-breakpoint) {
+			tab-size: 2;
+		}
+
 		@import "syntax";
 	}
 
