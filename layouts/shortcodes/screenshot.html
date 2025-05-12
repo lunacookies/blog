@@ -3,6 +3,9 @@
 {{ $darkResource := .Page.Resources.GetMatch (printf "%s-dark.*" $name) }}
 
 {{ $classList := slice }}
+{{ if .Get "hasShadow" }}
+	{{ $classList = $classList | append "has-shadow" }}
+{{ end }}
 {{ if .Get "small" }}
 	{{ $classList = $classList | append "small" }}
 {{ end }}
